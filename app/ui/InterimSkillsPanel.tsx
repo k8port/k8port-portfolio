@@ -94,7 +94,7 @@ export default function SkillsDisplay({ className }: InterimSkillsPanelProps) {
                   onClick={() => setActiveCategory(category as CategoryKey)}
                   className={`flex items-center space-x-1 px-3 py-1 rounded-md transition-all ${
                     activeCategory === category
-                      ? "bg-parchment/90 ring-1 ring-agedparchment shadow-sm text-brightblue"
+                      ? "bg-parchment/90 ring-1 ring-agedparchment shadow-xs text-brightblue"
                       : "hover:bg-pistachio/90 hover:ring-ashes_450 hover:text-ashes_850"
                   }`}
                 >

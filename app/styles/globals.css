@@ -1,83 +1,106 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-body {
-  @apply text-antiqueblack font-sans m-0 p-0;
-  background-image: url("/images/background/artnouveau_brain_sm.png"),
-    linear-gradient(to bottom right, #FFFDD0, #F5F5DC, #BAC5BC) ;
-  background-size: cover;
-  background-position: center;
-  background-repeat: repeat-y;
-  background-attachment: scroll;
-  box-sizing: border-box;
-  align-self: stretch;
+@config '../../tailwind.config.ts';
 
-  /* Scrollbar styles */
-  scrollbar-width: thin;
-  scrollbar-color: #f0ead6 #87ceeb;
-}
-/* Webkit Scrollbar Styles */
-body::-webkit-scrollbar {
-  width: 8px;
-  display: block;
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
 }
 
-body::-webkit-scrollbar-track {
-  background: #edeade;
+@utility text-stroke-midnight {
+  -webkit-text-stroke: 0.75px #191970;
+  /* text-stroke: 3px #191970; (nonstandard, remove or comment out) */
 }
 
-body::-webkit-scrollbar-thumb {
-  background-color: #ffdead;
-  border-radius: 4px;
+@utility text-stroke-pearl {
+  -webkit-text-stroke: 0.75px #e2dfd2;
 }
 
-body::-webkit-scrollbar-thumb:hover {
-  background-color: #ffdead;
+@utility text-stroke-lightgreen {
+  -webkit-text-stroke: 0.5px #90ee90;
 }
 
-/* Show scrollbar only on hover/scroll */
-@media (max-width: 768px) {
+@layer utilities {
   body {
-    overflow-y: auto;
-    scrollbar-width: none;
+    @apply text-antiqueblack font-sans m-0 p-0;
+    background-image:
+      url('/images/background/artnouveau_brain_sm.png'),
+      linear-gradient(to bottom right, #f5f5dc, #bac5bc);
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-y;
+    background-attachment: scroll;
+    box-sizing: border-box;
+    align-self: stretch;
+
+    /* Scrollbar styles */
+    scrollbar-width: thin;
+    scrollbar-color: #f0ead6 #87ceeb;
+  }
+  /* Webkit Scrollbar Styles */
+  body::-webkit-scrollbar {
+    width: 8px;
+    display: block;
+  }
+
+  body::-webkit-scrollbar-track {
+    background: #edeade;
   }
 
   body::-webkit-scrollbar-thumb {
     background-color: #ffdead;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+    border-radius: 4px;
   }
 
-  body:hover::-webkit-scrollbar-thumb {
-    opacity: 1;
+  body::-webkit-scrollbar-thumb:hover {
+    background-color: #ffdead;
+  }
+
+  /* Show scrollbar only on hover/scroll */
+  @media (max-width: 768px) {
+    body {
+      overflow-y: auto;
+      scrollbar-width: none;
+    }
+
+    body::-webkit-scrollbar-thumb {
+      background-color: #ffdead;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    body:hover::-webkit-scrollbar-thumb {
+      opacity: 1;
+    }
   }
 }
 
 @layer utilities {
-  .text-stroke-midnight {
-    -webkit-text-stroke: 0.75px #191970;
-    /* text-stroke: 3px #191970; (nonstandard, remove or comment out) */
+  nav {
+    transition: max-height 0.3s ease-in-out;
   }
-  .text-stroke-pearl {
-    -webkit-text-stroke: 0.75px #e2dfd2;
+
+  /* Optional: Style active link */
+  nav ul li a {
+    transition: color 0.3s;
   }
-  .text-stroke-lightgreen {
-    -webkit-text-stroke: 0.5px #90ee90;
+
+  nav ul li a:hover {
+    color: #a8e6cf; /* Example hover color */
   }
-}
-
-nav {
-  transition: max-height 0.3s ease-in-out;
-}
-
-/* Optional: Style active link */
-nav ul li a {
-  transition: color 0.3s;
-}
-
-nav ul li a:hover {
-  color: #a8e6cf; /* Example hover color */
 }
 
 @layer base {

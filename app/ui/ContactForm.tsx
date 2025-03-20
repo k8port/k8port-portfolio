@@ -21,7 +21,7 @@ export default function ContactForm() {
             <input
               type="text"
               id="name"
-              className="w-[264px] h-[29px] bg-industrialgray border border-pearl rounded"
+              className="w-[264px] h-[29px] bg-industrialgray border border-pearl rounded-sm"
             />
           </div>
 
@@ -35,7 +35,7 @@ export default function ContactForm() {
             <input
               type="email"
               id="email"
-              className="w-[264px] h-[29px] bg-industrialgray border border-pearl rounded"
+              className="w-[264px] h-[29px] bg-industrialgray border border-pearl rounded-sm"
             />
           </div>
         </div>

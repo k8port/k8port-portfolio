@@ -16,7 +16,7 @@ const NumberPad: React.FC = () => {
                      hover:bg-bisque transition-colors duration-200"
             >
               {/* Gradient overlay */}
-              <div className="absolute inset-0 rounded-full bg-gradient-to-t from-sepiabrown/80 to-pinkgrey pointer-events-none" />
+              <div className="absolute inset-0 rounded-full bg-linear-to-t from-sepiabrown/80 to-pinkgrey pointer-events-none" />
               {/* Border */}
               <div className="absolute inset-0 border border-bisque rounded-full shadow-punchcard" />
               <div className="absolute inset-0 border border-antiqueBlack rounded-full shadow-punchcard" />

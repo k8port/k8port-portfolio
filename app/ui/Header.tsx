@@ -33,7 +33,7 @@ export default function Header({ className }: HeaderProps) {
       className={`w-full bg-midnight/90 flex items-center justify-between border-b border-b-electricgrey shadow-lg 
       font-ibmPlexSans text-offwhite text-xl drop-shadow-section px-0 py-3 ${className}`}
     >
-      <div className="flex flex-grow w-full items-center justify-between px-4">
+      <div className="flex grow w-full items-center justify-between px-4">
         <span
           className={`${lobster.className} font-lobster text-base sm:text-lg md:text-2xl`}
         >
@@ -43,7 +43,7 @@ export default function Header({ className }: HeaderProps) {
         <div className="flex space-x-6 my-2 md:hidden">
           <button
             onClick={toggleMenu}
-            className="focus:outline-none"
+            className="focus:outline-hidden"
             aria-label="Toggle menu"
           >
             {isOpen ? (

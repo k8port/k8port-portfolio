@@ -45,7 +45,7 @@ export default function Logo({ className, logo }: LogoProps) {
 
       <div className="relative w-full flex justify-center">
         {/* Portrait section */}
-        <div className="relative w-[200px] aspect-[3/4] border-2 my-2">
+        <div className="relative w-[200px] aspect-3/4 border-2 my-2">
           <Image
             src="/images/portrait.png"
             alt="Portrait"

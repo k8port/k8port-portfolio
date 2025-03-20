@@ -30,12 +30,12 @@ export default function SkillsPanel({
               {category.topic}
             </h2>
 
-            <div className="flex-grow font-cormorantGaramond text-antiqueblack/75 overflow-y-auto">
+            <div className="grow font-cormorantGaramond text-antiqueblack/75 overflow-y-auto">
               {category.topicList.map((sub, i) => (
                 <SubtopicRenderer key={i} item={sub} />
               ))}
             </div> */}
-      {/* <div className="flex-grow font-cormorantGaramond overflow-y-auto">
+      {/* <div className="grow font-cormorantGaramond overflow-y-auto">
               {category.topicList.map((topic, topicIdx) => (
                 <div key={topicIdx} className="mb-4">
                   <h3 className="font-semibold text-sm mb-1">{topic.subtopic}</h3>
