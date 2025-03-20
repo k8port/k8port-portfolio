@@ -6,8 +6,7 @@ import Footer from "./ui/Footer";
 import Head from "next/head";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
-import styles from "./styles/modules/layout.module.css";
-import { spaceGrotesk } from "./fonts";
+import { roboto } from "./fonts";
 
 export const metadata: Metadata = {
   title: "k8port | Kate Portalatin",
@@ -37,10 +36,10 @@ export default function RootLayout({
         <meta property="og:url" content="https://k8port.github.io" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body className={` ${spaceGrotesk.className} `}>
+      <body className={` ${roboto.className} `}>
         <Header className="fixed top-0 z-50 mb-4" />
         <main
-          className={`grid grid-cols-12 gap-2 scroll-smooth ${styles.mainContainer}`}
+          className={`grid grid-cols-12 gap-2 scroll-smooth`} 
         >
           {children}
           <Analytics />

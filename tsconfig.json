@@ -27,8 +27,7 @@
       "@/lib/*": ["./app/lib/*"],
       "@/styles/*": ["./app/styles/*"],
       "@/public/*": ["./public/*"]
-    },
-    "types": ["@testing-library/jest-dom"]
+    }
   },
   "include": [
     "next-env.d.ts",

@@ -10,7 +10,6 @@ import {
   Roboto,
 } from "next/font/google";
 
-// Example: Use Space Grotesk as your default body font.
 export const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   weight: ["400"],
