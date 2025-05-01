@@ -10,7 +10,26 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
+  ...compat.extends("next/core-web-vitals", "next/typescript", "prettier"),
+  {
+    plugins: ["prettier"],
+    rules: {
+      // Add prettier rule
+      "prettier/prettier": "error",
+      // Basic formatting rules
+      "indent": ["error", 2],
+      "linebreak-style": ["error", "unix"],
+      "quotes": ["error", "single", { "avoidEscape": true }],
+      "semi": ["error", "always"],
+      // React specific formatting
+      "react/jsx-indent": ["error", 2],
+      "react/jsx-indent-props": ["error", 2],
+      // TypeScript specific formatting
+      "@typescript-eslint/type-annotation-spacing": "error",
+      "@typescript-eslint/semi": ["error", "always"],
+    },
+    ignorePatterns: ["node_modules/", ".next/", "out/"],
+  }
 ];
 
 export default eslintConfig;

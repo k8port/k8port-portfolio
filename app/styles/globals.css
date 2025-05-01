@@ -11,138 +11,192 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
-  }
-}
+	*,
+	::after,
+	::before,
+	::backdrop,
+	::file-selector-button {
+		box-sizing: border-box;
+		border: 0 solid #F2F3F4;
+	}
 
-@utility text-stroke-midnight {
-  -webkit-text-stroke: 0.75px #191970;
-  /* text-stroke: 3px #191970; (nonstandard, remove or comment out) */
-}
+	:root {
+		--footer-margin: 2rem;
+		--header-height: 3.6rem;
+	}
 
-@utility text-stroke-pearl {
-  -webkit-text-stroke: 0.75px #e2dfd2;
-}
+	html,
+	body {
+		@apply font-spacegrotesk text-base leading-[17.7px] text-redblacks-vampireblack;
+	}
 
-@utility text-stroke-lightgreen {
-  -webkit-text-stroke: 0.5px #90ee90;
+	h1 {
+		@apply font-dmserifdisplay font-bold text-redblacks-blackplum text-5xl leading-[65.8px] uppercase;
+	}
+
+	h2 {
+		@apply font-dmserifdisplay font-bold text-redblacks-blackplum text-[40px] leading-[54.8px] capitalize;
+	}
+
+	h3 {
+		@apply font-dmserifdisplay font-bold text-redblacks-blackplum text-[32px] tracking-[0] leading-[43.9px] capitalize;
+	}
+
+	h4 {
+		@apply font-dmserifdisplay font-bold text-redblacks-blackplum text-2xl tracking-[0] leading-[32.9px] capitalize;
+	}
+
+	h5 {
+		@apply font-dmserifdisplay font-bold text-redblacks-blackplum text-xl tracking-[0] leading-[27.4px] capitalize;
+	}
+
+	h6 {
+		@apply font-dmserifdisplay font-bold text-redblacks-blackplum text-base tracking-[0] leading-[21.9px] capitalize;
+	}
+
+	p {
+		@apply font-spacegrotesk text-base leading-[17.7px];
+	}
+
+	.paragraph-base {
+		@apply text-[13px] leading-[17.7px];
+	}
+
+	.paragraph-small {
+		@apply text-[12px] leading-[13.69px];
+	}
+
+	.paragraph-xs {
+		@apply text-[10px] leading-[12.8px];
+	}
+
+	.caption-light {
+		@apply font-spacegrotesk font-normal text-xs tracking-[0] leading-4 uppercase not-italic;
+	}
+
+	.caption-heavy {
+		@apply font-spacegrotesk font-bold text-xs tracking-[0] leading-4 uppercase not-italic;
+	}
+
+	.nav-menu-item {
+		@apply font-martianmono font-normal text-bluegrays-stormcloud text-xs tracking-[-0.35px] leading-4 lowercase not-italic;
+	}
+
+	.greeting {
+		@apply font-greatvibes font-normal text-blueblacks-bluecharcoal text-[108px] tracking-[0] leading-[108px] whitespace-nowrap;
+	}
 }
 
 @layer utilities {
-  body {
-    @apply text-antiqueblack font-sans m-0 p-0;
-    background-image:
-      url('/images/background/artnouveau_brain_sm.png'),
-      linear-gradient(to bottom right, #f5f5dc, #bac5bc);
-    background-size: cover;
-    background-position: center;
-    background-repeat: repeat-y;
-    background-attachment: scroll;
-    box-sizing: border-box;
-    align-self: stretch;
+	/* Scrollbar Utilities */
+	.scrollbar-hide {
+		scrollbar-width: none;
+		-ms-overflow-style: none;
+	}
 
-    /* Scrollbar styles */
-    scrollbar-width: thin;
-    scrollbar-color: #f0ead6 #87ceeb;
-  }
-  /* Webkit Scrollbar Styles */
-  body::-webkit-scrollbar {
-    width: 8px;
-    display: block;
-  }
+	.scrollbar-hide::-webkit-scrollbar {
+		display: none;
+	}
 
-  body::-webkit-scrollbar-track {
-    background: #edeade;
-  }
+	.scrollbar-default {
+		scrollbar-width: thin;
+		-ms-overflow-style: auto;
+		background-color: var(--brand-secondary);
+	}
 
-  body::-webkit-scrollbar-thumb {
-    background-color: #ffdead;
-    border-radius: 4px;
-  }
+	.scrollbar-default::-webkit-scrollbar {
+		width: 8px;
+	}
 
-  body::-webkit-scrollbar-thumb:hover {
-    background-color: #ffdead;
-  }
+	.scrollbar-default::-webkit-scrollbar-thumb {
+		background-color: var(--collection-caribbeangreen);
+		opacity: 0;
+		transition: opacity 0.3s ease-in-out;
+		border-radius: 4px;
+	}
 
-  /* Show scrollbar only on hover/scroll */
-  @media (max-width: 768px) {
-    body {
-      overflow-y: auto;
-      scrollbar-width: none;
-    }
+	.scrollbar-default:hover::-webkit-scrollbar-thumb {
+		opacity: 1;
+	}
 
-    body::-webkit-scrollbar-thumb {
-      background-color: #ffdead;
-      opacity: 0;
-      transition: opacity 0.3s ease-in-out;
-    }
+  	/* Custom scrollbar */
+  	::-webkit-scrollbar {
+    	width: 8px;
+  	}
 
-    body:hover::-webkit-scrollbar-thumb {
-      opacity: 1;
-    }
-  }
+  	::-webkit-scrollbar-track {
+		width: 9px;
+    	background: #E9FFDB;
+  	}
+
+  	::-webkit-scrollbar-thumb {
+  	  background: #A0D6B4;
+  	  border-radius: 5px;
+  	}
+
+  	::-webkit-scrollbar-thumb:hover {
+  	  background: #81D8D0;
+  	}
+
+  	/* Firefox support */
+  	html {
+  	  scrollbar-width: 8px;
+  	  scrollbar-color: #F8F9F5 #A0D6B4;
+  	}
+	
+	html:hover {
+		scrollbar-color: #C9FFE5 #A0D6B4;
+		transition: scrollbar-color 0.3s ease-in-out;
+	}
+
+  	/* html.dark {
+  	  scrollbar-color: #555 #222;
+  	} */
+
+
+	/* Navigation Transitions */
+	nav {
+		transition: max-height 0.3s ease-in-out;
+	}
+
+	nav ul li a {
+		transition: color 0.3s;
+	}
+
+	nav ul li a:hover {
+		color: var(--brand-tertiary);
+	}
+
+	/* Animation Utilities */
+	.animate-fade-in {
+		@apply animate-fade-in;
+	}
+
+	.animate-slide-up {
+		@apply animate-slide-up;
+	}
+
+	/* Transition Utilities */
+	.transition-default {
+		@apply transition-default;
+	}
+
+	.transition-fast {
+		@apply transition-fast;
+	}
+
+	.transition-slow {
+		@apply transition-slow;
+	}
 }
 
 @layer utilities {
-  nav {
-    transition: max-height 0.3s ease-in-out;
-  }
+	.header-shadow {
+		box-shadow: 0 0 25px 0 rgba(37, 43, 47, 0.3);
+	}
 
-  /* Optional: Style active link */
-  nav ul li a {
-    transition: color 0.3s;
-  }
-
-  nav ul li a:hover {
-    color: #a8e6cf; /* Example hover color */
-  }
-}
-
-@layer base {
-  :root {
-    --footer-margin: 2rem;
-  }
-}
-
-html,
-body {
-  overflow-x: hidden;
-}
-
-/* Add these in your Tailwind CSS configuration */
-.footer-dynamic {
-  position: sticky;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-/* heart shape */
-#heart {
-  position: relative;
-  width: 100px;
-  height: 90px;
-}
-#heart:before {
-  position: absolute;
-  content: "";
-  left: 50px;
-  top: 0;
-  width: 50px;
-  height: 80px;
-  background: #FFF0F5;
-  border-radius: 50px 50px 0 0;
-  transform: rotate(-45deg);
-  transform-origin: 0 100%;
-  opacity: 0.65;
-}
-#heart:after {
-  left: 0;
-  transform: rotate(45deg);
-  transform-origin: 100% 100%;
+	.brand-style {
+		box-shadow: inset 0 0 5px 0 rgba(248, 249, 245, 0.8), 0 2 8px 0 rgba(40, 41, 61, 0.15);
+		border: 1px solid #A3C1AD;
+	}
 }

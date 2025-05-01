@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import IconRow from "@/app/ui/IconRow"; // Adjust path if needed
+import IconRow from "@/app/ui/icons/IconRow"; // Adjust path if needed
 import { getFontAwesomeIcon } from "@/app/styles/icons"; // Mocked function
 import "@testing-library/jest-dom";
 
@@ -35,7 +35,7 @@ describe("IconRow Component", () => {
   it("applies default class when no custom class is provided", () => {
     render(<IconRow icons={[{ name: "Wrench" }]} />);
 
-    expect(screen.getByTestId("icon-Wrench")).toHaveClass("text-antiqueblack");
+    expect(screen.getByTestId("icon-Wrench")).toHaveClass("text-blackplum");
   });
 
   it("does not render anything if an invalid icon name is provided", () => {

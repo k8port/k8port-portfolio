@@ -73,6 +73,7 @@ import {
     SiUml,
     SiLucid,
     SiSwagger,
+    SiNeo4J
 } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io5";
 import { 
@@ -86,6 +87,7 @@ import { MdOutlineViewKanban, MdOutlinePhone } from "react-icons/md";
 import { FaBusinessTime, FaGolang, FaC, FaScrewdriverWrench, FaCompassDrafting, FaPersonDigging } from "react-icons/fa6";
 import { GiThink, GiTeacher, GiStrongMan } from "react-icons/gi";
 import { TbMath } from "react-icons/tb";
+import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
 import { RiMentalHealthFill, RiNextjsFill, RiParentFill, RiPresentationLine, RiTailwindCssFill } from "react-icons/ri";
 import { FcCollaboration } from "react-icons/fc";
 import { PiStudent, PiFileCpp } from "react-icons/pi";
@@ -194,6 +196,9 @@ export const iconMap: Record<string, IconType> = {
     "Screwdriver Wrench": FaScrewdriverWrench,
     "Compass Drafting": FaCompassDrafting,
     "Person Digging": FaPersonDigging,
+    "Arrow Dropdown": IoMdArrowDropdown,
+    "Arrow Dropup": IoMdArrowDropup,
+    "Neo4j": SiNeo4J,
 }
 
 export function getFontAwesomeIcon(iconName: string): IconType | null {

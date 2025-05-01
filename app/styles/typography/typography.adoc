@@ -1,0 +1,25 @@
+= Typography
+
+== Paragraph Styles
+
+.Base Style
+====
+[horizontal]
+*size*:: 13px
+*line-height*:: 17.7
+====
+
+.Small Paragraph
+====
+[horizontal]
+*size*:: 12px
+*line-height*:: 13.69
+====
+
+.Extra-Small Paragraph
+====
+[horizontal]
+*size*:: 10px
+*line-height*:: 12.8
+====
+

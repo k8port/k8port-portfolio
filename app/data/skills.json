@@ -116,8 +116,7 @@
                         "tools": ["Jest", "Mocha", "Chai", "Cypress"]
                     }
                 ]
-            },
-
+            }
         ],
         "Testing Tools": [
             { "topic": "Unit Testing", "level": "Proficient"},
@@ -125,6 +124,8 @@
             { "topic": "E2E Testing", "level": "Proficient"}
         ]
     },
+    "Frontend Development": {
+        "skills": [
             { "topic": "Testing tools (unit, component, e2e)", "level": "Competent"},
             { "topic": "Package Management (npm, yarn, pnpm)", "level": "Competent"},
             { "topic": "State Management (Redux)", "level": "Proficient"},
