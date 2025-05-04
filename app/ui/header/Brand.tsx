@@ -4,8 +4,8 @@ import Image from 'next/image';
 export default function Brand() {
     return (
         <div className={`
-            absolute inset-1 w-[150px] h-[50px] left-10 z-10
-            bg-bluegrays-electricgray
+            absolute inset-1 w-[95px] h-[30px] left-10 z-10
+            bg-bluegrays-cadetgray
             brand-style
             overflow-hidden
             border-[0.25px] border-solid border-accent-accentgreenvar rounded-lg`}>
@@ -18,12 +18,12 @@ export default function Brand() {
                     className="w-full h-full object-contain"  
                 />  
             </div>
-            <div className="absolute inset-0 left-15 z-30">
+            <div className="absolute inset-0 left-10 z-30">
                 <Image 
                     src="/images/k8.png"
                     alt="logo" 
-                    width={150} 
-                    height={50} 
+                    width={50} 
+                    height={30} 
                     className="w-full h-full p-1 object-contain"  
                 />
             </div>

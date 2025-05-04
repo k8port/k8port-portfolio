@@ -27,7 +27,7 @@
 
 	html,
 	body {
-		@apply font-spacegrotesk text-base leading-[17.7px] text-redblacks-vampireblack;
+		@apply font-spacegrotesk text-[14px] leading-[17.7px] text-redblacks-vampireblack;
 	}
 
 	h1 {

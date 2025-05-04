@@ -1,8 +1,8 @@
 import React from "react";
-import { GradientOverlay } from "./GradientOverlay";
 import { ImageFrame } from "./ImageFrame";
+import RainbowGradientOverlay from "./background/RainboxGradientOverlay";
 
-interface LeftSideLayoutProps {
+interface InnerLayoutProps {
   className: string;
   imageFrameClassName: string;
   imageSource: string;
@@ -11,35 +11,35 @@ interface LeftSideLayoutProps {
   imageHeight: number;
 }
 
-export const LeftSideLayout = ({
+export default function InnerLayout({
   className,
   imageFrameClassName,
   imageSource,
   imageAlt,
   imageWidth,
   imageHeight,
-}: LeftSideLayoutProps) => {
+}: InnerLayoutProps) {
   const aspectRatio = imageWidth / imageHeight;
   return (
     <div className={`
       flex justify-center items-center
-      w-full md:w-auto
-      min-w-3xs md:min-w-xl lg:min-w-xl
-      max-w-5xl
+      w-full
+      max-w-3xl 
+      mx-auto
       aspect-[${aspectRatio}]
-      flex-shrink-o
       ${className}
     `}>
       <div className={`relative w-full h-full aspect-[${aspectRatio}]`}>
         <ImageFrame
-          className="w-full h-full object-color"
+          className="w-full h-full object-cover"
           imageSrc={imageSource}
           imageClassName={imageFrameClassName}
           imageAlt={imageAlt}
           imageWidth={imageWidth}
           imageHeight={imageHeight}
         />
-        <GradientOverlay className="absolute inset-0" />
+        <RainbowGradientOverlay className="absolute inset-0" innerClassName="mix-blend-exclusion" />
+        <RainbowGradientOverlay className="absolute inset-0" innerClassName="mix-blend-hard-light" />
       </div>
     </div>
   );

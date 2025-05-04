@@ -1,9 +1,5 @@
-'use client';
-
-import React, { useEffect, useState } from "react";
 import Brand from "./Brand";
 import NavMenu  from "./NavMenu";
-import MobileNavMenu from "./MobileNavMenu";
 
 export default function Header() {
 
@@ -18,6 +14,17 @@ export default function Header() {
         <div className={`container max-w-full mx-auto px-4 sm:px-4 lg:px-4`}>
           <div className="flex items-center justify-between w-full">
             <Brand />
+            <div className={`
+              flex-grow flex justify-center font-greatvibes 
+              text-accent-accentgreenvar 
+              text-shadow-xl
+              text-2xl tracking-normal 
+              leading-[10px]
+            `}>
+              <span className="absolute top-5 left-40">
+                Non Perditio Dolorem 
+              </span>
+            </div>
             <NavMenu className="flex-grow flex justify-end" />
           </div>
         </div>

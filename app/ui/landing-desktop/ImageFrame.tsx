@@ -19,9 +19,9 @@ export const ImageFrame = ({
   imageHeight,
 }: ImageFrameProps) => {
   return (
-    <div className={`flex w-full h-full items-center relative ${className}`}>
+    <div className={`flex items-center relative ${className}`}>
       <Image
-        className={`w-full h-auto object-contain rounded-lg ${imageClassName}`}
+        className={`object-contain rounded-lg ${imageClassName}`}
         alt={imageAlt}
         src={imageSrc}
         width={imageWidth}

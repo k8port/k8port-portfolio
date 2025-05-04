@@ -26,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="h-full">
+    <html lang="en">
           <body className={`
             ${spaceGrotesk.variable} 
             ${dmSerifDisplay.variable}
@@ -34,17 +34,14 @@ export default function RootLayout({
             ${martianMono.variable}
             ${cormorantGaramond.variable}
             font-spacegrotesk
-            min-h-screen
             flex
             flex-col
             bg-brand-primary
-            text-base
             antialiased
             overflow-x-hidden
-            overflow-y-hidden
           `}>
             <Header />
-            <main className="w-full h-screen overflow-y-scroll">
+            <main>
               {children}
             </main>
           </body>

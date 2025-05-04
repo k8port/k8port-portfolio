@@ -1,24 +1,25 @@
 import { useEffect, useState } from "react";
 
-export function useMediaQuery(query: string): boolean {
-    const [matches, setMatches] = useState(() => window.matchMedia(query).matches);
+export function useWindowSize() {
+    const [size, setSize] = useState({ width: 0, height: 0 });
 
     useEffect(() => {
-        const media = window.matchMedia(query);
-        const listener = () => setMatches(media.matches);
-        media.addEventListener('change', listener);
-        return () => media.removeEventListener('change', listener);
-    }, [query]);
+        if (typeof window === 'undefined') return;
 
-    return matches;
+        const handleResize = () => {
+            setSize({
+                width: window.innerWidth,
+                height: window.innerHeight,
+            });
+        };
+       
+        handleResize(); // initialize on mount
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    return size;
 }
-
-export function useIsMobile(): boolean {
-    return useMediaQuery("(max-width: 768px)");
-}
-
-export function useIsDesktop(): boolean {
-    return useMediaQuery("(min-width: 768px)");
-}
-
-

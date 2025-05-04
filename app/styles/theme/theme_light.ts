@@ -14,6 +14,7 @@
       quinary: "oklch(0.9 0.0916 112.82)",
       senaryvar: "oklch(0.92 0.0721 135.24)",
       senary: "oklch(0.9 0.0546 121.07)",
+      septenary: "oklch(0.97 0.0525 133.17)",
     },
     accent: {
       accentblue: "oklch(0.78 0.043 156.1)",
@@ -55,6 +56,6 @@
       shadow6: "0px 8px 16px 0px rgba(96, 97, 112, 0.16), 0px 2px 4px 0px rgba(40, 41, 61, 0.04)",
       shadow7: "0px 16px 24px 0px rgba(96, 97, 112, 0.16), 0px 2px 8px 0px rgba(40, 41, 61, 0.04)",
       shadow8: "0px 20px 32px 0px rgba(96, 97, 112, 0.24), 0px 2px 8px 0px rgba(40, 41, 61, 0.08)",  
-    }
+    },
   }
 }

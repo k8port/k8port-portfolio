@@ -29,9 +29,10 @@ export const themeConfig = {
     'footer': 'var(--footer-margin)',
   },
   screens: {
-    'xs': '768px',
-    'wide-view': '1200px',
-    'long': '1300px',
+    'sm': '640px',
+    'md': '768px',
+    'lg': '1024px',
+    'wide': '1200px',
   },
   animation: {
     'fade-in': 'fadeIn 0.3s ease-in-out',
