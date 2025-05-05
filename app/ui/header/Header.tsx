@@ -10,7 +10,7 @@ export default function Header() {
         transition-all duration-300
         header-shadow
   `}>
-      <div className="flex items-center gap-11 relative px-8 sm:px-4 py-1 shadow-xl">
+      <div className="flex items-center py-1 shadow-xl">
         <div className={`container max-w-full mx-auto px-4 sm:px-4 lg:px-4`}>
           <div className="flex items-center justify-between w-full">
             <Brand />

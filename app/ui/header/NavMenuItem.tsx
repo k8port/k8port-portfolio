@@ -10,7 +10,7 @@ const NavMenuItem = ({ label, href }: NavMenuItemProps) => {
   return (
     <div className="
       inline-flex items-center 
-      px-2 py-2 
+      px-px py-2 
       nav-menu-item
       hover:text-collection-alizarincrimson
       transition-colors duration-300">

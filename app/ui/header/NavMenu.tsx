@@ -26,7 +26,7 @@ export default function NavMenu({ className }: NavMenuProps) {
     <div className={`
       ${className}
       flex flex-col 
-      w-full max-w-screen-xl 
+      w-full max-w-screen-2xl 
       gap-2.5 relative
     `}>
       {/* Hamburger Menu Icon for mobile displays */}
@@ -50,7 +50,7 @@ export default function NavMenu({ className }: NavMenuProps) {
       {isMenuOpen && (
         <nav className={`
           block md:hidden 
-          w-xs md:w-full bg-brand-secondary 
+          w-24 bg-brand-secondary 
           shadow-lg rounded-md 
           absolute top-12 right-0 
           z-50

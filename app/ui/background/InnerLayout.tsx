@@ -1,6 +1,6 @@
 import React from "react";
-import { ImageFrame } from "./ImageFrame";
-import RainbowGradientOverlay from "./background/RainboxGradientOverlay";
+import { ImageFrame } from "../ImageFrame";
+import RainbowGradientOverlay from "./RainboxGradientOverlay";
 
 interface InnerLayoutProps {
   className: string;
@@ -22,24 +22,22 @@ export default function InnerLayout({
   const aspectRatio = imageWidth / imageHeight;
   return (
     <div className={`
-      flex justify-center items-center
-      w-full
-      max-w-3xl 
-      mx-auto
       aspect-[${aspectRatio}]
       ${className}
     `}>
-      <div className={`relative w-full h-full aspect-[${aspectRatio}]`}>
+      <div className={`aspect-[${aspectRatio}] aspect-[5/4]`}>
         <ImageFrame
-          className="w-full h-full object-cover"
+          className={`relative`}
           imageSrc={imageSource}
           imageClassName={imageFrameClassName}
           imageAlt={imageAlt}
           imageWidth={imageWidth}
           imageHeight={imageHeight}
         />
-        <RainbowGradientOverlay className="absolute inset-0" innerClassName="mix-blend-exclusion" />
-        <RainbowGradientOverlay className="absolute inset-0" innerClassName="mix-blend-hard-light" />
+        <div className="object-cover overflow-y-scroll">
+          <RainbowGradientOverlay className="absolute inset-0" innerClassName="mix-blend-exclusion" />
+          <RainbowGradientOverlay className="absolute inset-0" innerClassName="mix-blend-hard-light" />
+        </div>
       </div>
     </div>
   );

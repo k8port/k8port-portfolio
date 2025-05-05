@@ -21,7 +21,7 @@ export const ImageFrame = ({
   return (
     <div className={`flex items-center relative ${className}`}>
       <Image
-        className={`object-contain rounded-lg ${imageClassName}`}
+        className={`object-cover rounded-lg ${imageClassName}`}
         alt={imageAlt}
         src={imageSrc}
         width={imageWidth}

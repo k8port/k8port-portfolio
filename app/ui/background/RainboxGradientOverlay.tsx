@@ -7,7 +7,7 @@ interface GradientOverlayProps {
 
 export default function RainbowGradientOverlay({ className, innerClassName }: GradientOverlayProps) {
   return (
-    <div className={`absolute inset-0 ${className}`}>
+    <div className={`${className}`}>
       <div className={`
         absolute inset-0 bg-gradient-to-b 
         from-brand-quinaryvar 

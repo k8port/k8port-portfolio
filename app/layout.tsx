@@ -39,9 +39,10 @@ export default function RootLayout({
             bg-brand-primary
             antialiased
             overflow-x-hidden
+            scroll-smooth
           `}>
             <Header />
-            <main>
+            <main className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-4 overflow-y-auto">
               {children}
             </main>
           </body>

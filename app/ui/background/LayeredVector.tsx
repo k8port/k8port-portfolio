@@ -6,8 +6,8 @@ interface LayeredVectorProps {
 }
 
 export default function LayeredVector({ className }: LayeredVectorProps) {
-    const width = 240;
-    const height = 875;
+    const width = 140;
+    const height = 650;
     const aspectRatio = width / height;
 
     return (
