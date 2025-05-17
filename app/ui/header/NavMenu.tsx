@@ -16,9 +16,9 @@ export default function NavMenu({ className }: NavMenuProps) {
   };
  
   const navMenuItems = [
-    { label: "home", href: "/" },
-    { label: "projects", href: "/projects" },
-    { label: "contact", href: "/contact" },
+    { label: "home", href: "#hero" },
+    { label: "projects", href: "#projects" },
+    { label: "contact", href: "#contact" },
     { label: "resume", href: "/resume" },
   ];
 
@@ -64,7 +64,7 @@ export default function NavMenu({ className }: NavMenuProps) {
       )}
 
       {/* Desktop Navigation menu (horizontal, always visible) */}
-      <nav className="hidden md:flex md:space-x-4 ml-auto">
+      <nav className="hidden md:flex md:space-x-6 ml-auto mr-8">
         {navMenuItems.map((item) => (
           <NavMenuItem key={item.label} label={item.label} href={item.href} />
         ))}

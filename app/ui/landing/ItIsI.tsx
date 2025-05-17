@@ -1,5 +1,7 @@
 import React from "react";
-import Image from "next/image";
+import { Display } from "../typography/Display";
+import { Headline } from "../typography/Headline";
+import { ProfilePic } from "./ProfilePic";
 interface ItIsIProps {
   className?: string;
   insertNameHere: string;
@@ -9,41 +11,25 @@ interface ItIsIProps {
 export const ItIsI = ({ className, insertNameHere, insertJobTitleHere }: ItIsIProps) => {
   return (
     <div className={`${className}`}> 
-        <div className={`
-            relative self-stretch
-            mt-[-1.00px] font-spacegrotesk
-            font-bold text-collection-persiangreen
-            text-2xl tracking-[1.00px]
-            leading-6
-        `}>
-           I AM 
-        </div>
-
-        <div className={`
-            relative self-stretch 
-            font-dmserifdisplay 
-            font-normal text-blueblacks-bluecharcoal
-            text-8xl tracking-[0] 
-            leading-[105.6px]
-        `}>
-            {insertNameHere}
-        </div>
-
-        <div className={`
-            relative self-stretch
-            font-spacegrotesk
-            font-bold text-blueblacks-bluecharcoal
-            text-4xl tracking-[0] 
-            leading-[105.6px]
-        `}>
-            {insertJobTitleHere}
-        </div>
-
-        <div className={`
-            absolute w-[186px] h-[178px]
-            top-[-31px] left-52
-        `}>
-            <Image src="/images/profile_pic.png" alt="Profile Picture" width={186} height={178} />
+        <Display 
+          className="w-96 h-auto text-left" 
+          displayText={insertNameHere} 
+          textColor="text-greengrays-graygreen"
+          textSize="text-5xl" />
+        <Headline 
+          className="mt-2 w-96 h-auto text-left" 
+          headlineText={insertJobTitleHere} 
+          headlineStyle="default" 
+          textColor="text-greengrays-chameleongray"
+          textSize="text-lg" />
+        <div className="mt-10 w-vw h-auto">
+          <ProfilePic 
+            imageWidth={686} 
+            imageHeight={678}
+            className="mix-blend-overlay opacity-60"
+            profilePicSrc="/images/abstract_profile.png"
+            profilePicDescription="Profile Picture"
+          />
         </div>
     </div>
   );

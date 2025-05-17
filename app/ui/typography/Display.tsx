@@ -1,19 +1,20 @@
 import React from "react";
 
 interface DisplayProps {
+    className?: string;
     displayText: string;
+    textColor?: string;
+    textSize?: string;
 }
 
-export const Display = ({ displayText }: DisplayProps) => { 
+export const Display = ({ className, displayText, textColor, textSize }: DisplayProps) => { 
     return (
-        <div className="
-            relative 
-            w-445px 
-            mt-[-1.00px] 
-            font-dm-serif-display 
-            text-redblacks-blackplum 
-            text-4xl 
-            leading-[48px]">
+        <div className={`
+            font-dmserifdisplay
+            ${textColor}
+            ${textSize}
+            ${className}
+        `}>
             {displayText}
         </div>
     );

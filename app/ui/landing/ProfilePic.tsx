@@ -3,23 +3,29 @@ import Image from "next/image";
 
 interface ProfilePicProps {
     className?: string;
-    profilePicSrc?: string;
+    imageWidth?: number;
+    imageHeight?: number;
     profilePicDescription?: string;
+    profilePicSrc?: string;
 }
 
 export const ProfilePic = ({
     className,
+    imageWidth,
+    imageHeight,
     profilePicDescription,
     profilePicSrc,
 }: ProfilePicProps) => {
+    if (!imageWidth) imageWidth = 686;
+    if (!imageHeight) imageHeight = 678;
     return (
-        <div className={`relative w-[300px] h-[287px] ${className}`}>
+        <div className={`relative w-3/4 h-3/4 ${className}`}>
             <Image 
                 src={`${profilePicSrc}`} 
                 alt={`${profilePicDescription}`} 
-                className="w-full h-full object-cover"
-                width={300}
-                height={287}
+                className="w-full"
+                width={imageWidth}
+                height={imageHeight}
             />
         </div>
     );

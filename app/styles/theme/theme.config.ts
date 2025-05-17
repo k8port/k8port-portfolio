@@ -32,21 +32,11 @@ export const themeConfig = {
     'sm': '640px',
     'md': '768px',
     'lg': '1024px',
-    'wide': '1200px',
-  },
-  animation: {
-    'fade-in': 'fadeIn 0.3s ease-in-out',
-    'slide-up': 'slideUp 0.3s ease-out',
-  },
-  keyframes: {
-    fadeIn: {
-      '0%': { opacity: '0' },
-      '100%': { opacity: '1' },
-    },
-    slideUp: {
-      '0%': { transform: 'translateY(20px)', opacity: '0' },
-      '100%': { transform: 'translateY(0)', opacity: '1' },
-    },
+    'xl': '1200px',
+    '2xl': '1400px',
+    '3xl': '1600px',
+    '4xl': '1800px',
+    '5xl': '2000px',
   },
   transition: {
     'default': 'all 0.3s ease-in-out',

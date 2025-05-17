@@ -15,7 +15,7 @@ import Header from "./ui/header/Header";
 import { dmSerifDisplay, greatVibes, martianMono, spaceGrotesk, cormorantGaramond } from "./styles/typography/fonts";
 
 export const metadata: Metadata = {
-  title: "k8port | Kate Portalatin",
+  title: "k8portalatin | Software Engineer",
   description:
     "Kate Portalatin's (k8port) portfolio build using Next.js 13, Tailwind CSS, and TypeScript",
 };
@@ -26,29 +26,40 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-          <body className={`
-            ${spaceGrotesk.variable} 
-            ${dmSerifDisplay.variable}
-            ${greatVibes.variable}
-            ${martianMono.variable}
-            ${cormorantGaramond.variable}
-            font-spacegrotesk
-            flex
-            flex-col
-            bg-brand-primary
-            antialiased
-            overflow-x-hidden
-            scroll-smooth
-          `}>
-            <Header />
-            <main className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-4 overflow-y-auto">
-              {children}
-            </main>
-          </body>
-          <Analytics />
-          <SpeedInsights />
-        {/* <Footer className="fixed bottom-0 z-50" /> */} 
+    <html lang="en" className="scroll-smooth">
+      <head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Kate Portalatin's (k8port) portfolio build using Next.js 
+          15, TypeScript, React 19, Tailwind CSS 4, and TypeScript" />
+        <meta name="keywords" content="Kate Portalatin, k8port, portfolio, Next.js, TypeScript, React, Tailwind CSS" />
+      </head>
+      <body className={`
+        ${spaceGrotesk.variable} 
+        ${dmSerifDisplay.variable}
+        ${greatVibes.variable}
+        ${martianMono.variable}
+        ${cormorantGaramond.variable}
+        font-spacegrotesk
+        flex
+        flex-col
+        bg-brand-primary
+        antialiased
+        overflow-x-hidden
+      `}>
+        <Header className={`
+          fixed top-0 left-0 
+          w-full z-50 
+          bg-brand-secondary/70 
+          backdrop-blur-sm
+        `}/>
+        <main>
+          {children}
+        </main>
+      </body>
+        <Analytics />
+        <SpeedInsights />
+      {/* <Footer className="fixed bottom-0 z-50" /> */} 
     </html>
   );
 }

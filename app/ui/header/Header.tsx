@@ -1,28 +1,25 @@
 import Brand from "./Brand";
 import NavMenu  from "./NavMenu";
 
-export default function Header() {
-
+export default function Header({ className }: { className?: string }) {
   return (
-    <header className={`
-        sticky top-0 z-50
-        bg-brand-secondary
-        transition-all duration-300
-        header-shadow
-  `}>
+    <header className={`transition-all duration-300 header-shadow ${className}`}>
       <div className="flex items-center py-1 shadow-xl">
         <div className={`container max-w-full mx-auto px-4 sm:px-4 lg:px-4`}>
           <div className="flex items-center justify-between w-full">
             <Brand />
             <div className={`
-              flex-grow flex justify-center font-greatvibes 
-              text-accent-accentgreenvar 
-              text-shadow-xl
-              text-2xl tracking-normal 
-              leading-[10px]
+              flex-grow flex 
+              justify-center
+              font-martianmono
+              text-bluegrays-deepspacesparkle
+              text-[8px]
+              md:text-sm
+              leading-[8px]
+              md:leading-2
             `}>
-              <span className="absolute top-5 left-40">
-                Non Perditio Dolorem 
+              <span className="absolute top-5 left-42 md:left-50 text-accent-accentbluevar tracking-tighter">
+                [ I'm not just a node, I am circuits.]
               </span>
             </div>
             <NavMenu className="flex-grow flex justify-end" />

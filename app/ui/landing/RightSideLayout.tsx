@@ -1,5 +1,5 @@
 import React from "react";
-import { ButtonGroup } from "./ButtonGroup";
+import { ButtonGroup } from "../buttons/MobileButtonGroup";
 import { ProfileDescriptionGroup } from "./ProfileDescriptionGroup";
 
 interface RightSideLayoutProps {

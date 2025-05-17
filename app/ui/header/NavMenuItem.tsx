@@ -12,6 +12,7 @@ const NavMenuItem = ({ label, href }: NavMenuItemProps) => {
       inline-flex items-center 
       px-px py-2 
       nav-menu-item
+      hover:underline
       hover:text-collection-alizarincrimson
       transition-colors duration-300">
       <Link href={href}>{label}</Link>

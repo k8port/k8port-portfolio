@@ -4,7 +4,7 @@ import Image from 'next/image';
 export default function Brand() {
     return (
         <div className={`
-            absolute inset-1 w-[95px] h-[30px] left-10 z-10
+            absolute inset-1 w-[95px] h-[30px] left-10 top-2 z-10
             bg-bluegrays-cadetgray
             brand-style
             overflow-hidden

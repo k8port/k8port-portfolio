@@ -1,12 +1,15 @@
 import React from "react";
-import { LandingContainer } from "./ui/background/LandingContainer";
+import Landing from "./ui/landing/LandingContent";
+import { LandingContainer } from "./ui/landing/LandingContainer";
+
 
 export default function HomePage() {
   return (
-      <div className={`bg-brand-primary overflow-y-scroll`}>
-      
-        <LandingContainer className="max-w-screen px-0" />
-      </div>
+    <>
+        <section id="landing" className="relative h-screen w-full overflow-hidden">
+          <LandingContainer />
+        </section>
+    </>
   );
 }
 

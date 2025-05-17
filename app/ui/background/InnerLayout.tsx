@@ -25,20 +25,16 @@ export default function InnerLayout({
       aspect-[${aspectRatio}]
       ${className}
     `}>
-      <div className={`aspect-[${aspectRatio}] aspect-[5/4]`}>
         <ImageFrame
-          className={`relative`}
+          className={`aspect-[${aspectRatio}] relative`}
           imageSrc={imageSource}
           imageClassName={imageFrameClassName}
           imageAlt={imageAlt}
           imageWidth={imageWidth}
           imageHeight={imageHeight}
         />
-        <div className="object-cover overflow-y-scroll">
-          <RainbowGradientOverlay className="absolute inset-0" innerClassName="mix-blend-exclusion" />
-          <RainbowGradientOverlay className="absolute inset-0" innerClassName="mix-blend-hard-light" />
-        </div>
-      </div>
+          <RainbowGradientOverlay className="aspect-[${aspectRatio}] absolute inset-0" innerClassName="mix-blend-exclusion" />
+          <RainbowGradientOverlay className="aspect-[${aspectRatio}] absolute inset-0" innerClassName="mix-blend-hard-light" />
     </div>
   );
 };

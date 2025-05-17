@@ -1,14 +1,23 @@
-import React from "react";
+import React, { forwardRef } from "react";
 
-export default function OpacityOverlay() {
-    return (
-        <div className={`
-            relative
-            w-full h-full
-            bg-gradient-to-b from-brand-primary
-            to-brand-primary/75
-            to-brand-primary/0
-        `}>
-        </div>
-    );
+interface OpacityOverlayProps {
+    className?: string;
 }
+
+const OpacityOverlay = forwardRef<HTMLDivElement, OpacityOverlayProps>(({ className }, ref) => {
+    return (
+        <div 
+            ref={ref}
+            className={`
+                bg-gradient-to-b from-brand-primary
+                from-35%
+                to-brand-primary/0
+                ${className}
+            `}
+        />
+    );
+});
+
+OpacityOverlay.displayName = 'OpacityOverlay';
+
+export default OpacityOverlay;

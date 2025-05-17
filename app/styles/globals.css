@@ -55,11 +55,11 @@
 	}
 
 	p {
-		@apply font-spacegrotesk text-base leading-[17.7px];
+		@apply font-spacegrotesk text-base leading-[18.7px];
 	}
 
 	.paragraph-base {
-		@apply text-[13px] leading-[17.7px];
+		@apply text-[14px] leading-[25px];
 	}
 
 	.paragraph-small {
@@ -71,19 +71,19 @@
 	}
 
 	.caption-light {
-		@apply font-spacegrotesk font-normal text-xs tracking-[0] leading-4 uppercase not-italic;
+		@apply font-spacegrotesk font-normal text-xl tracking-[0] leading-5 not-italic;
 	}
 
 	.caption-heavy {
-		@apply font-spacegrotesk font-bold text-xs tracking-[0] leading-4 uppercase not-italic;
+		@apply font-spacegrotesk font-bold text-xs tracking-[0] leading-4 not-italic;
 	}
 
 	.nav-menu-item {
-		@apply font-martianmono font-normal text-bluegrays-stormcloud text-xs tracking-[-0.35px] leading-4 lowercase not-italic;
+		@apply font-spacegrotesk font-normal text-bluegrays-stormcloud text-sm leading-4 lowercase not-italic;
 	}
 
 	.greeting {
-		@apply font-greatvibes font-normal text-blueblacks-bluecharcoal text-[108px] tracking-[0] leading-[108px] whitespace-nowrap;
+		@apply font-greatvibes font-normal text-greenwhites-harp tracking-[0] whitespace-nowrap;
 	}
 }
 
@@ -168,12 +168,55 @@
 	}
 
 	/* Animation Utilities */
+	@keyframes fadeIn {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+	@keyframes scroll {
+		0% { transform: translateX(100%); }
+		100% { transform: translateX(-100%); }
+	}
+
+	@keyframes slideUp {
+		0% {
+			transform: translateY(10px);
+			opacity: 0;
+		}
+		100% {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+
+	@keyframes float {
+		0%,
+		100% {
+			transform: translateY(0);
+		}
+		50% {
+			transform: translateY(-10px);
+		}
+	}
+
 	.animate-fade-in {
-		@apply animate-fade-in;
+		animation: fadeIn 0.3s ease-in-out;
 	}
 
 	.animate-slide-up {
-		@apply animate-slide-up;
+		animation: slideUp 0.3s ease-out;
+	}
+
+	.animate-float {
+		animation: float 6s ease-in-out infinite;
+	}
+
+	.animate-scroll {
+		animation: scroll 10s linear infinite;
 	}
 
 	/* Transition Utilities */
@@ -188,14 +231,18 @@
 	.transition-slow {
 		@apply transition-slow;
 	}
-}
 
-@layer utilities {
+	/* Header & Brand Styles */
 	.header-shadow {
 		box-shadow: 0 0 25px 0 rgba(37, 43, 47, 0.3);
 	}
 
 	.brand-style {
+		box-shadow: inset 0 0 5px 0 rgba(248, 249, 245, 0.8), 0 2 8px 0 rgba(40, 41, 61, 0.15);
+		border: 1px solid #A3C1AD;
+	}
+
+	.inner-shadow {
 		box-shadow: inset 0 0 5px 0 rgba(248, 249, 245, 0.8), 0 2 8px 0 rgba(40, 41, 61, 0.15);
 		border: 1px solid #A3C1AD;
 	}
