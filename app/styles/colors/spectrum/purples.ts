@@ -109,7 +109,6 @@ export const purples = {
         "mythical-purple": "#53277E",
         "northwestern-purple": "#4E2A84",
         "ocean-purple": "#6E2D91",
-        "pale-purple": "#FAE6FA",
         "periwinkle-purple": "#BE93E4",
         "phlox": "#DF00FF",
         "pizza-edge": "#9A2CA0",
