@@ -13,8 +13,6 @@ export default {
       boxShadow: themeConfig.shadows,
       spacing: themeConfig.spacing,
       screens: themeConfig.screens,
-      animation: themeConfig.animation,
-      keyframes: themeConfig.keyframes,
       transitionProperty: themeConfig.transition,
       zIndex: themeConfig.zIndex,
     },

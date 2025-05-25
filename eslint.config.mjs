@@ -11,6 +11,9 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
+  {
+    ignores: ["node_modules/**", ".next/**", "out/**"]
+  },
   ...compat.extends("next/core-web-vitals", "next/typescript", "prettier"),
   {
     plugins: {
@@ -30,8 +33,7 @@ const eslintConfig = [
       // TypeScript specific formatting
       "@typescript-eslint/type-annotation-spacing": "error",
       "@typescript-eslint/semi": ["error", "always"],
-    },
-    ignorePatterns: ["node_modules/", ".next/", "out/"],
+    }
   }
 ];
 
