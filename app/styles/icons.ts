@@ -76,6 +76,7 @@ import {
     SiNeo4J
 } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io5";
+import { FaDownload } from "react-icons/fa6";
 import { 
     DiMongodb,
     DiDjango,
@@ -84,7 +85,7 @@ import {
     DiRuby
  } from "react-icons/di";
 import { MdOutlineViewKanban, MdOutlinePhone } from "react-icons/md";
-import { FaBusinessTime, FaGolang, FaC, FaScrewdriverWrench, FaCompassDrafting, FaPersonDigging } from "react-icons/fa6";
+import { FaBusinessTime, FaGolang, FaC, FaScrewdriverWrench, FaCompassDrafting, FaPersonDigging, FaUserAstronaut, FaArrowRightLong } from "react-icons/fa6";
 import { GiThink, GiTeacher, GiStrongMan } from "react-icons/gi";
 import { TbMath } from "react-icons/tb";
 import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
@@ -93,7 +94,7 @@ import { FcCollaboration } from "react-icons/fc";
 import { PiStudent, PiFileCpp } from "react-icons/pi";
 import { VscAzure } from "react-icons/vsc";
 import { IconType } from 'react-icons';
-
+import { BsMegaphone } from "react-icons/bs";
 
 
 export const iconMap: Record<string, IconType> = {
@@ -199,6 +200,11 @@ export const iconMap: Record<string, IconType> = {
     "Arrow Dropdown": IoMdArrowDropdown,
     "Arrow Dropup": IoMdArrowDropup,
     "Neo4j": SiNeo4J,
+    "Download": FaDownload,
+    "Phone": MdOutlinePhone,
+    "Contact": BsMegaphone,
+    "User": FaUserAstronaut,
+    "Right Arrow": FaArrowRightLong
 }
 
 export function getFontAwesomeIcon(iconName: string): IconType | null {

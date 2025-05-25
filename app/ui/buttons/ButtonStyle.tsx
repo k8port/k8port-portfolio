@@ -1,6 +1,8 @@
 import React from "react";
 import { ShapeCircle } from "../icons/ShapeCircle";
 import { Rec } from "../icons/Rec";
+import { IconType } from "react-icons/lib";
+import { getFontAwesomeIcon } from "@/app/styles/icons";
 
 interface ButtonStyleProps {
     style: "filled" | "ghost" | "outlined";
@@ -8,7 +10,8 @@ interface ButtonStyleProps {
     size: "large" | "medium" | "small" | "tiny";
     borderRadius: "four" | "eight" | "sixteen" | "thirty-two";
     buttonText: string;
-    buttonIconSelection?: string;
+    buttonIconSelection?: IconType;
+    onClick?: () => void;
 }
 
 export const ButtonStyle = ({
@@ -17,7 +20,8 @@ export const ButtonStyle = ({
     size,
     borderRadius,
     buttonText,
-    buttonIconSelection, 
+    buttonIconSelection,
+    onClick,
 }: ButtonStyleProps) => {
     let styleClass = "bg-brand-tertiary border border-solid border-brand-secondaryvar";
     let hoverStyleClass = "hover:bg-brand-tertiaryvar hover:border-2 hover:border-brand-quinary";
@@ -26,6 +30,7 @@ export const ButtonStyle = ({
     let sizeClass = "px-28 py-5";
     let iconPositionClass = "left-icon";
     let borderRadiusClass = "rounded-sm";
+    const IconComponent = buttonIconSelection ?? null;
 
     if (style === "outlined") {
         styleClass = "bg-brand-secondary/25 border border-solid border-accent-accentred !text-bluewhites-ghostwhite";
@@ -70,18 +75,22 @@ export const ButtonStyle = ({
     return (
         /* default code is for large button right icon, border-radius: four */
         
-        <div className={`
-            inline-flex items-center 
-            justify-center gap-1 
-            ${sizeClass}
-            ${styleClass}
-            ${hoverStyleClass}
-            ${activeStyleClass}
-            ${loadingStyleClass}
-            ${iconPositionClass}
-            ${borderRadiusClass}
-            border border-solid
-            shadow-btn-shadow6
+        <button 
+            type="button"
+            onClick={onClick}
+            className={`
+                inline-flex items-center 
+                justify-center gap-1 
+                ${sizeClass}
+                ${styleClass}
+                ${hoverStyleClass}
+                ${activeStyleClass}
+                ${loadingStyleClass}
+                ${iconPositionClass}
+                ${borderRadiusClass}
+                border border-solid
+                shadow-btn-shadow6
+                cursor-pointer
         `}>
             <div className={`
                 inline-flex 
@@ -97,15 +106,13 @@ export const ButtonStyle = ({
                     whitespace-nowrap 
                     not-italic
                     font-bold lg:font-normal
-                    text-sm
-                    sm:text-base lg:text-xl
+                    text-xs lg:text-sm
                     uppercase
-                    leading-4 lg:leading-7
-                    tracking-[-0.35px] lg:tracking-[-0.45px]
                     [&[data-loading="true"]]:text-transparent
                     text-greenblacks-jade
                 `}>
-                    <span className="data-[loading=true]:hidden">{buttonText}</span>
+                    {IconComponent && <IconComponent className="inline-flex mx-auto" />}
+                    <span className="data-[loading=true]:hidden mx-2">{buttonText}</span>
                 </div>
                 <div className={`
                     text-greenblacks-jade
@@ -121,6 +128,6 @@ export const ButtonStyle = ({
                     <Rec className="hidden group-data-[loading=true]:inline-block animate-spin !relative !w-2 !h-2" />
                 </div>
             </div>
-        </div>
+        </button>
     );
 }

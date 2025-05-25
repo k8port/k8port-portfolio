@@ -12,21 +12,21 @@ export const ItIsI = ({ className, insertNameHere, insertJobTitleHere }: ItIsIPr
   return (
     <div className={`${className}`}> 
         <Display 
-          className="w-96 h-auto text-left" 
+          className="w-96 h-auto text-center sm:text-left"
           displayText={insertNameHere} 
           textColor="text-greengrays-graygreen"
           textSize="text-5xl" />
         <Headline 
-          className="mt-2 w-96 h-auto text-left" 
+          className="mt-2 w-96 h-auto text-center sm:text-left" 
           headlineText={insertJobTitleHere} 
           headlineStyle="default" 
           textColor="text-greengrays-chameleongray"
           textSize="text-lg" />
-        <div className="mt-10 w-vw h-auto">
+        <div className="mt-4 sm:mt-10 w-96 md:w-md lg:w-2xl h-auto">
           <ProfilePic 
             imageWidth={686} 
             imageHeight={678}
-            className="mix-blend-overlay opacity-60"
+            className="mix-blend-multiply"
             profilePicSrc="/images/abstract_profile.png"
             profilePicDescription="Profile Picture"
           />

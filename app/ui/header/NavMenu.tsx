@@ -19,7 +19,6 @@ export default function NavMenu({ className }: NavMenuProps) {
     { label: "home", href: "#hero" },
     { label: "projects", href: "#projects" },
     { label: "contact", href: "#contact" },
-    { label: "resume", href: "/resume" },
   ];
 
   return (

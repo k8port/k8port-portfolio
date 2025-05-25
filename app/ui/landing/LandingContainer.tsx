@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useRef } from "react";
-import { useScrollFade } from "../../lib/hooks/useScrollFade";
 import Image from "next/image";
 import RainbowGradientOverlay from "../background/RainboxGradientOverlay";
 import OpacityOverlay from "../background/OpacityOverlay";
@@ -26,13 +25,17 @@ export const LandingContainer = () => {
         className={`
           absolute inset-0
           aspect-[1/2]
-          md:aspect-[${aspectRatio}]
-          wide:aspect-4
+          sm:aspect-[${aspectRatio}]
+          md:aspect-4/5
+          lg:aspect-5/6
+          xl:aspect-6/7
           object-cover z-0
           -translate-y-12
           md:-translate-y-16
           lg:-translate-y-32
           xl:-translate-y-48
+          max-w-full
+          max-h-full
         `}
       />
 
@@ -47,7 +50,7 @@ export const LandingContainer = () => {
       <ScrollingBanner className="relative z-50" />
 
       {/* layer 5: Landing Content */}
-      <LandingContent ref={scrollRef} className={`relative z-60 h-screen overflow-y-auto`} />
+      <LandingContent ref={scrollRef} className={`relative z-60`} />
     </div>
   );
 };

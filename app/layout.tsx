@@ -48,10 +48,12 @@ export default function RootLayout({
         overflow-x-hidden
       `}>
         <Header className={`
-          fixed top-0 left-0 
-          w-full z-50 
-          bg-brand-secondary/70 
+          sticky top-0 left-0 
+          w-full h-12 z-99 
+          bg-brand-secondary/75
           backdrop-blur-sm
+          transition-all duration-300 
+          header-shadow
         `}/>
         <main>
           {children}
