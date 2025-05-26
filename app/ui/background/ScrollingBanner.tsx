@@ -7,12 +7,12 @@ interface ScrollingBannerProps {
 export default function ScrollingBanner({ className }: ScrollingBannerProps) {
     return (
         <div className={`
-            fixed top-12 left-0
+            fixed top-6 left-0
             w-full h-10
             bg-accent-accentbluevar/50
             z-50
             overflow-hidden
-            h-10 md:h-20
+            h-10 md:h-16
             flex 
             items-center
             border border-solid border-brand-primary

@@ -37,7 +37,7 @@ export default function LayeredVector({ className }: LayeredVectorProps) {
                     height={height}
                     className={`
                         min-h-[700px] min-w-[160px]
-                        sm:min-h-[650px] sm:min-w-[180px]
+                        sm:min-h-[650px] sm:min-w-[220px]
                         md:min-h-[825px] md:min-w-[240px]
                         lg:min-h-[900px] lg:min-w-[260px]
                         aspect-[${aspectRatio}] 
@@ -61,7 +61,7 @@ export default function LayeredVector({ className }: LayeredVectorProps) {
                     height={height} 
                     className={`
                         min-h-[700px] min-w-[160px]
-                        sm:min-h-[650px] sm:min-w-[180px]
+                        sm:min-h-[650px] sm:min-w-[220px]
                         md:min-h-[825px] md:min-w-[240px]
                         lg:min-h-[900px] lg:min-w-[260px]
                         aspect-[${aspectRatio}] 

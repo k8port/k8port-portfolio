@@ -32,7 +32,7 @@ export const DesktopButtonGroup = ({ className }: DesktopButtonGroupProps) => {
                 buttonIconSelection={DownloadIcon ?? undefined}
                 onClick={handleResumeClick}
             />
-            <ButtonStyle
+            {/* <ButtonStyle
                 style="filled"
                 iconPosition="left-icon"
                 size="small"
@@ -40,7 +40,7 @@ export const DesktopButtonGroup = ({ className }: DesktopButtonGroupProps) => {
                 buttonText="Contact Me"
                 buttonIconSelection={PhoneIcon ?? undefined}
                 onClick={handleContactClick}
-            />
+            /> */}
         </div>
     );
 };

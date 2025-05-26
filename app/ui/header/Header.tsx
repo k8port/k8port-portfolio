@@ -7,7 +7,7 @@ export default function Header({ className }: { className?: string }) {
       <div className="flex items-center py-2">
         <div className={`container max-w-full mx-auto px-4 sm:px-4 lg:px-4`}>
           <div className="flex items-center justify-between w-full">
-            <Brand />
+            {/* <Brand /> */}
             <div className={`
               flex-grow flex 
               justify-center
