@@ -49,8 +49,12 @@ export default function RootLayout({
       `}>
         <Header className={`
           sticky top-0 left-0 
-          w-full h-12 z-99 
-          bg-brand-secondary/75
+          w-full h-16 z-99 
+          bg-brand-secondaryvar/65
+          bg-[url('/images/waves_pattern.png')]
+          bg-no-r bg-cover
+          bg-center
+          bg-blend-overlay
           backdrop-blur-sm
           transition-all duration-300 
           header-shadow

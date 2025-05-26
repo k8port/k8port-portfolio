@@ -46,8 +46,8 @@ export const LandingContainer = () => {
       {/* layer 3: Animated Opacity Layer */}
       <OpacityOverlay ref={overlayRef} className="absolute inset-0 transition-opacity duration-300 z-30" />
 
-      {/* layer 4: Scrolling Banner */}
-      <ScrollingBanner className="relative z-50" />
+      {/* layer 4: Scrolling Banner
+      <ScrollingBanner className="relative z-50" /> */}
 
       {/* layer 5: Landing Content */}
       <LandingContent ref={scrollRef} className={`relative z-60`} />

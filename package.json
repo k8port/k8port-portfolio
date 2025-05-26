@@ -49,8 +49,6 @@
 		"@types/node": "^20.17.48",
 		"@types/react": "^19.1.4",
 		"@types/react-dom": "^19.1.5",
-		"@typescript-eslint/eslint-plugin": "^8.32.1",
-		"@typescript-eslint/parser": "^8.32.1",
 		"clsx": "^2.1.1",
 		"cypress": "^14.3.3",
 		"eslint": "^9.27.0",
@@ -78,10 +76,14 @@
 	},
 	"pnpm": {
 		"ignoredBuiltDependencies": [
+			"@tailwindcss/oxide",
 			"@vercel/speed-insights",
-			"@vercel/speed-insights",
+			"@vscode/ripgrep",
+			"bufferutil",
+			"cypress",
 			"sharp",
-			"sharp"
+			"unrs-resolver",
+			"utf-8-validate"
 		]
 	},
 	"overrides": {

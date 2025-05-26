@@ -78,7 +78,7 @@
 	}
 
 	.nav-menu-item {
-		@apply font-spacegrotesk font-normal text-bluegrays-stormcloud text-sm leading-4 lowercase not-italic;
+		@apply font-spacegrotesk font-normal text-bluegrays-stormcloud text-lg leading-4 lowercase not-italic;
 	}
 
 	.greeting {
