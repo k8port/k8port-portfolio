@@ -31,8 +31,7 @@ const eslintConfig = [
       "react/jsx-indent": ["error", 2],
       "react/jsx-indent-props": ["error", 2],
       // TypeScript specific formatting
-      "@typescript-eslint/type-annotation-spacing": "error",
-      "@typescript-eslint/semi": ["error", "always"],
+      "@typescript-eslint/type-annotation-spacing": "error"
     }
   }
 ];
