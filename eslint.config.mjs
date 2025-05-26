@@ -15,7 +15,7 @@ const eslintConfig = [
   {
     ignores: ["node_modules/**", ".next/**", "out/**"]
   },
-  ...compat.extends("next/core-web-vitals", "next/typescript", "prettier"),
+  ...compat.extends("next/core-web-vitals", "next/typescript", "prettier", "plugin:react/recommended", "plugin:@typescript-eslint/recommended"),
   {
     plugins: {
       prettier: prettier,
