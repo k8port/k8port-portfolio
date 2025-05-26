@@ -17,7 +17,7 @@ const projects = [
     {
         title: "Family Device Agent",
         description: "SaaS platform built to manage family devices, including smart home and personal, with a focus on security and privacy. (prototype in TypeScript)",
-        link: "https://github.com/k8port/family_device_agent",
+        link: "https://github.com/k8port/device-management-system",
         tags: ["Java", "Spring", "AWS", "Docker", "Terraform"],
     },
     {
