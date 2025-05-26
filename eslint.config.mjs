@@ -2,6 +2,7 @@ import { dirname } from "path";
 import { fileURLToPath } from "url";
 import { FlatCompat } from "@eslint/eslintrc";
 import prettier from "eslint-plugin-prettier";
+import tsEslintPlugin from "@typescript-eslint/eslint-plugin";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -17,7 +18,8 @@ const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript", "prettier"),
   {
     plugins: {
-      prettier: prettier
+      prettier: prettier,
+      '@typescript-eslint': tsEslintPlugin,
     },
     rules: {
       // Add prettier rule
