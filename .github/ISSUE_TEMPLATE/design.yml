@@ -1,7 +1,7 @@
 # design.yml
 name: Design Update
 description: Request design changes
-labels: ["design"]
+labels: ['design']
 body:
   - type: textarea
     id: current_design

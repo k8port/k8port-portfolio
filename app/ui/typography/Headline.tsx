@@ -1,0 +1,38 @@
+import React from 'react';
+
+interface HeadlineProps {
+    className?: string;
+    headlineText: string;
+    headlineStyle?: 'default' | 'heavy';
+    textColor?: string;
+    textSize?: string;
+}
+
+export const Headline = ({
+    className,
+    headlineText,
+    headlineStyle,
+    textColor,
+    textSize,
+}: HeadlineProps) => {
+    const fontWeightClass = headlineStyle === 'heavy' ? 'font-bold' : 'font-normal';
+    const transformClass = headlineStyle === 'heavy' ? 'uppercase' : 'capitalize';
+    const leadingClass = headlineStyle === 'heavy' ? 'leading-8' : 'leading-[normal]';
+    return (
+        <p
+            className={`
+            font-spacegrotesk 
+            ${fontWeightClass} 
+            ${leadingClass} 
+            ${transformClass}
+            ${textColor}
+            ${textSize}
+            ${className}
+            hover:text-brand-quinary
+            hover:text-xl
+        `}
+        >
+            {headlineText}
+        </p>
+    );
+};

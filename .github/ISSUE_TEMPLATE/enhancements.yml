@@ -2,7 +2,7 @@
 # enhancement.yml
 name: Feature Request
 description: Suggest an enhancement
-labels: ["enhancement"]
+labels: ['enhancement']
 body:
   - type: textarea
     id: description

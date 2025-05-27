@@ -1,7 +1,7 @@
 # optimization.yml
 name: Performance Optimization
 description: Report performance issues
-labels: ["optimization"]
+labels: ['optimization']
 body:
   - type: textarea
     id: current

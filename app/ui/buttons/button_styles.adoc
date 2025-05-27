@@ -1,0 +1,240 @@
+= Button Styles
+
+== Large buttons (164x56, border-radius: 4)
+
+.Filled, _right-icon_
+[horizontal]
+*default*:: (ButtonStyle.tsx)
+*hover*::
+[horizontal]
+_first line_::: `bg-brand-tertiaryvar`
+*pressed*:: 
+[horizontal]
+_first line_:::
+[horizontal]
+* `bg-brand-primary`
+* `border border-solid border-brand-tertiary`
+* `text-bluewhites-ghostwhite`
+*loading*::
+[horizontal]
+_second line_:::
+[horizontal]
+* `items-end` to `items-center`
+_first line_::: 
+[horizontal]
+* `px` to `px-[60px]`
+* `bg-brand-secondaryvar`
+* no border classes
+_Icons_:::
+[horizontal]
+* 2 small Rectangle icons placed before and after main icon using `!w-2 !h-2`
+* main icon class `!w-4 !h-4`
+* `text-redblacks-blackplum`
+*disable*::
+[horizontal]
+_first line_:::
+[horizontal]
+* `px` to `px-[52px]`
+* `bg-greenwhites-featherwhite`
+* no border classes
+_icon + text_:::
+[horizontal]
+* main icon class to `!w-3.5 !h-3.5`
+* single icon
+* text-bluegrays-antiquepewter
+
+.Outlined, _right-icon_
+[horizontal]
+*default*::
+[horizontal]
+ _first line_:::
+[horizontal]
+* `border-2 border-solid border-accent-accentred`
+*hover*::
+[horizontal]
+_first line_:::
+[horizontal]
+* `border-2 border-solid border-accent-accentredvar`
+*pressed*::
+[horizontal]
+_first line_::: 
+[horizontal]
+* `bg-accent-accentred` 
+* `border-2 border-solid border-collection-alizarincrimson`
+_icon + text_:::
+[horizontal]
+* `text-brand-secondary`
+*loading*::
+[horizontal]
+_second line_:::
+[horizontal]
+* `items-end` to `items-center`
+_first line_:::
+[horizontal]
+* `px` to `px-[60px]`
+* `bg-brand-secondary`
+* `border-2 border-solid border-accent-accentredvar`
+_Icons_::: same as filled
+*disable*::
+[horizontal]
+_first line_:::
+[horizontal]
+* `px` to `px-[52px]`
+* `border-2 border-solid border-greenwhites-featherwhite`
+_icon + text_::: same as filled
+
+.Ghost,right-icon
+[horizontal]
+*default*::
+[horizontal]
+_first line_:::
+[horizontal]
+* `bg-accent-accentgreenvar`
+* `opacity-50`
+* `$className`
+*hover*::
+[horizontal]
+_first line_:::
+[horizontal]
+* `bg-accent-accentgreen`
+* `opacity-60`
+*pressed*::
+[horizontal]
+_first line_:::
+[horizontal]
+* `bg-accent-accentgreen`
+* `opacity-80`
+*loading*::
+[horizontal]
+_second line_::: same as filled and outlined
+_first line_:::
+[horizontal]
+* `bg-accent-accentgreenvar`
+* `opacity-50`
+_Icons_::: same as filled and outlined
+*disable*::
+[horizontal]
+_first line_:::
+[horizontal]
+* `px-[52px]`
+* `bg-accent-accentgreenvar`
+* `opacity-30`
+
+=== Large Button ICON Variations
+.All variations are same as right icon unless specified below
+[horizontal,labelwidth=28,itemwidth=72]
+_left icon_:: swap _text_ with _icon_,  else same as _right icon_
+_no icon_:: remove _icon_ + use sm circle + rectangles icons for *loading* 
+_icon-right-left-text_::
+[horizontal]
+*ln 21*::: `px-[25px]` 
+*ln 22*::: `gap-[60px]`
+_icon-left-right-text_::
+[horizontal]
+Same as `icon-right-left-text` but swap _text_ and _icon_::: **
+
+== Medium (154x48, border-radius: 4)
+.All variations are same as large buttons unless specified below
+Filled, Outlined, + Ghost w/ _right-icon_::
+[horizontal]
+*default*:::
+[horizontal]
+_first line_:::: `px-[47px] py-4`
+*hover*:::
+[horizontal]
+_first line_:::: `px-[47px] py-4`
+*pressed*:::
+[horizontal]
+_first line_:::: `px-[47px] py-4`
+*loading*:::
+[horizontal]
+_first line_:::: `px-[55px] py-4`
+*disable*:::
+[horizontal]
+_first line_:::: `px-[47px] py-4`
+
+=== Medium Button ICON Variations
+.All variations are same as large buttons unless specified below
+_left icon_:: swap _text_ with _icon_,  else same as _right icon_
+_no icon_:: remove _icon_ + use sm circle + rectangles icons for *loading* 
+_icon-right-left-text_::
+[horizontal]
+*ln 21*::: `px-[5px]` 
+*ln 22*::: `gap-[60px]` 
+_icon-left-right-text_::
+[horizontal]
+Same as `icon-right-left-text` but swap _text_ and _icon_::: **
+
+== Small (138x40, border-radius: 4)
+.All variations are same as large and medium buttons unless specified below
+Filled, Outlined, + Ghost w/ _right-icon_::
+[horizontal]
+*default*:::
+[horizontal]
+_first line_:::: `px-[39px] py-3`
+*hover*:::
+[horizontal]
+_first line_:::: `px-[39px] py-3`
+*pressed*:::
+[horizontal]
+_first line_:::: `px-[39px] py-3`  
+*loading*:::
+[horizontal]
+_first line_:::: `px-[47px] py-3`
+*disable*:::
+[horizontal]
+_first line_:::: `px-[39px] py-3`  
+
+=== Small Button ICON Variations
+.All variations are same as large and medium buttons unless specified below
+_left icon_:: swap _text_ with _icon_,  else same as _right icon_
+_no icon_:: remove _icon_ + use sm circle + rectangles icons for *loading* 
+_icon-right-left-text_::
+[horizontal]
+*ln 21*::: `p-3` 
+*ln 22*::: `gap-[60px]` 
+_icon-left-right-text_::
+[horizontal]
+Same as `icon-right-left-text` but swap _text_ and _icon_::: **
+
+== Tiny (106x32, border-radius: 4)
+.All variations are same as large, medium, and small buttons unless specified below
+Filled, Outlined, + Ghost w/ _right-icon_::
+[horizontal]
+*default*:::
+[horizontal]
+_first line_:::: `px-[27px] py-2`
+*hover*:::
+[horizontal]
+_first line_:::: `px-[27px] py-2`
+*pressed*:::
+[horizontal]
+_first line_:::: `px-[27px] py-2`
+*loading*:::
+[horizontal]
+_first line_:::: `px-[31px] py-2`
+*disable*:::
+[horizontal]
+_first line_:::: `px-[27px] py-2`
+
+=== Tiny Button ICON Variations
+.All variations are same as large, medium, and small buttons unless specified below
+_left icon_:: swap _text_ with _icon_,  else same as _right icon_
+_no icon_:: remove _icon_ + use sm circle + rectangles icons for *loading* 
+_icon-right-left-text_::
+[horizontal]
+*ln 21*::: `px-2.5`  
+*ln 22*::: `gap-[60px]` 
+_icon-left-right-text_::
+[horizontal]
+Same as `icon-right-left-text` but swap _text_ and _icon_::: **
+
+== Border-Radius Variations (all button sizes)
+.All variations are same as large, medium, small and tiny buttons unless specified below
+[horizontal]
+_four_::: `rounded`
+_eight_::: `rounded-lg`
+_sixteen_::: `rounded-2xl`
+_thirty-two_::: `rounded-[32px]`
+
+ 

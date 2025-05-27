@@ -1,0 +1,119 @@
+= Rules of Fractions
+:stem:
+
+Fractions are a way to represent a part of a whole. They are written as a ratio of two numbers, the numerator and the denominator. The numerator is the number of parts you have (the number on top), and the denominator is the total number of parts (the number on the bottom).
+
+== Adding Fractions
+To add fractions, fractions involved must have a common denominator. If they do not have a common denominator, you must find a common denominator before adding the fractions. This can be done by finding the least common multiple of the denominators (LCM).  Fractions are added by adding the numerators only of the fractions, which is why a common denominator is required.
+
+=== Lowest Common Denominator
+The lowest common denominator is the smallest number that is a multiple of both denominators.
+
+To find the lowest common denominator, you can use the following steps:
+
+* List the multiples of each denominator.
+* Find the smallest number that is in all of the lists.
+
+This number is the lowest common denominator.
+
+.Adding Fractions with a Common Denominator
+[stem]
+++++ 
+frac{1}{4} + frac{2}{4} = frac{1 + 2}{4} = frac{3}{4}
+++++
+
+.Adding Fractions without a Common Denominator
+[stem]
+++++
+frac{1}{2} + frac{1}{3} = frac{1*3}{2*3} + frac{1*2}{3*2} = frac{3}{6} + frac{2}{6} = frac{5}{6}
+++++
+
+==== Finding the Least Common Denominator: Tips and Tricks
+
+_Find the least common denominator between 2 and 3 by finding multiples of both numbers and picking the smallest number that are on both lists._
+
+_You can also find a common denominator by multiplying the 2 unalike numbers together, but the answer will not necessarily be the least common denominator._
+
+== Subtracting Fractions
+Subtracting fractions is like adding fractions in that fractions subtracted must have a common denominator. If they do not have a common denominator, you must find a common denominator before subtracting the fractions. Subtracting fractions is done by subtracting the numerators of the fractions.  Subtraction of fractions is done by subtracting the numerators only of the fractions (the top part), which is why a common denominator is required.
+
+.Subtracting Fractions with a Common Denominator
+[stem]
+++++
+frac{3}{4} - frac{1}{4} = frac{3 - 1}{4} = frac{2}{4}
+++++
+
+.Subtracting Fractions without a Common Denominator
+[stem]
+++++
+frac{1}{2} - frac{1}{3} = frac{1*3}{2*3} - frac{1*2}{3*2} = frac{3}{6} - frac{2}{6} = frac{1}{6}
+++++
+
+== Multiplying Fractions
+Multiplying fractions is done by multiplying the numerators and the denominators of the fractions. Multiplication of fractions does not require fractions to have a common denominator. The only rule is to first multiply the numerators, and then multiply the denominators. 
+
+.Multiplying Fractions Example 1
+[stem]
+++++
+frac{1}{2} * frac{1}{3} = frac{1*1}{2*3} = frac{1}{6}
+++++
+
+.Multiplying Fractions Example 2
+[stem]
+++++
+frac{2}{3} * frac{4}{6} = frac{2*4}{3*6} = frac{8}{18} = frac{4}{9}
+++++
+
+== Dividing Fractions
+Dividing fractions is done by multiplying the first fraction by the reciprocal of the second fraction. The reciprocal of a fraction is found by flipping the numerator and the denominator of the fraction.
+
+.Dividing Fractions Example 1
+[stem]
+++++
+frac{1}{2} ÷ frac{1}{3} = frac{1}{2} * frac{3}{1} = frac{1*3}{2*1} = frac{3}{2}
+++++
+
+== Simplifying Fractions
+To simplify a fraction, find the greatest common factor (GCF) of the numerator and the denominator. The GCF is the largest number that divides both the numerator and the denominator without leaving a remainder.
+
+.Simplifying Fractions Example 1
+[stem]
+++++
+frac{2}{4} = frac{2 ÷ 2}{4 ÷ 2} = frac{1}{2}
+++++
+
+.Simplifying Fractions Example 2
+[stem]
+++++
+frac{8}{18} = frac{8 ÷ 2}{18 ÷ 2} = frac{4}{9}
+++++
+
+== Converting Fractions to Decimals
+To convert a fraction to a decimal, divide the numerator by the denominator.
+
+.Converting Fractions to Decimals Example 1
+[stem]
+++++
+frac{1}{2} = 1 ÷ 2 = 0.5
+++++
+
+.Converting Fractions to Decimals Example 2
+[stem]
+++++
+frac{3}{4} = 3 ÷ 4 = 0.75
+++++
+
+== Converting Decimals to Fractions
+To convert a decimal to a fraction, write the decimal as a fraction with the decimal as the numerator and 1 as the denominator. Then, simplify the fraction.
+
+.Converting Decimals to Fractions Example 1
+[stem]
+++++
+0.5 = frac{0.5}{1} = frac{1}{2}
+++++
+
+.Converting Decimals to Fractions Example 2
+[stem]
+++++
+0.75 = frac{0.75}{1} = frac{3}{4}
+++++

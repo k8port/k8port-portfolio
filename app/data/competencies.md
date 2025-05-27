@@ -23,16 +23,16 @@
   - **Code Quality**: [SonarQube, CheckStyle, PMD, FindBugs, SpotBugs]
 - **Dependency Management**: [Maven Central, JFrog Artifactory, Nexus Repository, JitPack]
 - **Application Servers**: [Tomcat, JBoss/WildFly, WebSphere, WebLogic, Jetty, Undertow]
-- **Microservices**: 
+- **Microservices**:
   - **Service Discovery**: [Eureka, Consul, ZooKeeper]
   - **API Gateway**: [Spring Cloud Gateway, Netflix Zuul, Kong]
-- **Database Technologies**: 
+- **Database Technologies**:
   - **JDBC Drivers**: [MySQL Connector, PostgreSQL JDBC, Oracle JDBC, MongoDB Java Driver]
   - **Connection Pools**: [HikariCP, C3P0, DBCP, Tomcat JDBC]
 - **Security**: [Spring Security, Apache Shiro, JAAS, Keycloak, OAuth2]
 - **Messaging**: [JMS, Apache Kafka, RabbitMQ, ActiveMQ, Apache Camel]
 - **Monitoring & Profiling**: [JMX, JavaMelody, Prometheus, New Relic, AppDynamics, JProfiler]
-- **Cloud & DevOps**: 
+- **Cloud & DevOps**:
   - **Cloud SDKs**: [AWS SDK, Google Cloud SDK, Azure SDK]
   - **Containerization**: [Docker, Kubernetes, OpenShift]
 - **Documentation**: [Javadoc, Swagger/OpenAPI, AsciiDoc, Jekyll, Dokka (Kotlin), Reactive Programming, Project Reactor, RxJava, Akka, Spring WebFlux]
@@ -69,7 +69,7 @@
 - **Utility Libraries**
   - **General Purpose**: [Lodash, Underscore.js, Ramda, date-fns, Moment.js]
   - **HTTP Clients**: [Axios, got, node-fetch, superagent]
--**Database Tools** 
+-**Database Tools**
   - **ORMs/Query Builders**: [Prisma, TypeORM, Sequelize, Knex.js, Mongoose]
   - **Database Clients**: [MongoDB Node Driver, pg, mysql2, Redis Node.js Client]
 -**Development Tools**

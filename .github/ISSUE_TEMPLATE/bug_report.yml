@@ -1,7 +1,7 @@
 # bug_report.yml
 name: Bug Report
 description: File a bug report
-labels: ["bug"]
+labels: ['bug']
 body:
   - type: textarea
     id: description

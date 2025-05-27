@@ -1,0 +1,29 @@
+export const darkThemeColors = {
+    dkaccentblue: 'oklch(0.37 0.1362 285.87)',
+    dkaccentbluevar: 'oklch(0.45 0.0806 285.44)',
+    dkaccentgreen: 'oklch(0.75 0.15387 166.913)',
+    dkaccentgreenvar: 'oklch(0.65 0.11729 180.8506)',
+    dkaccentpurple: 'oklch(0.43 0.1882 336.18)',
+    dkaccentpurplevar: 'oklch(0.5 0.1686 8.32)',
+    dkaccentred: 'oklch(0.63 0.2576 29.18)',
+    dkaccentredvar: 'oklch(0.68 0.2069 33.86)',
+    dkdarkprimary: 'oklch(0.27 0.0963 303.66)',
+    dkdarkquaternary: 'oklch(0.25 0.0667 326.1)',
+    darkquaternaryvar: 'oklch(0.2 0.0729 348.09)',
+    dkdarkquinary: 'oklch(0.25 0.0259 326.31)',
+    dkdarkquinaryvar: 'oklch(0.32 0.0638 340.08)',
+    dkdarksecondary: 'oklch(0.15 0.0641 304.15)',
+    dkdarksecondaryvar: 'oklch(0.3 0.02 339.93)',
+    darksenary: 'oklch(0.2 0.0558 358.14)',
+    dksenaryvar: 'oklch(0.39 0.0303 332.62)',
+    dktertiary: 'oklch(0.23 0.0429 51.7)',
+    dktertiaryvar: 'oklch(0.28 0.0773 2.1)',
+};
+
+export const proficiencyScaleColors = {
+    novice: 'oklch(0.68 0.2069 33.86)',
+    advbegin: 'oklch(0.76 0.1547 96.53)',
+    competent: 'oklch(0.77 0.2293 146.85)',
+    proficient: 'oklch(0.59 0.100276 202.6893)',
+    expert: 'oklch(0.25 0.074853 251.9371)',
+};

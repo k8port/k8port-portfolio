@@ -1,0 +1,37 @@
+<svg width='210' height='59' viewBox='0 0 210 59' fill='none' xmlns='http://www.w3.org/2000/svg'>
+<g filter='url(#filter0_dd_455_3507)'>
+<rect x='4.25' y='2.7973' width='201.5' height='49.1722' stroke='#C2D8D3' stroke-width='0.75'/>
+<line x1='4.5' y1='5.2973' x2='205.5' y2='5.2973' stroke='#A0D6B4' stroke-width='0.75'/>
+<line x1='4.5' y1='8.2973' x2='205.5' y2='8.2973' stroke='#DFE69F' stroke-width='0.75'/>
+<line x1='4.5' y1='11.2973' x2='205.5' y2='11.2973' stroke='#D0F0C0' stroke-width='0.75'/>
+<line x1='4.5' y1='14.2973' x2='205.5' y2='14.2973' stroke='#C9FFE5' stroke-width='0.75'/>
+<line x1='4.5' y1='17.2973' x2='205.5' y2='17.2973' stroke='#A8E4A0' stroke-width='0.75'/>
+<line x1='4.5' y1='20.2973' x2='205.5' y2='20.2973' stroke='#B0E0E6' stroke-width='0.75'/>
+<line x1='4.5' y1='23.2973' x2='205.5' y2='23.2973' stroke='#A8E4A0' stroke-width='0.75'/>
+<line x1='4.5' y1='26.2973' x2='205.5' y2='26.2973' stroke='#A0D6B4' stroke-width='0.75'/>
+<line x1='4.5' y1='29.2973' x2='205.5' y2='29.2973' stroke='#81D8D0' stroke-width='0.75'/>
+<line x1='4.5' y1='32.2973' x2='205.5' y2='32.2973' stroke='#C9FFE5' stroke-width='0.75'/>
+<line x1='4.5' y1='35.2973' x2='205.5' y2='35.2973' stroke='#D8E4BC' stroke-width='0.75'/>
+<line x1='4.5' y1='38.2973' x2='205.5' y2='38.2973' stroke='#D0F0C0' stroke-width='0.75'/>
+<line x1='4.5' y1='41.2973' x2='205.5' y2='41.2973' stroke='#DFE69F' stroke-width='0.75'/>
+<line x1='4.5' y1='44.2973' x2='205.5' y2='44.2973' stroke='#A0D6B4' stroke-width='0.75'/>
+<line x1='4.5' y1='47.2973' x2='205.5' y2='47.2973' stroke='#81D8D0' stroke-width='0.75'/>
+<line x1='4.5' y1='50.2973' x2='205.5' y2='50.2973' stroke='#D8E4BC' stroke-width='0.75'/>
+</g>
+<defs>
+<filter id='filter0_dd_455_3507' x='0' y='0.0473022' width='210' height='58.1722' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'>
+<feFlood flood-opacity='0' result='BackgroundImageFix'/>
+<feColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/>
+<feOffset dy='2'/>
+<feGaussianBlur stdDeviation='2'/>
+<feColorMatrix type='matrix' values='0 0 0 0 0.376471 0 0 0 0 0.380392 0 0 0 0 0.439216 0 0 0 0.16 0'/>
+<feBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_455_3507'/>
+<feColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/>
+<feOffset/>
+<feGaussianBlur stdDeviation='0.5'/>
+<feColorMatrix type='matrix' values='0 0 0 0 0.156863 0 0 0 0 0.160784 0 0 0 0 0.239216 0 0 0 0.04 0'/>
+<feBlend mode='normal' in2='effect1_dropShadow_455_3507' result='effect2_dropShadow_455_3507'/>
+<feBlend mode='normal' in='SourceGraphic' in2='effect2_dropShadow_455_3507' result='shape'/>
+</filter>
+</defs>
+</svg>

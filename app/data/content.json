@@ -1,356 +1,356 @@
 {
-  "title": "k8portalatin portfolio",
-  "description": "k8portalatin's software engineering portfolio",
-  "sections": {
-    "branding": {
-      "motto": "Non perditio dolorem.",
-      "motto_translation": "Don't waste your pain."
+  'title': 'k8portalatin portfolio',
+  'description': 'k8portalatin's software engineering portfolio',
+  'sections': {
+    'branding': {
+      'motto': 'Non perditio dolorem.',
+      'motto_translation': 'Don't waste your pain.'
     },
-    "skillsPanel": {
-      "label": "Competencies",
-      "content": [
+    'skillsPanel': {
+      'label': 'Competencies',
+      'content': [
         {
-          "topic": "Core Technical Foundations",
-          "topicList": [
+          'topic': 'Core Technical Foundations',
+          'topicList': [
             {
-              "subtopic": "Programming Languages",
-              "subtopicList": [
+              'subtopic': 'Programming Languages',
+              'subtopicList': [
                 {
-                  "subtopicLabel": "Java",
-                  "subtopicText": "(ecosystem: Spring, Hibernate, etc.)",
-                  "iconList": [
-                    "FaJava",
-                    "SiSpring",
-                    "SiHibernate"
+                  'subtopicLabel': 'Java',
+                  'subtopicText': '(ecosystem: Spring, Hibernate, etc.)',
+                  'iconList': [
+                    'FaJava',
+                    'SiSpring',
+                    'SiHibernate'
                   ],
-                  "level": "Competent"
+                  'level': 'Competent'
                 },
                 {
-                  "subtopic": "Python",
-                  "subtopicText": "(common frameworks/libraries: Django, Flask, FastAPI, etc.)",
-                  "iconList": [
-                    "SiPython",
-                    "DiDjango",
-                    "FaFlask",
-                    "SiFastapi"
+                  'subtopic': 'Python',
+                  'subtopicText': '(common frameworks/libraries: Django, Flask, FastAPI, etc.)',
+                  'iconList': [
+                    'SiPython',
+                    'DiDjango',
+                    'FaFlask',
+                    'SiFastapi'
                   ],
-                  "level": "Competent"
+                  'level': 'Competent'
                 },
                 {
-                  "subtopic": "JavaScript/TypeScript",
-                  "subtopicText": "(Node.js, React, Angular, Next.js, Meteor)",
-                  "iconList": [
-                    "IoLogoJavascript",
-                    "SiTypescript",
-                    "RiNextjsFill",
-                    "FaReact",
-                    "FaAngular",
-                    "FaMeteor"
+                  'subtopic': 'JavaScript/TypeScript',
+                  'subtopicText': '(Node.js, React, Angular, Next.js, Meteor)',
+                  'iconList': [
+                    'IoLogoJavascript',
+                    'SiTypescript',
+                    'RiNextjsFill',
+                    'FaReact',
+                    'FaAngular',
+                    'FaMeteor'
                   ],
-                  "level": "Proficient"
+                  'level': 'Proficient'
                 },
                 {
-                  "subtopic": "HTML5 / CSS3",
-                  "subtopicText": "",
-                  "iconList": [
-                    "FaHtml5",
-                    "FaCss3"
+                  'subtopic': 'HTML5 / CSS3',
+                  'subtopicText': '',
+                  'iconList': [
+                    'FaHtml5',
+                    'FaCss3'
                   ],
-                  "level": "Proficient"
+                  'level': 'Proficient'
                 },
                 {
-                  "subtopic": "PHP",
-                  "subtopicText": "(Laravel, Symfony)",
-                  "iconList": [
-                    "FaPhp",
-                    "FaLaravel",
-                    "FaSymfony"
+                  'subtopic': 'PHP',
+                  'subtopicText': '(Laravel, Symfony)',
+                  'iconList': [
+                    'FaPhp',
+                    'FaLaravel',
+                    'FaSymfony'
                   ],
-                  "level": "Competent"
+                  'level': 'Competent'
                 },
                 {
-                  "subtopic": "C / C++ / Go / Rust",
-                  "subtopicText": "",
-                  "iconList": [
-                    "FaC",
-                    "PiFileCpp",
-                    "FaGolang",
-                    "FaRust"
+                  'subtopic': 'C / C++ / Go / Rust',
+                  'subtopicText': '',
+                  'iconList': [
+                    'FaC',
+                    'PiFileCpp',
+                    'FaGolang',
+                    'FaRust'
                   ],
-                  "level": "Competent"
+                  'level': 'Competent'
                 },
                 {
-                  "subtopic": "SQL/NoSQL",
-                  "subtopicText": "(MySQL, PostgreSQL, MongoDB, etc.)",
-                  "iconList": [
-                    "DiMysql",
-                    "DiPostgresql",
-                    "DiMongodb"
+                  'subtopic': 'SQL/NoSQL',
+                  'subtopicText': '(MySQL, PostgreSQL, MongoDB, etc.)',
+                  'iconList': [
+                    'DiMysql',
+                    'DiPostgresql',
+                    'DiMongodb'
                   ],
-                  "level": "Proficient"
+                  'level': 'Proficient'
                 },
                 {
-                  "subtopic": "Ruby",
-                  "subtopicText": "",
-                  "iconList": [
-                    "DiRuby"
+                  'subtopic': 'Ruby',
+                  'subtopicText': '',
+                  'iconList': [
+                    'DiRuby'
                   ],
-                  "level": "Novice"
+                  'level': 'Novice'
                 }
               ]
             },
             {
-              "topic": "Data Structures & Algorithms",
-              "topicList": [
+              'topic': 'Data Structures & Algorithms',
+              'topicList': [
                 {
-                  "subtopic": "Data Structures", 
-                  "subtopicText": "Arrays, Linked Lists, Trees, Graphs, Hash Tables, etc.",
-                  "level": "Expert"
+                  'subtopic': 'Data Structures',
+                  'subtopicText': 'Arrays, Linked Lists, Trees, Graphs, Hash Tables, etc.',
+                  'level': 'Expert'
                 },
                 {
-                  "subtopic": "Algorithms",
-                  "subtopicText": "Sorting, Searching, Dynamic Programming, Greedy Algorithms, etc.",
-                  "level": "Expert"
+                  'subtopic': 'Algorithms',
+                  'subtopicText': 'Sorting, Searching, Dynamic Programming, Greedy Algorithms, etc.',
+                  'level': 'Expert'
                 },
                 {
-                  "subtopic": "Complexity Analysis",
-                  "subtopicText": "Time Complexity, Space Complexity, Performance Optimization, etc.",
-                  "level": "Expert"
+                  'subtopic': 'Complexity Analysis',
+                  'subtopicText': 'Time Complexity, Space Complexity, Performance Optimization, etc.',
+                  'level': 'Expert'
                 }
               ]
             },
             {
-              "topic": "Software Design & Architecture",
-              "topicList": [
+              'topic': 'Software Design & Architecture',
+              'topicList': [
                 {
-                  "subtopic": "Object-Oriented Programming (OOP) principles",
-                  "subtopicText": "Encapsulation, Inheritance, Polymorphism, Abstraction",
-                  "level": "Competent"
+                  'subtopic': 'Object-Oriented Programming (OOP) principles',
+                  'subtopicText': 'Encapsulation, Inheritance, Polymorphism, Abstraction',
+                  'level': 'Competent'
                 },
                 {
-                  "subtopic": "Microservices Architecture",
-                  "subtopicText": "Service independence, Domain-driven design, Decentralization, Resilience & Fault Tolerance, Data Management, Communication patterns, Observability, Security, etc.",
-                  "level": "Competent"
+                  'subtopic': 'Microservices Architecture',
+                  'subtopicText': 'Service independence, Domain-driven design, Decentralization, Resilience & Fault Tolerance, Data Management, Communication patterns, Observability, Security, etc.',
+                  'level': 'Competent'
                 },
                 {
-                  "subtopic": "Design Patterns (Singleton, Factory, Observer, etc.)",
-                  "level": "Competent"
+                  'subtopic': 'Design Patterns (Singleton, Factory, Observer, etc.)',
+                  'level': 'Competent'
                 },
                 {
-                  "subtopic": "Domain-Driven Design (DDD), SOLID principles, etc.",
-                  "level": "Competent"
+                  'subtopic': 'Domain-Driven Design (DDD), SOLID principles, etc.',
+                  'level': 'Competent'
                 },
                 {
-                  "subtopic": "UML Diagrams, system design, Lucidchart, PlantUML",
-                  "level": "Competent"
+                  'subtopic': 'UML Diagrams, system design, Lucidchart, PlantUML',
+                  'level': 'Competent'
                 }
               ]
             }
           ]
         },
         {
-          "topic": "Frameworks & Libraries",
-          "topicList": [
+          'topic': 'Frameworks & Libraries',
+          'topicList': [
             {
-              "subtopic": "Web & Backend",
-              "subtopicList": [
+              'subtopic': 'Web & Backend',
+              'subtopicList': [
                 {
-                  "subtopic": "Java",
-                  "subtopicList": [
+                  'subtopic': 'Java',
+                  'subtopicList': [
                     {
-                      "subtopic": "Spring Framework (Spring Boot, Spring MVC, Spring Data, Spring Security)",
-                      "iconList": [
-                        "SiSpringboot",
-                        "SiSpringsecurity"
+                      'subtopic': 'Spring Framework (Spring Boot, Spring MVC, Spring Data, Spring Security)',
+                      'iconList': [
+                        'SiSpringboot',
+                        'SiSpringsecurity'
                       ],
-                      "level": "Expert"
+                      'level': 'Expert'
                     },
                     {
-                      "subtopic": "JPA/Hibernate",
-                      "iconList": [
-                        "SiHibernate"
+                      'subtopic': 'JPA/Hibernate',
+                      'iconList': [
+                        'SiHibernate'
                       ],
-                      "level": "Competent"
+                      'level': 'Competent'
                     }
                   ]
                 },
                 {
-                  "subtopic": "Python",
-                  "subtopicList": [
+                  'subtopic': 'Python',
+                  'subtopicList': [
                     {
-                      "subtopic": "Django (full-stack framework)",
-                      "iconList": [
-                        "DiDjango"
+                      'subtopic': 'Django (full-stack framework)',
+                      'iconList': [
+                        'DiDjango'
                       ],
-                      "level": "Advanced Beginner"
+                      'level': 'Advanced Beginner'
                     },
                     {
-                      "subtopic": "Flask (lightweight microframework)",
-                      "iconList": [
-                        "FaFlask"
+                      'subtopic': 'Flask (lightweight microframework)',
+                      'iconList': [
+                        'FaFlask'
                       ],
-                      "level": "Advanced Beginner"
+                      'level': 'Advanced Beginner'
                     },
                     {
-                      "subtopic": "FastAPI (modern async)",
-                      "iconList": [
-                        "SiFastapi"
+                      'subtopic': 'FastAPI (modern async)',
+                      'iconList': [
+                        'SiFastapi'
                       ],
-                      "level": "Advanced Beginner"
+                      'level': 'Advanced Beginner'
                     },
                     {
-                      "subtopic": "Celery (Distributed task queue)",
-                      "iconList": [
-                        "SiCelery"
+                      'subtopic': 'Celery (Distributed task queue)',
+                      'iconList': [
+                        'SiCelery'
                       ],
-                      "level": "Advanced Beginner"
+                      'level': 'Advanced Beginner'
                     }
                   ]
                 },
                 {
-                  "subtopic": "Node.js",
-                  "subtopicList": [
+                  'subtopic': 'Node.js',
+                  'subtopicList': [
                     {
-                      "subtopic": "Express.js (Express web framework)",
-                      "iconList": [
-                        "SiExpress"
+                      'subtopic': 'Express.js (Express web framework)',
+                      'iconList': [
+                        'SiExpress'
                       ],
-                      "level": "Competent"
+                      'level': 'Competent'
                     },
                     {
-                      "subtopic": "Next.js (React framework for server-side rendering, Router api)",
-                      "iconList": [
-                        "RiNextjsFill"
+                      'subtopic': 'Next.js (React framework for server-side rendering, Router api)',
+                      'iconList': [
+                        'RiNextjsFill'
                       ],
-                      "level": "Competent"
+                      'level': 'Competent'
                     }
                   ]
                 },
                 {
-                  "subtopic": "PHP",
-                  "subtopicList": [
+                  'subtopic': 'PHP',
+                  'subtopicList': [
                     {
-                      "subtopic": "Laravel (Laravel mvc, Eloquent ORM)",
-                      "iconList": [
-                        "FaLaravel"
+                      'subtopic': 'Laravel (Laravel mvc, Eloquent ORM)',
+                      'iconList': [
+                        'FaLaravel'
                       ],
-                      "level": "Competent"
+                      'level': 'Competent'
                     },
                     {
-                      "subtopic": "Symfony (Enterprise components)",
-                      "iconList": [
-                        "FaSymfony"
+                      'subtopic': 'Symfony (Enterprise components)',
+                      'iconList': [
+                        'FaSymfony'
                       ],
-                      "level": "Competent"
+                      'level': 'Competent'
                     }
                   ]
                 },
                 {
-                  "subtopic": "other",
-                  "subtopicList": [
+                  'subtopic': 'other',
+                  'subtopicList': [
                     {
-                      "subtopic": "Scala & Play Framework",
-                      "iconList": [
-                        "SiScala"
+                      'subtopic': 'Scala & Play Framework',
+                      'iconList': [
+                        'SiScala'
                       ],
-                      "level": "Novice"
+                      'level': 'Novice'
                     },
                     {
-                      "subtopic": "Go (Golang)",
-                      "iconList": [
-                        "FaGolang"
+                      'subtopic': 'Go (Golang)',
+                      'iconList': [
+                        'FaGolang'
                       ],
-                      "level": "Novice"
+                      'level': 'Novice'
                     },
                     {
-                      "subtopic": "Rust (for systems-level or specialized back-end needs)",
-                      "iconList": [
-                        "FaRust"
+                      'subtopic': 'Rust (for systems-level or specialized back-end needs)',
+                      'iconList': [
+                        'FaRust'
                       ],
-                      "level": "Novice"
+                      'level': 'Novice'
                     }
                   ]
                 }
               ]
             },
             {
-              "subtopic": "Frontend & UI Libraries",
-              "subtopicList": [
+              'subtopic': 'Frontend & UI Libraries',
+              'subtopicList': [
                 {
-                  "subtopic": "JavaScript/TypeScript",
-                  "subtopicList": [
+                  'subtopic': 'JavaScript/TypeScript',
+                  'subtopicList': [
                     {
-                      "subtopic": "React",
-                      "iconList": [
-                        "FaReact"
+                      'subtopic': 'React',
+                      'iconList': [
+                        'FaReact'
                       ],
-                      "level": "Proficient"
+                      'level': 'Proficient'
                     },
                     {
-                      "subtopic": "Redux",
-                      "iconList": [
-                        "SiRedux"
+                      'subtopic': 'Redux',
+                      'iconList': [
+                        'SiRedux'
                       ],
-                      "level": "Competent"
+                      'level': 'Competent'
                     },
                     {
-                      "subtopic": "Next.js",
-                      "iconList": [
-                        "RiNextjsFill"
+                      'subtopic': 'Next.js',
+                      'iconList': [
+                        'RiNextjsFill'
                       ],
-                      "level": "Proficient"
+                      'level': 'Proficient'
                     },
                     {
-                      "subtopic": "Angular",
-                      "iconList": [
-                        "FaAngular"
+                      'subtopic': 'Angular',
+                      'iconList': [
+                        'FaAngular'
                       ],
-                      "level": "Proficient"
+                      'level': 'Proficient'
                     }
                   ]
                 },
                 {
-                  "subtopic": "CSS",
-                  "subtopicList": [
+                  'subtopic': 'CSS',
+                  'subtopicList': [
                     {
-                      "subtopic": "Bootstrap",
-                      "iconList": [
-                        "FaBootstrap"
+                      'subtopic': 'Bootstrap',
+                      'iconList': [
+                        'FaBootstrap'
                       ],
-                      "level": "Proficient"
+                      'level': 'Proficient'
                     },
                     {
-                      "subtopic": "Tailwind CSS",
-                      "iconList": [
-                        "RiTailwindCssFill"
+                      'subtopic': 'Tailwind CSS',
+                      'iconList': [
+                        'RiTailwindCssFill'
                       ],
-                      "level": "Proficient"
+                      'level': 'Proficient'
                     }
                   ]
                 },
                 {
-                  "subtopic": "UI/UX",
-                  "subtopicList": [
+                  'subtopic': 'UI/UX',
+                  'subtopicList': [
                     {
-                      "subtopic": "Figma",
-                      "iconList": [
-                        "FaFigma"
+                      'subtopic': 'Figma',
+                      'iconList': [
+                        'FaFigma'
                       ],
-                      "level": "Competent"
+                      'level': 'Competent'
                     },
                     {
-                      "subtopic": "Adobe XD",
-                      "iconList": [
-                        "SiAdobe"
+                      'subtopic': 'Adobe XD',
+                      'iconList': [
+                        'SiAdobe'
                       ],
-                      "level": "Competent"
+                      'level': 'Competent'
                     },
                     {
-                      "subtopic": "Sketch",
-                      "iconList": [
-                        "FaSketch"
+                      'subtopic': 'Sketch',
+                      'iconList': [
+                        'FaSketch'
                       ],
-                      "level": "Competent"
+                      'level': 'Competent'
                     }
                   ]
                 }
@@ -359,453 +359,457 @@
           ]
         },
         {
-          "topic": "DevOps, CI/CD & Cloud",
-          "topicList": [
+          'topic': 'DevOps, CI/CD & Cloud',
+          'topicList': [
             {
-              "subtopic": "DevOps & Containerization",
-              "subtopicList": [
+              'subtopic': 'DevOps & Containerization',
+              'subtopicList': [
                 {
-                  "subtopic": "Docker",
-                  "subtopicList": [
+                  'subtopic': 'Docker',
+                  'subtopicList': [
                     {
-                      "subtopic": "Containerization",
-                      "iconList": [
-                        "FaDocker"
+                      'subtopic': 'Containerization',
+                      'iconList': [
+                        'FaDocker'
                       ],
-                      "level": "Competent"
+                      'level': 'Competent'
                     },
                     {
-                      "subtopic": "Dockerfiles",
-                      "iconList": [
-                        "FaDocker"
+                      'subtopic': 'Dockerfiles',
+                      'iconList': [
+                        'FaDocker'
                       ],
-                      "level": "Competent"
+                      'level': 'Competent'
                     }
                   ]
                 },
                 {
-                  "subtopic": "Kubernetes",
-                  "subtopicList": [
+                  'subtopic': 'Kubernetes',
+                  'subtopicList': [
                     {
-                      "subtopic": "Container Orchestration (Helm, Operators)",
-                      "iconList": [
-                        "SiKubernetes"
+                      'subtopic': 'Container Orchestration (Helm, Operators)',
+                      'iconList': [
+                        'SiKubernetes'
                       ],
-                      "level": "Advanced Beginner"
+                      'level': 'Advanced Beginner'
                     }
                   ]
                 }
               ]
             },
             {
-              "subtopic": "CI/CD Pipelines",
-              "subtopicList": [
+              'subtopic': 'CI/CD Pipelines',
+              'subtopicList': [
                 {
-                  "subtopic": "Jenkins, Gitlab CI, GitHub Actions",
-                  "iconList": [
-                    "FaJenkins",
-                    "FaGitlab",
-                    "FaGithub",
-                    "SiGithubactions"
+                  'subtopic': 'Jenkins, Gitlab CI, GitHub Actions',
+                  'iconList': [
+                    'FaJenkins',
+                    'FaGitlab',
+                    'FaGithub',
+                    'SiGithubactions'
                   ],
-                  "level": "Competent"
+                  'level': 'Competent'
                 },
                 {
-                  "subtopic": "Artifact repository managers: Artifactory, Nexus",
-                  "iconList": [],
-                  "level": "Competent"
+                  'subtopic': 'Artifact repository managers: Artifactory, Nexus',
+                  'iconList': [],
+                  'level': 'Competent'
                 },
                 {
-                  "subtopic": "Automated build, test, deployment",
-                  "iconList": [
-                    "FaJenkins",
-                    "FaGitlab",
-                    "FaGithub",
-                    "SiGithubactions"
+                  'subtopic': 'Automated build, test, deployment',
+                  'iconList': [
+                    'FaJenkins',
+                    'FaGitlab',
+                    'FaGithub',
+                    'SiGithubactions'
                   ],
-                  "level": "Competent"
+                  'level': 'Competent'
                 }
               ]
             },
             {
-              "subtopic": "Cloud Platforms",
-              "subtopicList": [
+              'subtopic': 'Cloud Platforms',
+              'subtopicList': [
                 {
-                  "subtopic": "AWS (EC2, S3, RDS, Lambda, etc.)",
-                  "iconList": [
-                    "FaAws"
+                  'subtopic': 'AWS (EC2, S3, RDS, Lambda, etc.)',
+                  'iconList': [
+                    'FaAws'
                   ],
-                  "level": "Advanced Beginner"
+                  'level': 'Advanced Beginner'
                 },
                 {
-                  "subtopic": "Azure (Azure App Service, Azure Functions, Azure Storage, etc.)",
-                  "iconList": [
-                    "VscAzure"
+                  'subtopic': 'Azure (Azure App Service, Azure Functions, Azure Storage, etc.)',
+                  'iconList': [
+                    'VscAzure'
                   ],
-                  "level": "Competent"
+                  'level': 'Competent'
                 },
                 {
-                  "subtopic": "Google Cloud (Google Cloud Run, Google Cloud Functions, Google Cloud Storage, etc.)",
-                  "iconList": [
-                    "FaGoogle"
+                  'subtopic': 'Google Cloud (Google Cloud Run, Google Cloud Functions, Google Cloud Storage, etc.)',
+                  'iconList': [
+                    'FaGoogle'
                   ],
-                  "level": "Competent"
+                  'level': 'Competent'
                 }
               ]
             },
             {
-              "subtopic": "Infrastructure as Code (IaC)",
-              "subtopicList": [
+              'subtopic': 'Infrastructure as Code (IaC)',
+              'subtopicList': [
                 {
-                  "subtopic": "Terraform, Ansible",
-                  "iconList": [
-                    "SiTerraform",
-                    "SiAnsible"
+                  'subtopic': 'Terraform, Ansible',
+                  'iconList': [
+                    'SiTerraform',
+                    'SiAnsible'
                   ],
-                  "level": "Competent"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "topic": "Testing & Quality Assurance",
-          "topicList": [
-            {
-              "subtopic": "Automated Testing",
-              "subtopicList": [
-                {
-                  "subtopic": "Java: Junit, TestNG, Mockito",
-                  "iconList": [
-                    "SiJunit5"
-                  ],
-                  "level": "Competent"
-                },
-                {
-                  "subtopic": "Python: Pytest, unittest, mock, pytest-mock",
-                  "iconList": [
-                    "SiPytest"
-                  ],
-                  "level": "Competent"
-                },
-                {
-                  "subtopic": "JavaScript: Jest, Mocha, Chai, Jasmine",
-                  "iconList": [
-                    "SiJest",
-                    "SiMocha",
-                    "SiJasmine"
-                  ],
-                  "level": "Competent"
-                },
-                {
-                  "subtopic": "UI & E2E: Selenium, Cypress",
-                  "iconList": [
-                    "SiSelenium",
-                    "SiCypress"
-                  ],
-                  "level": "Advanced Beginner"
-                }
-              ]
-            },
-            {
-              "subtopic": "TDD, BDD & Code Quality",
-              "subtopicList": [
-                {
-                  "subtopic": "Test-Driven Development (TDD)",
-                  "iconList": [],
-                  "level": "Competent"
-                },
-                {
-                  "subtopic": "Behavior-Driven Development (BDD): Cucumber",
-                  "iconList": [
-                    "SiCucumber"
-                  ],
-                  "level": "Competent"
-                },
-                {
-                  "subtopic": "Static Analysis: SonarQube, Checkstyle, etc.",
-                  "iconList": [
-                    "SiSonarqube"
-                  ],
-                  "level": "Competent"
+                  'level': 'Competent'
                 }
               ]
             }
           ]
         },
         {
-          "topic": "Security & Best Practices",
-          "topicList": [
+          'topic': 'Testing & Quality Assurance',
+          'topicList': [
             {
-              "subtopic": "OWASP principles (Top 10 vulnerabilities)",
-              "iconList": [
-                "SiOwasp"
-              ],
-              "level": "Competent"
-            },
-            {
-              "subtopic": "DevSecOps (integrating security checks in CI/CD)",
-              "iconList": [
-                "SiGithubactions"
-              ],
-              "level": "Competent"
-            },
-            {
-              "subtopic": "Data Encryption (SSL/TLS, key management, hashing)",
-              "iconList": [],
-              "level": "Competent"
-            },
-            {
-              "subtopic": "Security Frameworks (Spring Security, Apache Shiro)",
-              "iconList": [
-                "SiSpringsecurity"
-              ],
-              "level": "Competent"
-            },
-            {
-              "subtopic": "Auth: OAuth2, JWT, Passport.js, Laravel Passport, Django REST Framework Token/Auth",
-              "iconList": [
-                "SiSpringsecurity",
-                "SiLaravel",
-                "SiDjango"
-              ],
-              "level": "Competent"
-            }
-          ]
-        },
-        {
-          "topic": "Collaboration & Version Control",
-          "topicList": [
-            {
-              "subtopic": "Git (branching, pull requests, code reviews)",
-              "iconList": [
-                "FaGit"
-              ],
-              "level": "Proficient"
-            },
-            {
-              "subtopic": "GitHub, GitLab, Bitbucket (repository hosting)",
-              "iconList": [
-                "FaGithub",
-                "FaGitlab",
-                "FaBitbucket"
-              ],
-              "level": "Competent"
-            },
-            {
-              "subtopic": "Agile, Scrum, Kanban (sprint planning, daily stand-ups)",
-              "iconList": [
-                "MdOutlineViewKanban"
-              ],
-              "level": "Proficient"
-            }
-          ]
-        },
-        {
-          "topic": "Methodologies & Process",
-          "topicList": [
-            {
-              "subtopic": "SDLC: requirements analysis, design, implementation, testing, deployment, maintenance",
-              "iconList": [
-                "SiJira"
-              ],
-              "level": "Proficient"
-            },
-            {
-              "subtopic": "Agile / Scrum: user stories, sprint reviews, retrospectives",
-              "iconList": [
-                "SiJira"
-              ],
-              "level": "Competent"
-            },
-            {
-              "subtopic": "XP (Extreme Programming): pair programming, test-driven development, continuous integration, refactoring",
-              "iconList": [],
-              "level": "Competent"
-            },
-            {
-              "subtopic": "DevOps culture: collaboration between dev, QA, ops: continuous feedback loops",
-              "iconList": [],
-              "level": "Competent"
-            }
-          ]
-        },
-        {
-          "topic": "Additional / Specialized",
-          "topicList": [
-            {
-              "subtopic": "Data & Analytics (Python-focused)",
-              "subtopicList": [
+              'subtopic': 'Automated Testing',
+              'subtopicList': [
                 {
-                  "subtopic": "Data Processing: Pandas, NumPy",
-                  "iconList": [
-                    "SiPandas",
-                    "SiNumpy"
+                  'subtopic': 'Java: Junit, TestNG, Mockito',
+                  'iconList': [
+                    'SiJunit5'
                   ],
-                  "level": "Competent"
+                  'level': 'Competent'
                 },
                 {
-                  "subtopic": "Big Data: Apache Kafka, Spark (PySpark), Hadoop",
-                  "iconList": [
-                    "SiApachekafka",
-                    "SiSpark",
-                    "SiApachehadoop"
+                  'subtopic': 'Python: Pytest, unittest, mock, pytest-mock',
+                  'iconList': [
+                    'SiPytest'
                   ],
-                  "level": "Competent"
+                  'level': 'Competent'
                 },
                 {
-                  "subtopic": "Machine Learning: Scikit-learn, TensorFlow, PyTorch",
-                  "iconList": [
-                    "SiScikitlearn",
-                    "SiTensorflow",
-                    "SiPytorch"
+                  'subtopic': 'JavaScript: Jest, Mocha, Chai, Jasmine',
+                  'iconList': [
+                    'SiJest',
+                    'SiMocha',
+                    'SiJasmine'
                   ],
-                  "level": "Competent"
+                  'level': 'Competent'
+                },
+                {
+                  'subtopic': 'UI & E2E: Selenium, Cypress',
+                  'iconList': [
+                    'SiSelenium',
+                    'SiCypress'
+                  ],
+                  'level': 'Advanced Beginner'
                 }
               ]
             },
             {
-              "subtopic": "Legacy & Mainframe",
-              "subtopicList": [
+              'subtopic': 'TDD, BDD & Code Quality',
+              'subtopicList': [
                 {
-                  "subtopic": "COBOL, JCL, SQL, PL/I, etc.",
-                  "iconList": [],
-                  "level": "Competent"
+                  'subtopic': 'Test-Driven Development (TDD)',
+                  'iconList': [],
+                  'level': 'Competent'
                 },
                 {
-                  "subtopic": "Linux, Windows",
-                  "iconList": [
-                    "FaLinux",
-                    "FaWindows"
+                  'subtopic': 'Behavior-Driven Development (BDD): Cucumber',
+                  'iconList': [
+                    'SiCucumber'
                   ],
-                  "level": "Competent"
-                }
-              ]
-            },
-            {
-              "subtopic": "Documentation & Diagramming",
-              "subtopicList": [
-                {
-                  "subtopic": "Swagger, Postman, OpenAPI",
-                  "iconList": [
-                    "SiSwagger",
-                    "SiPostman",
-                    "SiOpenapiinitiative"
-                  ],
-                  "level": "Proficient"
+                  'level': 'Competent'
                 },
                 {
-                  "subtopic": "Markdown, AsciiDoc, LaTeX, Sphinx (Python docs)",
-                  "iconList": [
-                    "FaMarkdown",
-                    "SiAsciidoctor",
-                    "SiLatex",
-                    "Sisphinx"
+                  'subtopic': 'Static Analysis: SonarQube, Checkstyle, etc.',
+                  'iconList': [
+                    'SiSonarqube'
                   ],
-                  "level": "Proficient"
-                },
-                {
-                  "subtopic": "Lucidchart, PlantUML (system architecture diagrams)",
-                  "iconList": [
-                    "SiLucid",
-                    "SiUml"
-                  ],
-                  "level": "Proficient"
+                  'level': 'Competent'
                 }
               ]
             }
           ]
         },
         {
-          "topic": "Soft Skills & Professional",
-          "topicList": [
+          'topic': 'Security & Best Practices',
+          'topicList': [
             {
-              "subtopic": "Problem Solving & Critical Thinking",
-              "iconList": [
-                "GiThink",
-                "TbMath"
+              'subtopic': 'OWASP principles (Top 10 vulnerabilities)',
+              'iconList': [
+                'SiOwasp'
               ],
-              "level": "Proficient"
+              'level': 'Competent'
             },
             {
-              "subtopic": "Communication & Presentation",
-              "iconList": [
-                "MdOutlinePhone",
-                "RiPresentationLine"
+              'subtopic': 'DevSecOps (integrating security checks in CI/CD)',
+              'iconList': [
+                'SiGithubactions'
               ],
-              "level": "Proficient"
+              'level': 'Competent'
             },
             {
-              "subtopic": "Leadership & Mentorship",
-              "iconList": [
-                "GiTeacher",
-                "RiParentFill"
-              ],
-              "level": "Proficient"
+              'subtopic': 'Data Encryption (SSL/TLS, key management, hashing)',
+              'iconList': [],
+              'level': 'Competent'
             },
             {
-              "subtopic": "Adaptability & Resilience",
-              "iconList": [
-                "GiStrongMan",
-                "RiMentalHealthFill"
+              'subtopic': 'Security Frameworks (Spring Security, Apache Shiro)',
+              'iconList': [
+                'SiSpringsecurity'
               ],
-              "level": "Proficient"
+              'level': 'Competent'
             },
             {
-              "subtopic": "Time Management & Self-Motivation",
-              "iconList": [
-                "FaBusinessTime",
-                "FaRunning"
+              'subtopic': 'Auth: OAuth2, JWT, Passport.js, Laravel Passport, Django REST Framework Token/Auth',
+              'iconList': [
+                'SiSpringsecurity',
+                'SiLaravel',
+                'SiDjango'
               ],
-              "level": "Proficient"
+              'level': 'Competent'
+            }
+          ]
+        },
+        {
+          'topic': 'Collaboration & Version Control',
+          'topicList': [
+            {
+              'subtopic': 'Git (branching, pull requests, code reviews)',
+              'iconList': [
+                'FaGit'
+              ],
+              'level': 'Proficient'
             },
             {
-              "subtopic": "Team Collaboration & Conflict Resolution",
-              "iconList": [
-                "FcCollaboration",
-                "FaHandshake"
+              'subtopic': 'GitHub, GitLab, Bitbucket (repository hosting)',
+              'iconList': [
+                'FaGithub',
+                'FaGitlab',
+                'FaBitbucket'
               ],
-              "level": "Proficient"
+              'level': 'Competent'
             },
             {
-              "subtopic": "Continuous Learning & Professional Development",
-              "iconList": [
-                "FaBookOpen",
-                "PiStudent"
+              'subtopic': 'Agile, Scrum, Kanban (sprint planning, daily stand-ups)',
+              'iconList': [
+                'MdOutlineViewKanban'
               ],
-              "level": "Proficient"
+              'level': 'Proficient'
+            }
+          ]
+        },
+        {
+          'topic': 'Methodologies & Process',
+          'topicList': [
+            {
+              'subtopic': 'SDLC: requirements analysis, design, implementation, testing, deployment, maintenance',
+              'iconList': [
+                'SiJira'
+              ],
+              'level': 'Proficient'
+            },
+            {
+              'subtopic': 'Agile / Scrum: user stories, sprint reviews, retrospectives',
+              'iconList': [
+                'SiJira'
+              ],
+              'level': 'Competent'
+            },
+            {
+              'subtopic': 'XP (Extreme Programming): pair programming, test-driven development, continuous integration, refactoring',
+              'iconList': [],
+              'level': 'Competent'
+            },
+            {
+              'subtopic': 'DevOps culture: collaboration between dev, QA, ops: continuous feedback loops',
+              'iconList': [],
+              'level': 'Competent'
+            }
+          ]
+        },
+        {
+          'topic': 'Additional / Specialized',
+          'topicList': [
+            {
+              'subtopic': 'Data & Analytics (Python-focused)',
+              'subtopicList': [
+                {
+                  'subtopic': 'Data Processing: Pandas, NumPy',
+                  'iconList': [
+                    'SiPandas',
+                    'SiNumpy'
+                  ],
+                  'level': 'Competent'
+                },
+                {
+                  'subtopic': 'Big Data: Apache Kafka, Spark (PySpark), Hadoop',
+                  'iconList': [
+                    'SiApachekafka',
+                    'SiSpark',
+                    'SiApachehadoop'
+                  ],
+                  'level': 'Competent'
+                },
+                {
+                  'subtopic': 'Machine Learning: Scikit-learn, TensorFlow, PyTorch',
+                  'iconList': [
+                    'SiScikitlearn',
+                    'SiTensorflow',
+                    'SiPytorch'
+                  ],
+                  'level': 'Competent'
+                }
+              ]
+            },
+            {
+              'subtopic': 'Legacy & Mainframe',
+              'subtopicList': [
+                {
+                  'subtopic': 'COBOL, JCL, SQL, PL/I, etc.',
+                  'iconList': [],
+                  'level': 'Competent'
+                },
+                {
+                  'subtopic': 'Linux, Windows',
+                  'iconList': [
+                    'FaLinux',
+                    'FaWindows'
+                  ],
+                  'level': 'Competent'
+                }
+              ]
+            },
+            {
+              'subtopic': 'Documentation & Diagramming',
+              'subtopicList': [
+                {
+                  'subtopic': 'Swagger, Postman, OpenAPI',
+                  'iconList': [
+                    'SiSwagger',
+                    'SiPostman',
+                    'SiOpenapiinitiative'
+                  ],
+                  'level': 'Proficient'
+                },
+                {
+                  'subtopic': 'Markdown, AsciiDoc, LaTeX, Sphinx (Python docs)',
+                  'iconList': [
+                    'FaMarkdown',
+                    'SiAsciidoctor',
+                    'SiLatex',
+                    'Sisphinx'
+                  ],
+                  'level': 'Proficient'
+                },
+                {
+                  'subtopic': 'Lucidchart, PlantUML (system architecture diagrams)',
+                  'iconList': [
+                    'SiLucid',
+                    'SiUml'
+                  ],
+                  'level': 'Proficient'
+                }
+              ]
+            }
+          ]
+        },
+        {
+          'topic': 'Soft Skills & Professional',
+          'topicList': [
+            {
+              'subtopic': 'Problem Solving & Critical Thinking',
+              'iconList': [
+                'GiThink',
+                'TbMath'
+              ],
+              'level': 'Proficient'
+            },
+            {
+              'subtopic': 'Communication & Presentation',
+              'iconList': [
+                'MdOutlinePhone',
+                'RiPresentationLine'
+              ],
+              'level': 'Proficient'
+            },
+            {
+              'subtopic': 'Leadership & Mentorship',
+              'iconList': [
+                'GiTeacher',
+                'RiParentFill'
+              ],
+              'level': 'Proficient'
+            },
+            {
+              'subtopic': 'Adaptability & Resilience',
+              'iconList': [
+                'GiStrongMan',
+                'RiMentalHealthFill'
+              ],
+              'level': 'Proficient'
+            },
+            {
+              'subtopic': 'Time Management & Self-Motivation',
+              'iconList': [
+                'FaBusinessTime',
+                'FaRunning'
+              ],
+              'level': 'Proficient'
+            },
+            {
+              'subtopic': 'Team Collaboration & Conflict Resolution',
+              'iconList': [
+                'FcCollaboration',
+                'FaHandshake'
+              ],
+              'level': 'Proficient'
+            },
+            {
+              'subtopic': 'Continuous Learning & Professional Development',
+              'iconList': [
+                'FaBookOpen',
+                'PiStudent'
+              ],
+              'level': 'Proficient'
             }
           ]
         }
       ]
     },
-    "aboutMe": {
-      "label": "About Me",
-      "content": {
-        "who": {
-          "text": "Software Engineer obsessed with the intersection of technology and human experience.",
-          "label": "who i am"
+    'aboutMe': {
+      'label': 'About Me',
+      'content': {
+        'who': {
+          'text': 'I am a Software Engineer obsessed with the intersection of technology and human experience.',
+          'label': 'who'
         },
-        "what": {
-          "text": "10+ years of full stack development, including technical leadership, multitenant SaaS enterprise platform, and AI.",
-          "label": "what i do"
+        'what': {
+          'text': 'I have 10+ years of experience in engineering, technical leadership, multitenant SaaS enterprise platform, and AI.',
+          'label': 'what'
         },
-        "why": {
-          "text": "I want to build software that is functional, user-friendly, and  supportive of humanity's higher nature.",
-          "label": "why i do it"
+        'why': {
+          'text': 'I want to build software that is functional, user-friendly, and  supportive of humanity's higher nature.',
+          'label': 'why'
         },
-        "where": {
-          "text": "Onsite/Hybrid Dallas-Fort Worth Metroplex. United States remote-ready.",
-          "label": "where i do it"
+        'where': {
+          'text': 'I am available for onsite/hybrid Dallas-Fort Worth Metroplex locations and remote-ready for anywhere in the US.',
+          'label': 'where'
         },
-        "when": {
-          "text": "January, 2025 and beyond.",
-          "label": "when"
+        'when': {
+          'text': 'I am available in January, 2025 and beyond.',
+          'label': 'when'
+        },
+        'how': {
+          'text': 'Contact me via email, phone, or form (coming soon).',
+          'label': 'how'
         }
       },
-      "projects": {},
-      "experience": {},
-      "contact": {}
+      'projects': {},
+      'experience': {},
+      'contact': {}
     }
   }
 }
