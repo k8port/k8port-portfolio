@@ -1,7 +1,7 @@
 # content.yml
 name: Content Update
 description: Request content changes
-labels: ["content"]
+labels: ['content']
 body:
   - type: textarea
     id: changes

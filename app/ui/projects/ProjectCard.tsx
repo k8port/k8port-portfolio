@@ -1,5 +1,5 @@
-import React from "react";
-import ContentBox from "./ContentBox/ContentBox";
+import React from 'react';
+import ContentBox from './ContentBox/ContentBox';
 
 interface ProjectCardProps {
     project: {
@@ -9,7 +9,7 @@ interface ProjectCardProps {
         link: string;
         tags?: string[];
         year?: number;
-    }
+    };
     className?: string;
 }
 
@@ -19,7 +19,7 @@ export default function ProjectCard({ project, className }: ProjectCardProps) {
             <ContentBox
                 title={project.title}
                 text={project.description}
-                category={`${project.tags?.join(", ")}`}
+                category={`${project.tags?.join(', ')}`}
                 link={project.link}
                 image={project.image}
                 has_button={true}

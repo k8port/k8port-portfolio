@@ -11,258 +11,264 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
-	::after,
-	::before,
-	::backdrop,
-	::file-selector-button {
-		box-sizing: border-box;
-		border: 0 solid #F2F3F4;
-	}
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        box-sizing: border-box;
+        border: 0 solid #f2f3f4;
+    }
 
-	:root {
-		--footer-margin: 2rem;
-		--header-height: 3.6rem;
-	}
+    :root {
+        --footer-margin: 2rem;
+        --header-height: 3.6rem;
+    }
 
-	html,
-	body {
-		@apply font-spacegrotesk text-[14px] leading-[17.7px] text-redblacks-vampireblack;
-	}
+    html,
+    body {
+        @apply font-spacegrotesk text-[14px] leading-[17.7px] text-redblacks-vampireblack;
+    }
 
-	h1 {
-		@apply font-dmserifdisplay font-bold text-redblacks-blackplum text-5xl leading-[65.8px] uppercase;
-	}
+    h1 {
+        @apply font-dmserifdisplay font-bold text-redblacks-blackplum text-5xl leading-[65.8px] uppercase;
+    }
 
-	h2 {
-		@apply font-dmserifdisplay font-bold text-redblacks-blackplum text-[40px] leading-[54.8px] capitalize;
-	}
+    h2 {
+        @apply font-dmserifdisplay font-bold text-redblacks-blackplum text-[40px] leading-[54.8px] capitalize;
+    }
 
-	h3 {
-		@apply font-dmserifdisplay font-bold text-redblacks-blackplum text-[32px] tracking-[0] leading-[43.9px] capitalize;
-	}
+    h3 {
+        @apply font-dmserifdisplay font-bold text-redblacks-blackplum text-[32px] tracking-[0] leading-[43.9px] capitalize;
+    }
 
-	h4 {
-		@apply font-dmserifdisplay font-bold text-redblacks-blackplum text-2xl tracking-[0] leading-[32.9px] capitalize;
-	}
+    h4 {
+        @apply font-dmserifdisplay font-bold text-redblacks-blackplum text-2xl tracking-[0] leading-[32.9px] capitalize;
+    }
 
-	h5 {
-		@apply font-dmserifdisplay font-bold text-redblacks-blackplum text-xl tracking-[0] leading-[27.4px] capitalize;
-	}
+    h5 {
+        @apply font-dmserifdisplay font-bold text-redblacks-blackplum text-xl tracking-[0] leading-[27.4px] capitalize;
+    }
 
-	h6 {
-		@apply font-dmserifdisplay font-bold text-redblacks-blackplum text-base tracking-[0] leading-[21.9px] capitalize;
-	}
+    h6 {
+        @apply font-dmserifdisplay font-bold text-redblacks-blackplum text-base tracking-[0] leading-[21.9px] capitalize;
+    }
 
-	p {
-		@apply font-spacegrotesk text-base leading-[18.7px];
-	}
+    p {
+        @apply font-spacegrotesk text-base leading-[18.7px];
+    }
 
-	.paragraph-base {
-		@apply text-[14px] leading-[25px];
-	}
+    .paragraph-base {
+        @apply text-[14px] leading-[25px];
+    }
 
-	.paragraph-small {
-		@apply text-[12px] leading-[13.69px];
-	}
+    .paragraph-small {
+        @apply text-[12px] leading-[13.69px];
+    }
 
-	.paragraph-xs {
-		@apply text-[10px] leading-[12.8px];
-	}
+    .paragraph-xs {
+        @apply text-[10px] leading-[12.8px];
+    }
 
-	.caption-light {
-		@apply font-spacegrotesk font-normal text-xl tracking-[0] leading-5 not-italic;
-	}
+    .caption-light {
+        @apply font-spacegrotesk font-normal text-xl tracking-[0] leading-5 not-italic;
+    }
 
-	.caption-heavy {
-		@apply font-spacegrotesk font-bold text-xs tracking-[0] leading-4 not-italic;
-	}
+    .caption-heavy {
+        @apply font-spacegrotesk font-bold text-xs tracking-[0] leading-4 not-italic;
+    }
 
-	.nav-menu-item {
-		@apply font-spacegrotesk font-normal text-bluegrays-stormcloud text-lg leading-4 lowercase not-italic;
-	}
+    .nav-menu-item {
+        @apply font-spacegrotesk font-normal text-bluegrays-stormcloud text-lg leading-4 lowercase not-italic;
+    }
 
-	.greeting {
-		@apply font-greatvibes font-normal text-greenwhites-harp tracking-[0] whitespace-nowrap;
-	}
+    .greeting {
+        @apply font-greatvibes font-normal text-greenwhites-harp tracking-[0] whitespace-nowrap;
+    }
 
-	.subtitle-m {
-		@apply font-martianmono font-normal text-xs tracking-[0] leading-4 not-italic;
-	}
+    .subtitle-m {
+        @apply font-martianmono font-normal text-xs tracking-[0] leading-4 not-italic;
+    }
 }
 
 @layer utilities {
-	/* Scrollbar Utilities */
-	.scrollbar-hide {
-		scrollbar-width: none;
-		-ms-overflow-style: none;
-	}
+    /* Scrollbar Utilities */
+    .scrollbar-hide {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
 
-	.scrollbar-hide::-webkit-scrollbar {
-		display: none;
-	}
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
 
-	.scrollbar-default {
-		scrollbar-width: thin;
-		-ms-overflow-style: auto;
-		background-color: var(--brand-secondary);
-	}
+    .scrollbar-default {
+        scrollbar-width: thin;
+        -ms-overflow-style: auto;
+        background-color: var(--brand-secondary);
+    }
 
-	.scrollbar-default::-webkit-scrollbar {
-		width: 8px;
-	}
+    .scrollbar-default::-webkit-scrollbar {
+        width: 8px;
+    }
 
-	.scrollbar-default::-webkit-scrollbar-thumb {
-		background-color: var(--collection-caribbeangreen);
-		opacity: 0;
-		transition: opacity 0.3s ease-in-out;
-		border-radius: 4px;
-	}
+    .scrollbar-default::-webkit-scrollbar-thumb {
+        background-color: var(--collection-caribbeangreen);
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        border-radius: 4px;
+    }
 
-	.scrollbar-default:hover::-webkit-scrollbar-thumb {
-		opacity: 1;
-	}
+    .scrollbar-default:hover::-webkit-scrollbar-thumb {
+        opacity: 1;
+    }
 
-  	/* Custom scrollbar */
-  	::-webkit-scrollbar {
-    	width: 8px;
-  	}
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
 
-  	::-webkit-scrollbar-track {
-		width: 9px;
-    	background: #E9FFDB;
-  	}
+    ::-webkit-scrollbar-track {
+        width: 9px;
+        background: #e9ffdb;
+    }
 
-  	::-webkit-scrollbar-thumb {
-  	  background: #A0D6B4;
-  	  border-radius: 5px;
-  	}
+    ::-webkit-scrollbar-thumb {
+        background: #a0d6b4;
+        border-radius: 5px;
+    }
 
-  	::-webkit-scrollbar-thumb:hover {
-  	  background: #81D8D0;
-  	}
+    ::-webkit-scrollbar-thumb:hover {
+        background: #81d8d0;
+    }
 
-  	/* Firefox support */
-  	html {
-  	  scrollbar-width: 8px;
-  	  scrollbar-color: #F8F9F5 #A0D6B4;
-  	}
-	
-	html:hover {
-		scrollbar-color: #C9FFE5 #A0D6B4;
-		transition: scrollbar-color 0.3s ease-in-out;
-	}
+    /* Firefox support */
+    html {
+        scrollbar-width: 8px;
+        scrollbar-color: #f8f9f5 #a0d6b4;
+    }
 
-  	/* html.dark {
+    html:hover {
+        scrollbar-color: #c9ffe5 #a0d6b4;
+        transition: scrollbar-color 0.3s ease-in-out;
+    }
+
+    /* html.dark {
   	  scrollbar-color: #555 #222;
   	} */
 
+    /* Navigation Transitions */
+    nav {
+        transition: max-height 0.3s ease-in-out;
+    }
 
-	/* Navigation Transitions */
-	nav {
-		transition: max-height 0.3s ease-in-out;
-	}
+    nav ul li a {
+        transition: color 0.3s;
+    }
 
-	nav ul li a {
-		transition: color 0.3s;
-	}
+    nav ul li a:hover {
+        color: var(--brand-tertiary);
+    }
 
-	nav ul li a:hover {
-		color: var(--brand-tertiary);
-	}
+    /* Animation Utilities */
 
-	/* Animation Utilities */
-	
-	
-	@keyframes fadeIn {
-		0% {
-			opacity: 0;
-		}
-		100% {
-			opacity: 1;
-		}
-	}
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
 
-	@keyframes scroll {
-		0% { transform: translateX(100%); }
-		100% { transform: translateX(-100%); }
-	}
+    @keyframes scroll {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
 
-	@keyframes slideUp {
-		0% {
-			transform: translateY(10px);
-			opacity: 0;
-		}
-		100% {
-			transform: translateY(0);
-			opacity: 1;
-		}
-	}
+    @keyframes slideUp {
+        0% {
+            transform: translateY(10px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
 
-	@keyframes float {
-		0%,
-		100% {
-			transform: translateY(0);
-		}
-		50% {
-			transform: translateY(-10px);
-		}
-	}
+    @keyframes float {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
 
-	@keyframes floatLeft {
-		0%,
-		100% {
-			transform: translateX(0);
-		}
-		50% {
-			transform: translateX(-11px);
-		}
-	}
+    @keyframes floatLeft {
+        0%,
+        100% {
+            transform: translateX(0);
+        }
+        50% {
+            transform: translateX(-11px);
+        }
+    }
 
-	.animate-fade-in {
-		animation: fadeIn 0.3s ease-in-out;
-	}
+    .animate-fade-in {
+        animation: fadeIn 0.3s ease-in-out;
+    }
 
-	.animate-slide-up {
-		animation: slideUp 0.3s ease-out;
-	}
+    .animate-slide-up {
+        animation: slideUp 0.3s ease-out;
+    }
 
-	.animate-float {
-		animation: float 6s ease-in-out infinite;
-	}
+    .animate-float {
+        animation: float 6s ease-in-out infinite;
+    }
 
-	.animate-float-left {
-		animation: floatLeft 6s ease-in-out infinite;
-	}
+    .animate-float-left {
+        animation: floatLeft 6s ease-in-out infinite;
+    }
 
-	.animate-scroll {
-		animation: scroll 10s linear infinite;
-	}
+    .animate-scroll {
+        animation: scroll 10s linear infinite;
+    }
 
-	/* Transition Utilities */
-	.transition-default {
-		@apply transition-default;
-	}
+    /* Transition Utilities */
+    .transition-default {
+        @apply transition-default;
+    }
 
-	.transition-fast {
-		@apply transition-fast;
-	}
+    .transition-fast {
+        @apply transition-fast;
+    }
 
-	.transition-slow {
-		@apply transition-slow;
-	}
+    .transition-slow {
+        @apply transition-slow;
+    }
 
-	/* Header & Brand Styles */
-	.header-shadow {
-		box-shadow: 0 0 40px 0 rgba(37, 43, 47, 0.5);
-	}
+    /* Header & Brand Styles */
+    .header-shadow {
+        box-shadow: 0 0 40px 0 rgba(37, 43, 47, 0.5);
+    }
 
-	.brand-style {
-		box-shadow: inset 0 0 5px 0 rgba(248, 249, 245, 0.8), 0 2 8px 0 rgba(40, 41, 61, 0.15);
-		border: 1px solid #A3C1AD;
-	}
+    .brand-style {
+        box-shadow:
+            inset 0 0 5px 0 rgba(248, 249, 245, 0.8),
+            0 2 8px 0 rgba(40, 41, 61, 0.15);
+        border: 1px solid #a3c1ad;
+    }
 
-	.inner-shadow {
-		box-shadow: inset 0 0 5px 0 rgba(248, 249, 245, 0.8), 0 2 8px 0 rgba(40, 41, 61, 0.15);
-		border: 1px solid #A3C1AD;
-	}
+    .inner-shadow {
+        box-shadow:
+            inset 0 0 5px 0 rgba(248, 249, 245, 0.8),
+            0 2 8px 0 rgba(40, 41, 61, 0.15);
+        border: 1px solid #a3c1ad;
+    }
 }

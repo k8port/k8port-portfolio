@@ -24,7 +24,7 @@ Streamline null/undefined checks and nested property access ^[1].
 ## **Backend/Platform Engineering**
 
 ### **Microservices & Event-Driven**
-Decoupled services with fault isolation; events (e.g., "order shipped") trigger 
+Decoupled services with fault isolation; events (e.g., 'order shipped') trigger 
 workflows ^[3].  
 
 ### **CQRS**

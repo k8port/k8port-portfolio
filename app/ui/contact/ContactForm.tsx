@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from "react";
+import React from 'react';
+import { useState } from 'react';
 
 export default function ContactForm() {
     const [form, setForm] = useState({
@@ -14,8 +15,8 @@ export default function ContactForm() {
     const [submitted, setSubmitted] = useState(false);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        setForm({ ...form, [e.target.name]: e.target.value })
-    }
+        setForm({ ...form, [e.target.name]: e.target.value });
+    };
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -41,38 +42,51 @@ export default function ContactForm() {
     };
 
     if (submitted) {
-        return <div className="text-greenblacks-pthalogreen font-greatvibes font-semibold">Thanks for your inquiry!  I'll be in touch!</div>
+        return (
+            <div className="text-greenblacks-pthalogreen font-greatvibes font-semibold">
+                Thanks for your inquiry! I&apos;ll be in touch!
+            </div>
+        );
     }
 
     return (
-        <form onSubmit={handleSubmit} className="space-y-4 max-w-md mx-auto p-4 border rounded shadow">
+        <form
+            onSubmit={handleSubmit}
+            className="space-y-4 max-w-md mx-auto p-4 border rounded shadow"
+        >
             <div>
-                <label htmlFor="name" className="block font-medium">Name</label>
-                <input 
-                    type="text" 
-                    id="name" 
-                    name="name" 
-                    value={form.name} 
-                    onChange={handleChange} 
-                    className="w-full p-2 border rounded" 
-                />
-            </div>
-
-            <div>
-                <label htmlFor="method" className="block font-medium">Preferred Contact Method</label>
+                <label htmlFor="name" className="block font-medium">
+                    Name
+                </label>
                 <input
                     type="text"
-                    id="method" 
-                    name="method" 
-                    value={form.method} 
+                    id="name"
+                    name="name"
+                    value={form.name}
                     onChange={handleChange}
-                    placeholder="email, phone call, text message, direct message, et.al."
-                    className="w-full p-2 border rounded" 
+                    className="w-full p-2 border rounded"
                 />
             </div>
 
             <div>
-                <label htmlFor="handle" className="block font-medium">Contact Handle (e.g. email address, mobile number, linkedin, github, etc.)</label>
+                <label htmlFor="method" className="block font-medium">
+                    Preferred Contact Method
+                </label>
+                <input
+                    type="text"
+                    id="method"
+                    name="method"
+                    value={form.method}
+                    onChange={handleChange}
+                    placeholder="email, phone call, text message, direct message, et.al."
+                    className="w-full p-2 border rounded"
+                />
+            </div>
+
+            <div>
+                <label htmlFor="handle" className="block font-medium">
+                    Contact Handle (e.g. email address, mobile number, linkedin, github, etc.)
+                </label>
                 <input
                     type="text"
                     id="handle"
@@ -84,7 +98,9 @@ export default function ContactForm() {
             </div>
 
             <div>
-                <label htmlFor="reason" className="block font-medium">Reason for Inquiry</label>
+                <label htmlFor="reason" className="block font-medium">
+                    Reason for Inquiry
+                </label>
                 <input
                     type="text"
                     id="reason"
@@ -97,7 +113,9 @@ export default function ContactForm() {
             </div>
 
             <div>
-                <label htmlFor="message" className="block font-medium">Message</label>
+                <label htmlFor="message" className="block font-medium">
+                    Message
+                </label>
                 <textarea
                     id="message"
                     name="message"
@@ -107,8 +125,8 @@ export default function ContactForm() {
                 />
             </div>
 
-            <button 
-                type="submit" 
+            <button
+                type="submit"
                 className="bg-accent-accentblue text-brand-secondary font-bold px-4 py-2 rounded hover:bg-accent-accentbluevar mx-[40%]"
             >
                 Submit

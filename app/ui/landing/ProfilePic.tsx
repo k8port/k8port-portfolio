@@ -1,5 +1,5 @@
-import React from "react";
-import Image from "next/image";
+import React from 'react';
+import Image from 'next/image';
 
 interface ProfilePicProps {
     className?: string;
@@ -20,9 +20,9 @@ export const ProfilePic = ({
     if (!imageHeight) imageHeight = 678;
     return (
         <div className={`relative w-full h-full md:w-3/4 md:h-3/4 ${className}`}>
-            <Image 
-                src={`${profilePicSrc}`} 
-                alt={`${profilePicDescription}`} 
+            <Image
+                src={`${profilePicSrc}`}
+                alt={`${profilePicDescription}`}
                 className="w-full"
                 width={imageWidth}
                 height={imageHeight}

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 interface LayeredVectorVectorProps {
     className?: string;
@@ -833,7 +833,7 @@ const LayeredVectorVector = ({ className }: LayeredVectorVectorProps) => {
                 <div className="w-3 h-3.5 left-[217.58px] top-[291.19px] absolute bg-greengrays-ashgray" />
                 <div className="w-7 h-8 left-[208.94px] top-[283.62px] absolute bg-greengrays-ashgray" />
             </div>
-            
+
             <div className="w-72 h-[853.57px] left-0 top-[11.21px] absolute mix-blend-plus-darker">
                 <div className="w-24 h-44 left-[145.67px] top-[16.75px] absolute bg-brand-secondary" />
                 <div className="w-2.5 h-2 left-[145.97px] top-[85.10px] absolute bg-brand-quinaryvar" />
@@ -1662,6 +1662,6 @@ const LayeredVectorVector = ({ className }: LayeredVectorVectorProps) => {
             </div>
         </div>
     );
-}
+};
 
 export default LayeredVectorVector;

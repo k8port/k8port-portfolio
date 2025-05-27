@@ -1,5 +1,5 @@
-import React from "react";
-import Image from "next/image";
+import React from 'react';
+import Image from 'next/image';
 
 interface LayeredVectorProps {
     className: string;
@@ -12,11 +12,11 @@ export default function LayeredVector({ className }: LayeredVectorProps) {
     return (
         <div className={`${className}`}>
             <div className="w-full h-full">
-                <Image 
-                    src="/images/layered_vector/floatingvectors.svg" 
-                    alt="Floating Vectors" 
-                    width={600} 
-                    height={600} 
+                <Image
+                    src="/images/layered_vector/floatingvectors.svg"
+                    alt="Floating Vectors"
+                    width={600}
+                    height={600}
                     className={`
                         min-h-[60px] min-w-[60px]
                         z-999
@@ -28,12 +28,12 @@ export default function LayeredVector({ className }: LayeredVectorProps) {
                         lg:top-75 lg:-left-50
                         lg-dt:top-50 lg-dt:-left-45
                         animate-float-left
-                    `} 
+                    `}
                 />
-                <Image 
-                    src="/images/layered_vector/luminous_vector.svg" 
-                    alt="Luminous Vector" 
-                    width={width} 
+                <Image
+                    src="/images/layered_vector/luminous_vector.svg"
+                    alt="Luminous Vector"
+                    width={width}
                     height={height}
                     className={`
                         min-h-[700px] min-w-[200px]
@@ -51,14 +51,14 @@ export default function LayeredVector({ className }: LayeredVectorProps) {
                         opacity-35
                         mix-blend-plus-luminosity
                         priority
-                    `} 
+                    `}
                 />
 
-                <Image 
-                    src="/images/layered_vector/plus-darker-vector.svg" 
-                    alt="Plus Darker Vector" 
-                    width={width} 
-                    height={height} 
+                <Image
+                    src="/images/layered_vector/plus-darker-vector.svg"
+                    alt="Plus Darker Vector"
+                    width={width}
+                    height={height}
                     className={`
                         min-h-[700px] min-w-[200px]
                         sm:min-h-[650px] sm:min-w-[220px]
@@ -75,7 +75,6 @@ export default function LayeredVector({ className }: LayeredVectorProps) {
                         mix-blend-plus-darker
                     `}
                 />
-
             </div>
         </div>
     );

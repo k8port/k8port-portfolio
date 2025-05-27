@@ -9,13 +9,13 @@ interface CreativeTypeProps {
 
 export default function CreativeType({ src, className }: CreativeTypeProps) {
     return (
-        <div className={`flex-col items-center justify-center md:justify-end`}>
+        <div className={'flex-col items-center justify-center md:justify-end'}>
             <Tooltip message="Click me to discover your creative type...">
-                <Image 
+                <Image
                     className={`${className} cursor-pointer object-cover`}
-                    src={src} 
-                    alt="Creative Type" 
-                    width={270} 
+                    src={src}
+                    alt="Creative Type"
+                    width={270}
                     height={480}
                     onClick={() => window.open('https://mycreativetype.com', '_blank')}
                 />

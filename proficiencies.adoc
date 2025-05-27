@@ -671,7 +671,7 @@ _Cloud-based observability platform providing real-time insights into applicatio
 _Lightweight dependency injection framework for Java developed at Google for simplicity and ease of use without XML configuration._
 
 *Key Features*::
-*Annotation-Based Configuration*::: Annotations like `@Inject` for dependency injection eliminating factories and keyword "new".
+*Annotation-Based Configuration*::: Annotations like `@Inject` for dependency injection eliminating factories and keyword 'new'.
 *Type-Safe Binding*::: Compile-time type safety for dependency bindings.
 *AOP Support*::: Aspect-oriented programming features.
 *Modularization*::: Organization of bindings into modules for better structure and reusability.

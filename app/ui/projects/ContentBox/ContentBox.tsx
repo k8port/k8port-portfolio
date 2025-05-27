@@ -1,8 +1,8 @@
-import React from "react";
-import PlaceholderPicture from "../PlaceholderPicture";
-import Content from "./Content";
-import { ImageFrame } from "../../ImageFrame";
-import { getFontAwesomeIcon } from "@/app/styles/icons";
+import React from 'react';
+import PlaceholderPicture from '../PlaceholderPicture';
+import Content from './Content';
+import { ImageFrame } from '../../ImageFrame';
+import { getFontAwesomeIcon } from '@/app/styles/icons';
 
 interface ContentBoxProps {
     category?: string;
@@ -13,16 +13,20 @@ interface ContentBoxProps {
     link?: string;
 }
 
-export default function ContentBox({ category, title, text, image, has_button, link }: ContentBoxProps) {
-
-    const IconComponent = has_button ? getFontAwesomeIcon("Right Arrow"): null;
+export default function ContentBox({
+    category,
+    title,
+    text,
+    image,
+    has_button,
+    link,
+}: ContentBoxProps) {
+    const IconComponent = has_button ? getFontAwesomeIcon('Right Arrow') : null;
 
     return (
         <div className="flex flex-col w-sm h-auto items-center relative bg-brand-secondary border border-solid border-greenwhites-featherwhite rounded-lg">
-            {!image && (
-                <PlaceholderPicture className="self-stretch h-3xs object-cover w-auto" />
-            )}
-            
+            {!image && <PlaceholderPicture className="self-stretch h-3xs object-cover w-auto" />}
+
             {image && (
                 <ImageFrame
                     className="self-stretch"
@@ -49,9 +53,13 @@ export default function ContentBox({ category, title, text, image, has_button, l
                     <button className="h-12 w-full items-center justify-center gap-4 pl-0 pr-2 py-4 p-0 cursor-pointer border-t border-greenwhites-featherwhite">
                         <div className="inline-flex items-start justify-center gap-2.5 px-4 py-0 relative flex-[0_0_auto]">
                             <span className="text-accent-accentredvar text-base align-left relative mt-[-1.00px] whitespace-nowrap">
-                                <a href={link} target="_blank" rel="noopener noreferrer">More Info</a>
+                                <a href={link} target="_blank" rel="noopener noreferrer">
+                                    More Info
+                                </a>
                             </span>
-                            {IconComponent && <IconComponent className="text-accent-accentredvar w-4 h-4" />}
+                            {IconComponent && (
+                                <IconComponent className="text-accent-accentredvar w-4 h-4" />
+                            )}
                         </div>
                     </button>
                 </div>

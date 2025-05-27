@@ -6,7 +6,7 @@ interface PopoverProps {
     triggerLabel: string;
 }
 
-export function Popover({triggerLabel, children}: PopoverProps) {
+export function Popover({ triggerLabel, children }: PopoverProps) {
     const [open, setOpen] = useState(false);
     const buttonRef = useRef<HTMLButtonElement>(null);
     const panelRef = useRef<HTMLDivElement>(null);
@@ -51,5 +51,5 @@ export function Popover({triggerLabel, children}: PopoverProps) {
                 </div>
             )}
         </div>
-    )
-};
+    );
+}

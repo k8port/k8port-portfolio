@@ -1,14 +1,15 @@
-import React from "react";
+import React from 'react';
 
 interface TitleProps {
     titleText: string;
-    fontWeight: "normal" | "bold";
+    fontWeight: 'normal' | 'bold';
 }
 
 export const Title = ({ titleText, fontWeight }: TitleProps) => {
-    const fontWeightClass = fontWeight === "normal" ? "font-normal" : "font-bold";
+    const fontWeightClass = fontWeight === 'normal' ? 'font-normal' : 'font-bold';
     return (
-        <p className={`
+        <p
+            className={`
             relative 
             w-[445px] 
             mt-[-1.00px] 
@@ -18,7 +19,8 @@ export const Title = ({ titleText, fontWeight }: TitleProps) => {
             text-xl 
             leading-7 
             uppercase 
-            not-italic`}>
+            not-italic`}
+        >
             {titleText}
         </p>
     );

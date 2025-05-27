@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react";
+import React, { forwardRef } from 'react';
 
 interface OpacityOverlayProps {
     className?: string;
@@ -6,7 +6,7 @@ interface OpacityOverlayProps {
 
 const OpacityOverlay = forwardRef<HTMLDivElement, OpacityOverlayProps>(({ className }, ref) => {
     return (
-        <div 
+        <div
             ref={ref}
             className={`
                 bg-gradient-to-b from-brand-primary
