@@ -24,10 +24,7 @@ export const LandingContainer = () => {
                 className={`
           absolute inset-0
           aspect-[1/2]
-          sm:aspect-[${aspectRatio}]
-          md:aspect-4/5
-          lg:aspect-5/6
-          xl:aspect-6/7
+          sm:aspect-[1/4]
           object-cover z-0
           -translate-y-12
           md:-translate-y-16
