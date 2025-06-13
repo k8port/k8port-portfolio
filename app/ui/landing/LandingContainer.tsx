@@ -17,22 +17,28 @@ export const LandingContainer = () => {
     return (
         <div>
             <Image
-                src="/images/nouveaubrain.png"
+                src="/images/nouveau-brain.png"
                 alt="Art Nouveau brain design"
                 width={width}
                 height={height}
                 className={`
-          absolute inset-0
-          aspect-[1/2]
-          sm:aspect-[1/4]
-          object-cover z-0
-          -translate-y-12
-          md:-translate-y-16
-          lg:-translate-y-32
-          xl:-translate-y-48
-          max-w-full
-          max-h-full
-        `}
+                    absolute inset-0
+                    aspect-[1/5]
+                    lg:aspect-[1/20]
+                    dt-lg:aspect-[1/30]
+                    xl:aspect-[1/40]
+                    2xl:aspect-[1/50]
+                    3xl:aspect-[1/60]
+                    4xl:aspect-[1/70]
+                    5xl:aspect-[1/80]
+                    object-cover z-0
+                    -translate-y-12
+                    md:-translate-y-16
+                    lg:-translate-y-20
+                    xl:-translate-y-24
+                    max-w-full
+                    max-h-full
+                `}
             />
 
             {/* layer 2: Gradient overlays */}

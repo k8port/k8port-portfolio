@@ -12,7 +12,7 @@ export const ItIsI = ({ className, insertNameHere, insertJobTitleHere }: ItIsIPr
     return (
         <div className={`${className}`}>
             <Display
-                className="w-96 h-auto text-center sm:text-left"
+                className="w-96 h-auto text-center sm:text-left animate-slide-in-left"
                 displayText={insertNameHere}
                 textColor="text-greengrays-graygreen"
                 textSize="text-5xl"

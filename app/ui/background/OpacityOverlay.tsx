@@ -10,7 +10,6 @@ const OpacityOverlay = forwardRef<HTMLDivElement, OpacityOverlayProps>(({ classN
             ref={ref}
             className={`
                 bg-gradient-to-b from-brand-primary
-                from-35%
                 to-brand-primary/0
                 ${className}
             `}

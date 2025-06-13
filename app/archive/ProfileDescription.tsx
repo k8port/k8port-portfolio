@@ -35,10 +35,12 @@ export const ProfileDescription = ({ className, subheader }: ProfileDescriptionP
                         `}
                         >
                             <p className="text-wrap">
-                                Versatile Software Engineer with a Master of Science in Computer
-                                Science from Saint Joseph’s University (2014) and 10+ years
-                                designing and developing performant &amp; scalable applications,
-                                microservices, apis, and UIs.
+                            systems, logic, data, colors, sounds, wisdom, nature, knowledge, truth,
+                            puzzles and patterns. I am programmed to have inate empathy,
+                            unconditional kindness, enduring curiosity, unbounded creativity, and a
+                            big-picture perspective. I thrive on the intersection of technology and
+                            humanity, where chaos and order vie for supremacy, complexity and
+                            simplicity collide and converge.
                             </p>
                         </div>
                     </div>

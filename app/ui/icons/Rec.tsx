@@ -10,7 +10,7 @@ export const Rec = ({ className }: RecProps) => {
             <img
                 className="absolute w-[5px] h-[5px] top-px left-px"
                 alt="Filled Circle"
-                src="/images/filled-circle.svg"
+                src="/images/brand/filled-circle.svg"
             />
         </div>
     );

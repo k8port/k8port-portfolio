@@ -1,5 +1,5 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 
 interface LayeredVectorProps {
     className: string;
@@ -12,69 +12,44 @@ export default function LayeredVector({ className }: LayeredVectorProps) {
     return (
         <div className={`${className}`}>
             <div className="w-full h-full">
-                <Image
-                    src="/images/layered_vector/floatingvectors.svg"
-                    alt="Floating Vectors"
-                    width={600}
-                    height={600}
+                <Image 
+                    src="/images/layered_vector/floatingvectors.svg" 
+                    alt="Floating Vectors" 
+                    width={600} 
+                    height={600} 
                     className={`
                         min-h-[60px] min-w-[60px]
                         z-999
                         aspect-[1]
-                        object-cover absolute 
+                        object-cover absolute
                         top-47 -left-15
-                        sm:top-54 sm:-left-25 
-                        md:top-25 md:-left-55
+                        sm:top-54 sm:-left-25
+                        md:top-15 md:-left-55
                         lg:top-75 lg:-left-50
                         lg-dt:top-50 lg-dt:-left-45
                         animate-float-left
                     `}
                 />
                 <Image
-                    src="/images/layered_vector/luminous_vector.svg"
+                    src="/images/layered_vector/vector_figure.svg"
                     alt="Luminous Vector"
                     width={width}
                     height={height}
                     className={`
-                        min-h-[700px] min-w-[200px]
-                        sm:min-h-[650px] sm:min-w-[220px]
-                        md:min-h-[825px] md:min-w-[240px]
-                        lg:min-h-[900px] lg:min-w-[260px]
-                        aspect-[${aspectRatio}] 
-                        object-cover 
-                        absolute 
+                        min-h-[605.5px] min-w-[200px]
+                        md:min-h-[807px] md:min-w-[267px]
+                        aspect-[${aspectRatio}]
+                        object-cover
+                        absolute
                         top-37 -left-10
-                        sm:top-54 sm:-left-25 
-                        md:top-25 md:-left-55
+                        sm:top-54 sm:-left-25
+                        md:top-15 md:-left-60
                         lg:top-75 lg:-left-50
                         lg-dt:top-50 lg-dt:-left-45
-                        opacity-35
-                        mix-blend-plus-luminosity
-                        priority
-                    `}
+                        opacity-85
+                    `} 
                 />
 
-                <Image
-                    src="/images/layered_vector/plus-darker-vector.svg"
-                    alt="Plus Darker Vector"
-                    width={width}
-                    height={height}
-                    className={`
-                        min-h-[700px] min-w-[200px]
-                        sm:min-h-[650px] sm:min-w-[220px]
-                        md:min-h-[825px] md:min-w-[240px]
-                        lg:min-h-[900px] lg:min-w-[260px]
-                        aspect-[${aspectRatio}] 
-                        object-cover absolute 
-                        top-37 -left-10
-                        sm:top-54 sm:-left-25 
-                        md:top-25 md:-left-55
-                        lg:top-75 lg:-left-50
-                        lg-dt:top-50 lg-dt:-left-45
-                        opacity-35
-                        mix-blend-plus-darker
-                    `}
-                />
             </div>
         </div>
     );

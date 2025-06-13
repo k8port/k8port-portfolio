@@ -1,7 +1,7 @@
 import React from 'react';
 import { ButtonStyle } from './ButtonStyle';
-import { getFontAwesomeIcon } from '@/app/styles/icons';
-import { downloadAndViewResume } from '@/app/lib/utilities';
+import { getFontAwesomeIcon } from '@/app/lib/utils/getFontAwesomeIcon';
+import { downloadAndViewResume } from '@/app/lib/utils/downloadAndViewResume';
 
 interface MobileButtonGroupProps {
     className?: string;
@@ -15,20 +15,15 @@ export const MobileButtonGroup = ({ className }: MobileButtonGroupProps) => {
         downloadAndViewResume();
     };
 
-    // const handleContactClick = () => {
-    //     console.log('Contact button clicked!');
-    //     // Add your contact logic here
-    //     // Example: window.location.href = '#contact';
-    // };
 
     return (
         <div className={`space-x-2 ${className}`}>
             <ButtonStyle
-                style="filled"
+                style="ghost"
                 iconPosition="left-icon"
                 size="tiny"
                 borderRadius="eight"
-                buttonText="Resume"
+                buttonText="Resume/CV"
                 buttonIconSelection={DownloadIcon ?? undefined}
                 onClick={handleResumeClick}
             />
