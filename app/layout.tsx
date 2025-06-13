@@ -34,8 +34,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta
                     name="description"
-                    content="Kate Portalatin's (k8port) portfolio build using Next.js 
-          15, TypeScript, React 19, Tailwind CSS 4, and TypeScript"
+                    content="Kate Portalatin's (k8port) portfolio build using Next.js 15, TypeScript,
+                                React 19, Tailwind CSS 4, and TypeScript"
                 />
                 <meta
                     name="keywords"
@@ -44,33 +44,32 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </head>
             <body
                 className={`
-        ${spaceGrotesk.variable} 
-        ${dmSerifDisplay.variable}
-        ${greatVibes.variable}
-        ${martianMono.variable}
-        ${cormorantGaramond.variable}
-        font-spacegrotesk
-        flex
-        flex-col
-        bg-brand-primary
-        antialiased
-        overflow-x-hidden
-      `}
+                    ${spaceGrotesk.variable}
+                    ${dmSerifDisplay.variable}
+                    ${greatVibes.variable}
+                    ${martianMono.variable}
+                    ${cormorantGaramond.variable}
+                    font-spacegrotesk
+                    flex
+                    flex-col
+                    bg-brand-primary
+                    antialiased
+                    overflow-x-hidden
+                `}
             >
                 <Header
                     className={`
-          sticky top-0 left-0 
-          w-full h-16 z-99 
-          bg-brand-secondaryvar/65
-          bg-[url('/images/waves_pattern.png')]
-          bg-no-repeat lg:bg-repeat-x
-          bg-cover
-          bg-center
-          bg-blend-overlay
-          backdrop-blur-sm
-          transition-all duration-300 
-          header-shadow
-        `}
+                        sticky top-0 left-0
+                        w-full h-16 z-99
+                        bg-brand-secondaryvar/65
+                        bg-[url('/images/brand/waves_pattern.png')]
+                        bg-no-repeat md:bg-repeat-x
+                        bg-center
+                        bg-blend-overlay
+                        backdrop-blur-sm
+                        transition-all duration-300
+                        header-shadow
+                    `}
                 />
                 <main>{children}</main>
             </body>

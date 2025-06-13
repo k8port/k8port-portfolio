@@ -1,63 +1,71 @@
+'use client';
+
 import React from 'react';
 import ProjectCard from './ProjectCard';
+import projects from '../../data/projects.json';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
-const projects = [
-    {
-        title: 'Stitch Companion',
-        description:
-            'Web app for creating and sharing cross-stitch and embroidery patterns from images',
-        link: 'https://github.com/k8port/stitch_companion',
-        tags: ['Python', 'React', 'Flask', 'Docker'],
-    },
-    {
-        title: 'Pattern Generator',
-        description:
-            'Algorithmically-generated patterns with color theme customization built with plain JS',
-        link: 'https://github.com/k8port/pattern_generator',
-        tags: ['Plain JS', 'Procedural Art'],
-    },
-    {
-        title: 'Family Device Agent',
-        description:
-            'SaaS platform built to manage family devices, including smart home and personal, with a focus on security and privacy. (prototype in TypeScript)',
-        link: 'https://github.com/k8port/device-management-system',
-        tags: ['Java', 'Spring', 'AWS', 'Docker', 'Terraform'],
-    },
-    {
-        title: 'Color Meanings API',
-        description:
-            "Data pipeline and GraphQL API for Jacob Oleson's Color Meanings web site with additional research and analysis",
-        link: 'https://github.com/k8port/color_meanings_api',
-        tags: ['Python', 'Flask', 'GraphQL'],
-    },
-];
+
+const projectMap = projects.map((project) => ({
+    ...project,
+    tags: project.tags.map((tag) => tag.toLowerCase()),
+}));
 
 export default function ProjectsContainer() {
     return (
-        <div className="flex flex-col md:items-center gap-16 p-20 bg-brand-secondary border-t border-solid border-greenwhites-featherwhite overflow-x-scroll">
-            <div
-                className={`
-                flex flex-col 
-                items-start gap-12 
-                min-w-[800px]
-                w-full max-w-[1280px]
-            `}
+        <section className="p-8 bg-brand-secondaryvar border border-greenwhites-featherwhite">
+            <div className="max-w-screen-xl mx-auto mb-8 text-center">
+                <h2 className="caption-heavy text-lg uppercase text-blueblacks-bluecharcoal">
+                    Portfolio Software Projects
+                </h2>
+            </div>
+
+            <Swiper
+                modules={[Navigation, Pagination]}
+                spaceBetween={24}
+                navigation
+                pagination={{ clickable: true }}
+                breakpoints={{
+                    0: { 
+                        slidesPerView: 1, 
+                        slidesPerGroup: 1,
+                        centeredSlides: true,
+                        // centeredSlidesBounds: true,
+                    }, // mobile
+                    768: { 
+                        slidesPerView: 2, 
+                        slidesPerGroup: 2,
+                        centeredSlides: true,
+                        // centeredSlidesBounds: true,
+                    }, // tablet
+                    1024: { 
+                        slidesPerView: 3, 
+                        slidesPerGroup: 3,
+                        centeredSlides: true,
+                        // centeredSlidesBounds: true,
+                    }, // laptop
+                    1280: { 
+                        slidesPerView: 4, 
+                        slidesPerGroup: 4,
+                        centeredSlides: true,
+                        // centeredSlidesBounds: true,
+                    }, // desktop +
+                }}
+                className="swiper-fullwidth"
             >
-                <div className="flex flex-col items-start md:items-center gap-2 w-full">
-                    <div className="caption-heavy text-lg text-blueblacks-bluecharcoal text-center uppercase">
-                        Portfolio Software Projects
-                    </div>
-                </div>
-            </div>
-            <div className="flex items-start gap-0 w-1/2 md:w-full">
-                {projects.map((project, index) => (
-                    <ProjectCard
-                        key={index}
-                        project={project}
-                        className="flex-0 md:flex-1 bg-brand-secondary border border-solid border-greenwhites-featherwhite"
-                    />
+                {projectMap.map((proj, i) => (
+                    <SwiperSlide key={i} className="w-full">
+                        <ProjectCard
+                            project={proj}
+                            className="bg-brand-secondary border border-greenwhites-featherwhite h-full flex-row justify-center"
+                        />
+                    </SwiperSlide>
                 ))}
-            </div>
-        </div>
+            </Swiper>
+        </section>
     );
 }

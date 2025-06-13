@@ -28,6 +28,7 @@ import {
     FaLinux,
     FaWindows,
     FaHammer,
+    FaCloudDownloadAlt,
 } from 'react-icons/fa';
 import {
     SiTypescript,
@@ -76,9 +77,9 @@ import {
     SiNeo4J,
 } from 'react-icons/si';
 import { IoLogoJavascript } from 'react-icons/io5';
-import { FaDownload } from 'react-icons/fa6';
+import { FiDownloadCloud } from 'react-icons/fi';
 import { DiMongodb, DiDjango, DiMysql, DiPostgresql, DiRuby } from 'react-icons/di';
-import { MdOutlineViewKanban, MdOutlinePhone } from 'react-icons/md';
+import { MdOutlineViewKanban, MdOutlinePhone, MdOutlineCloudDownload } from 'react-icons/md';
 import {
     FaBusinessTime,
     FaGolang,
@@ -208,7 +209,7 @@ export const iconMap: Record<string, IconType> = {
     'Arrow Dropdown': IoMdArrowDropdown,
     'Arrow Dropup': IoMdArrowDropup,
     Neo4j: SiNeo4J,
-    Download: FaDownload,
+    Download: FiDownloadCloud,
     Phone: MdOutlinePhone,
     Contact: BsMegaphone,
     User: FaUserAstronaut,

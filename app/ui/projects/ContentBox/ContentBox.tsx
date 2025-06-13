@@ -2,7 +2,7 @@ import React from 'react';
 import PlaceholderPicture from '../PlaceholderPicture';
 import Content from './Content';
 import { ImageFrame } from '../../ImageFrame';
-import { getFontAwesomeIcon } from '@/app/styles/icons';
+import { getFontAwesomeIcon } from '@/app/lib/utils/getFontAwesomeIcon';
 
 interface ContentBoxProps {
     category?: string;
@@ -50,15 +50,15 @@ export default function ContentBox({
 
             {has_button && (
                 <div className="flex items-start p-4">
-                    <button className="h-12 w-full items-center justify-center gap-4 pl-0 pr-2 py-4 p-0 cursor-pointer border-t border-greenwhites-featherwhite">
+                    <button className="h-12 w-full items-center justify-center gap-4 pl-0 pr-2 py-4 p-0 cursor-pointer border-t border-greenwhites-featherwhite hover:bg-bluewhites-paperwhite hover:text-accent-accentred hover:shadow-btn-shadow8">
                         <div className="inline-flex items-start justify-center gap-2.5 px-4 py-0 relative flex-[0_0_auto]">
-                            <span className="text-accent-accentredvar text-base align-left relative mt-[-1.00px] whitespace-nowrap">
+                            <span className="text-accent-accentredvar hover:text-accent-accentpink hover:text-lg text-base align-left relative mt-[-1.00px] whitespace-nowrap">
                                 <a href={link} target="_blank" rel="noopener noreferrer">
                                     More Info
                                 </a>
                             </span>
                             {IconComponent && (
-                                <IconComponent className="text-accent-accentredvar w-4 h-4" />
+                                <IconComponent className="text-accent-accentredvar hover:text-accent-accentpink hover:w-5 hover:h-5 w-4 h-4 cursor-pointer" />
                             )}
                         </div>
                     </button>

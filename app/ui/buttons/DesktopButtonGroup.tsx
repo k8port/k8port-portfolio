@@ -1,7 +1,7 @@
 import React from 'react';
 import { ButtonStyle } from './ButtonStyle';
-import { getFontAwesomeIcon } from '@/app/styles/icons';
-import { downloadAndViewResume } from '@/app/lib/utilities';
+import { getFontAwesomeIcon } from '@/app/lib/utils/getFontAwesomeIcon';
+import { downloadAndViewResume } from '@/app/lib/utils/downloadAndViewResume';
 
 interface DesktopButtonGroupProps {
     className?: string;
@@ -26,9 +26,9 @@ export const DesktopButtonGroup = ({ className }: DesktopButtonGroupProps) => {
             <ButtonStyle
                 style="filled"
                 iconPosition="left-icon"
-                size="small"
+                size="tiny"
                 borderRadius="sixteen"
-                buttonText="Resume"
+                buttonText="Resume / CV"
                 buttonIconSelection={DownloadIcon ?? undefined}
                 onClick={handleResumeClick}
             />

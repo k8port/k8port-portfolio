@@ -66,8 +66,8 @@ importers:
         specifier: ^2.15.3
         version: 2.15.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       xlsx:
-        specifier: ^0.18.5
-        version: 0.18.5
+        specifier: https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz
+        version: https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz
     devDependencies:
       '@eslint/eslintrc':
         specifier: ^3.3.1
@@ -114,6 +114,9 @@ importers:
       eslint-plugin-prettier:
         specifier: ^5.4.0
         version: 5.4.0(eslint-config-prettier@10.1.5(eslint@9.27.0(jiti@2.4.2)))(eslint@9.27.0(jiti@2.4.2))(prettier@3.5.3)
+      framer-motion:
+        specifier: ^12.15.0
+        version: 12.15.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       gh-pages:
         specifier: ^6.3.0
         version: 6.3.0
@@ -129,6 +132,9 @@ importers:
       jest-environment-jsdom:
         specifier: ^29.7.0
         version: 29.7.0(bufferutil@4.0.9)(utf-8-validate@6.0.5)
+      motion:
+        specifier: ^12.15.0
+        version: 12.15.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       postcss:
         specifier: ^8.5.3
         version: 8.5.3
@@ -138,6 +144,9 @@ importers:
       resend:
         specifier: ^4.5.1
         version: 4.5.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      swiper:
+        specifier: ^11.2.8
+        version: 11.2.8
       tailwindcss:
         specifier: ^4.1.7
         version: 4.1.7
@@ -1488,10 +1497,6 @@ packages:
     resolution: {integrity: sha512-XNAb/a6TCqou+TufU8/u11HCu9x1gYvOoxLwtlXgIqmkrYQADVv6ljyW2zwiPhHz9R1gItAWpuDrdJMmrOBFEA==}
     engines: {node: '>= 16.0.0'}
 
-  adler-32@1.3.1:
-    resolution: {integrity: sha512-ynZ4w/nUUv5rrsR8UUGoe1VC9hZj6V5hU9Qw1HlMDJGEJw5S7TfTErWTjMys6M7vr0YWcPqs3qAr4ss0nDfP+A==}
-    engines: {node: '>=0.8'}
-
   agent-base@6.0.2:
     resolution: {integrity: sha512-RZNwNclF7+MS/8bDg70amg32dyeZGZxiDuQmZxKLAlQjr3jGyLx+4Kkk58UO7D2QdgFIQCovuSuZESne6RG6XQ==}
     engines: {node: '>= 6.0.0'}
@@ -1773,10 +1778,6 @@ packages:
   caseless@0.12.0:
     resolution: {integrity: sha512-4tYFyifaFfGacoiObjJegolkwSU4xQNGbVgUiNYVUxbQ2x2lUsFvY4hVgVzGiIe6WLOPqycWXA40l+PWsxthUw==}
 
-  cfb@1.2.2:
-    resolution: {integrity: sha512-KfdUZsSOw19/ObEWasvBP/Ac4reZvAGauZhs6S/gqNhXhI7cKwvlH7ulj+dOEYnca4bm4SGo8C1bTAQvnTjgQA==}
-    engines: {node: '>=0.8'}
-
   chalk@3.0.0:
     resolution: {integrity: sha512-4D3B6Wf41KOYRFdszmDqMCGq5VV/uMAB273JILmO+3jAlh8X4qDtdtgCR3fxtbLEMzSx22QdhnDcJvu2u1fVwg==}
     engines: {node: '>=8'}
@@ -1846,10 +1847,6 @@ packages:
   co@4.6.0:
     resolution: {integrity: sha512-QVb0dM5HvG+uaxitm8wONl7jltx8dqhfU33DcqtOZcLSVIKSDDLDi7+0LbAKiyI8hD9u42m2YxXSkMGWThaecQ==}
     engines: {iojs: '>= 1.0.0', node: '>= 0.12.0'}
-
-  codepage@1.15.0:
-    resolution: {integrity: sha512-3g6NUTPd/YtuuGrhMnOMRjFc+LJw/bnMp3+0r/Wcz3IXUuCosKRJvMphm5+Q+bvTVGcJJuRvVLuYba+WojaFaA==}
-    engines: {node: '>=0.8'}
 
   collect-v8-coverage@1.0.2:
     resolution: {integrity: sha512-lHl4d5/ONEbLlJvaJNtsF/Lz+WvB07u2ycqTYbdrq7UypDXailES4valYb2eWiJFxZlVmpGekfqoxQhzyFdT4Q==}
@@ -1925,11 +1922,6 @@ packages:
 
   core-util-is@1.0.2:
     resolution: {integrity: sha512-3lqz5YjWTYnW6dlDa5TLaTCcShfar1e40rmcJVwCBJC6mWlFuj0eCHIElmG1g5kyuJ/GD+8Wn4FFCcz4gJPfaQ==}
-
-  crc-32@1.2.2:
-    resolution: {integrity: sha512-ROmzCKrTnOwybPcJApAA6WBWij23HVfGVNKqqrZpuyZOHqK2CwHSvpGuyt/UNNvaIjEd8X5IFGp4Mh+Ie1IHJQ==}
-    engines: {node: '>=0.8'}
-    hasBin: true
 
   create-jest@29.7.0:
     resolution: {integrity: sha512-Adz2bdH0Vq3F53KEMJOoftQFutWCukm6J24wbPWRO4k1kMY7gS7ds/uoJkNuV8wDCtWWnuwGcJwpWcih+zEW1Q==}
@@ -2603,9 +2595,19 @@ packages:
     resolution: {integrity: sha512-buRG0fpBtRHSTCOASe6hD258tEubFoRLb4ZNA6NxMVHNw2gOcwHo9wyablzMzOA5z9xA9L1KNjk/Nt6MT9aYow==}
     engines: {node: '>= 0.6'}
 
-  frac@1.1.2:
-    resolution: {integrity: sha512-w/XBfkibaTl3YDqASwfDUqkna4Z2p9cFSr1aHDt0WoMTECnRfBOv2WArlZILlqgWlmdIlALXGpM2AOhEk5W3IA==}
-    engines: {node: '>=0.8'}
+  framer-motion@12.15.0:
+    resolution: {integrity: sha512-XKg/LnKExdLGugZrDILV7jZjI599785lDIJZLxMiiIFidCsy0a4R2ZEf+Izm67zyOuJgQYTHOmodi7igQsw3vg==}
+    peerDependencies:
+      '@emotion/is-prop-valid': '*'
+      react: ^18.0.0 || ^19.0.0
+      react-dom: ^18.0.0 || ^19.0.0
+    peerDependenciesMeta:
+      '@emotion/is-prop-valid':
+        optional: true
+      react:
+        optional: true
+      react-dom:
+        optional: true
 
   fresh@0.5.2:
     resolution: {integrity: sha512-zJ2mQYM18rEFOudeV4GShTGIQ7RbzA7ozbU9I/XBpm7kqgMywgmylMwXHxZJmkVoYkna9d2pVXVXPdYTP9ej8Q==}
@@ -3555,6 +3557,26 @@ packages:
   moo-color@1.0.3:
     resolution: {integrity: sha512-i/+ZKXMDf6aqYtBhuOcej71YSlbjT3wCO/4H1j8rPvxDJEifdwgg5MaFyu6iYAT8GBZJg2z0dkgK4YMzvURALQ==}
 
+  motion-dom@12.15.0:
+    resolution: {integrity: sha512-D2ldJgor+2vdcrDtKJw48k3OddXiZN1dDLLWrS8kiHzQdYVruh0IoTwbJBslrnTXIPgFED7PBN2Zbwl7rNqnhA==}
+
+  motion-utils@12.12.1:
+    resolution: {integrity: sha512-f9qiqUHm7hWSLlNW8gS9pisnsN7CRFRD58vNjptKdsqFLpkVnX00TNeD6Q0d27V9KzT7ySFyK1TZ/DShfVOv6w==}
+
+  motion@12.15.0:
+    resolution: {integrity: sha512-HLouXyIb1uQFiZgJTYGrtEzbatPc6vK+HP+Qt6afLQjaudiGiLLVsoy71CwzD/Stlh06FUd5OpyiXqn6XvqjqQ==}
+    peerDependencies:
+      '@emotion/is-prop-valid': '*'
+      react: ^18.0.0 || ^19.0.0
+      react-dom: ^18.0.0 || ^19.0.0
+    peerDependenciesMeta:
+      '@emotion/is-prop-valid':
+        optional: true
+      react:
+        optional: true
+      react-dom:
+        optional: true
+
   ms@2.0.0:
     resolution: {integrity: sha512-Tpp60P6IUJDTuOq/5Z8cdskzJujfwqfOTkrwIwj7IRISpnkJnT6SyJ4PCPnGMoFjC9ddhal5KVIYtAt97ix05A==}
 
@@ -4172,10 +4194,6 @@ packages:
   sprintf-js@1.0.3:
     resolution: {integrity: sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==}
 
-  ssf@0.11.2:
-    resolution: {integrity: sha512-+idbmIXoYET47hH+d7dfm2epdOMUDjqcB4648sTZ+t2JwoyBFL/insLfB/racrDmsKB3diwsDA696pZMieAC5g==}
-    engines: {node: '>=0.8'}
-
   sshpk@1.18.0:
     resolution: {integrity: sha512-2p2KJZTSqQ/I3+HX42EpYOa2l3f8Erv8MWKsy2I9uf4wA7yFIkXRffYdsx86y6z4vHtV8u7g+pPlr8/4ouAxsQ==}
     engines: {node: '>=0.10.0'}
@@ -4287,6 +4305,10 @@ packages:
   supports-preserve-symlinks-flag@1.0.0:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
+
+  swiper@11.2.8:
+    resolution: {integrity: sha512-S5FVf6zWynPWooi7pJ7lZhSUe2snTzqLuUzbd5h5PHUOhzgvW0bLKBd2wv0ixn6/5o9vwc/IkQT74CRcLJQzeg==}
+    engines: {node: '>= 4.7.0'}
 
   symbol-tree@3.2.4:
     resolution: {integrity: sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==}
@@ -4584,17 +4606,9 @@ packages:
     engines: {node: '>= 8'}
     hasBin: true
 
-  wmf@1.0.2:
-    resolution: {integrity: sha512-/p9K7bEh0Dj6WbXg4JG0xvLQmIadrner1bi45VMJTfnbVHsc7yIajZyoSoK60/dtVBs12Fm6WkUI5/3WAVsNMw==}
-    engines: {node: '>=0.8'}
-
   word-wrap@1.2.5:
     resolution: {integrity: sha512-BN22B5eaMMI9UMtjrGd5g5eCYPpCPDUy0FJXbYsaT5zYxjFOckS53SQDE3pWkVoWpHXVb3BrYcEN4Twa55B5cA==}
     engines: {node: '>=0.10.0'}
-
-  word@0.3.0:
-    resolution: {integrity: sha512-OELeY0Q61OXpdUfTp+oweA/vtLVg5VDOXh+3he3PNzLGG/y0oylSOC1xRVj0+l4vQ3tj/bB1HVHv1ocXkQceFA==}
-    engines: {node: '>=0.8'}
 
   wrap-ansi@6.2.0:
     resolution: {integrity: sha512-r6lPcBGxZXlIcymEu7InxDMhdW0KDxpLgoFLcguasxCaJ/SOIZwINatK9KY/tf+ZrlywOKU0UDj3ATXUBfxJXA==}
@@ -4627,8 +4641,9 @@ packages:
       utf-8-validate:
         optional: true
 
-  xlsx@0.18.5:
-    resolution: {integrity: sha512-dmg3LCjBPHZnQp5/F/+nnTa+miPJxUXB6vtk42YjBBKayDNagxGEeIdWApkYPOf3Z3pm3k62Knjzp7lMeTEtFQ==}
+  xlsx@https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz:
+    resolution: {tarball: https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz}
+    version: 0.20.3
     engines: {node: '>=0.8'}
     hasBin: true
 
@@ -6159,8 +6174,6 @@ snapshots:
 
   address@2.0.3: {}
 
-  adler-32@1.3.1: {}
-
   agent-base@6.0.2:
     dependencies:
       debug: 4.4.1(supports-color@8.1.1)
@@ -6512,11 +6525,6 @@ snapshots:
 
   caseless@0.12.0: {}
 
-  cfb@1.2.2:
-    dependencies:
-      adler-32: 1.3.1
-      crc-32: 1.2.2
-
   chalk@3.0.0:
     dependencies:
       ansi-styles: 4.3.0
@@ -6575,8 +6583,6 @@ snapshots:
   clsx@2.1.1: {}
 
   co@4.6.0: {}
-
-  codepage@1.15.0: {}
 
   collect-v8-coverage@1.0.2: {}
 
@@ -6637,8 +6643,6 @@ snapshots:
   cookie@0.7.2: {}
 
   core-util-is@1.0.2: {}
-
-  crc-32@1.2.2: {}
 
   create-jest@29.7.0(@types/node@20.17.48)(ts-node@10.9.2(@types/node@20.17.48)(typescript@5.8.3)):
     dependencies:
@@ -7503,7 +7507,14 @@ snapshots:
 
   forwarded@0.2.0: {}
 
-  frac@1.1.2: {}
+  framer-motion@12.15.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
+    dependencies:
+      motion-dom: 12.15.0
+      motion-utils: 12.12.1
+      tslib: 2.8.1
+    optionalDependencies:
+      react: 19.1.0
+      react-dom: 19.1.0(react@19.1.0)
 
   fresh@0.5.2: {}
 
@@ -8657,6 +8668,20 @@ snapshots:
     dependencies:
       color-name: 1.1.4
 
+  motion-dom@12.15.0:
+    dependencies:
+      motion-utils: 12.12.1
+
+  motion-utils@12.12.1: {}
+
+  motion@12.15.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
+    dependencies:
+      framer-motion: 12.15.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      tslib: 2.8.1
+    optionalDependencies:
+      react: 19.1.0
+      react-dom: 19.1.0(react@19.1.0)
+
   ms@2.0.0: {}
 
   ms@2.1.3: {}
@@ -9328,10 +9353,6 @@ snapshots:
 
   sprintf-js@1.0.3: {}
 
-  ssf@0.11.2:
-    dependencies:
-      frac: 1.1.2
-
   sshpk@1.18.0:
     dependencies:
       asn1: 0.2.6
@@ -9461,6 +9482,8 @@ snapshots:
       has-flag: 4.0.0
 
   supports-preserve-symlinks-flag@1.0.0: {}
+
+  swiper@11.2.8: {}
 
   symbol-tree@3.2.4: {}
 
@@ -9811,11 +9834,7 @@ snapshots:
     dependencies:
       isexe: 2.0.0
 
-  wmf@1.0.2: {}
-
   word-wrap@1.2.5: {}
-
-  word@0.3.0: {}
 
   wrap-ansi@6.2.0:
     dependencies:
@@ -9847,15 +9866,7 @@ snapshots:
       bufferutil: 4.0.9
       utf-8-validate: 6.0.5
 
-  xlsx@0.18.5:
-    dependencies:
-      adler-32: 1.3.1
-      cfb: 1.2.2
-      codepage: 1.15.0
-      crc-32: 1.2.2
-      ssf: 0.11.2
-      wmf: 1.0.2
-      word: 0.3.0
+  xlsx@https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz: {}
 
   xml-name-validator@4.0.0: {}
 

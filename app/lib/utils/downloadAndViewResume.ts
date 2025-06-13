@@ -1,8 +1,8 @@
 'use client';
 
-export const viewResume = () => {
+const viewResume = () => {
     window.open(
-        'https://acrobat.adobe.com/id/urn:aaid:sc:us:1344bcfe-f30e-482b-b16c-88c5112e2f01',
+        'https://drive.proton.me/urls/35YHM5DT3W#q8cG6y5bmbYP',
         '_blank'
     );
 };

@@ -1,6 +1,6 @@
 import React from 'react';
-import { ItIsI } from './ItIsI';
-import { Greeting } from './Greeting';
+import { ItIsI } from '../ui/landing/ItIsI';
+import { Greeting } from '../ui/landing/Greeting';
 import { ProfileDescription } from './ProfileDescription';
 interface ProfileDescriptionGroupProps {
     className?: string;

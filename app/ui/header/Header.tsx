@@ -10,15 +10,15 @@ export default function Header({ className }: { className?: string }) {
                         {/* <Brand /> */}
                         <div
                             className={`
-                              flex-grow flex 
-                              justify-center
-                              font-martianmono
-                            text-bluegrays-deepspacesparkle
-                              text-sm 
-                              leading-3
-                          `}
+                                flex-grow flex 
+                                justify-center
+                                font-martianmono
+                                text-bluegrays-deepspacesparkle
+                                text-sm
+                                leading-3
+                            `}
                         >
-                            <span className="absolute top-6 left-42 md:left-50 text-xs text-bluegrays-cadetblue tracking-tighter">
+                            <span className="absolute top-6 left-22 md:left-50 text-xs text-bluegrays-cadetblue tracking-tighter">
                                 I&apos;m not just a node, I am circuits
                             </span>
                         </div>

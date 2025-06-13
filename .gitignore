@@ -1,4 +1,15 @@
-# Logs
+# === Operating System ===
+# == MacOS ==
+.DS_Store
+# == Windows ==
+Thumbs.db
+ehthumbs.db
+# == Linux ==
+*.swp
+.swo
+.cache/
+
+# === Logs ===
 logs
 *.log
 npm-debug.log*
@@ -6,68 +17,78 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 .pnpm/
+*.log
+*.gz
 
-# Node.js
+# === Node modules & caches ===
 node_modules/
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
+.pnp/
+.pnp.js
 
-# Next.js build output
+# Turbopack cache
+.turbo/
+
+# === Next.js build outputs ===
 .next/
 out/
 
 # Next.js static files (if exported)
 export/
 
-# Build files
-dist/
-*.build.*
+# === Tailwind CSS cache ===
+node_modules/.cache/tailwindcss/
 
-# TypeScript
+# === Optional: npm cache ===
+.npm/
+
+# === Optional: eslint cache ===
+.next/cache/eslint/
+
+# Optional tailwindcss JIT cache
+.tailwind/
+
+# === TypeScript build outputs ===
+dist/
+build/
+*.build.*
 *.tsbuildinfo
 
-# Environment Variables
-.env
+# === Environment files ===
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
+.env.*.local
+.env
+.local/
+.env.*
 
-# Local IDE settings
+# === Editor & IDE ===
 .vscode/
 .idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.iml
 
-# MacOS
-.DS_Store
 
-# Windows
-Thumbs.db
-ehthumbs.db
-
-# Linux
-*.swp
-.swo
-.cache/
-
-# Testing-related files
+# === Test-related ===
 coverage/
 *.lcov
+jest.config.ts
 
-# Storybook
+# === Storybook ===
 .storybook/
 storybook-static/
 
-# Debug files
-debug.log
-npm-debug.log
-yarn-debug.log
+# === Other private files ===
+app/archive/private/
 
-# Output from running next lint
-.next/cache/eslint/
-
-# Optional npm cache
-.npm/
+# === Optional: lockfiles ===
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
 
 # Custom temporary files
 *.tmp
@@ -78,20 +99,3 @@ yarn-debug.log
 *.pid
 *.seed
 *.pid.lock
-
-# Optional tailwindcss JIT cache
-.tailwind/
-
-# Ignore custom logs or temporary files
-*.log
-*.gz
-
-# Ignore any specific local development config
-.local/
-
-# JetBrains IDEs (e.g., WebStorm)
-.idea/
-*.iml
-
-# Ignore the `.env` file containing sensitive information
-.env.*

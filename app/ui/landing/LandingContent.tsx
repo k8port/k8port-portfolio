@@ -25,50 +25,52 @@ const LandingContent = forwardRef<HTMLDivElement, LandingContentProps>(({ classN
         >
             <div
                 className={`
-          flex flex-col 
-          sm:min-w-2xl
-          gap-8 md:gap-12 
-          justify-start sm:justify-center
-        `}
+                  flex flex-col 
+                  sm:min-w-2xl
+                  gap-8 md:gap-12 
+                  justify-start sm:justify-center
+                `}
             >
                 <ItIsI
                     className={`
-              relative
-              md:hidden
-              top-15
-              sm:top-25 md:top-50
-              left-0 
-              flex flex-col 
-              items-center
-              gap-2
-              sm:gap-4
-              md:gap-6
-            `}
-                    insertNameHere="Kate Portalatin"
-                    insertJobTitleHere="Full Stack Software Engineer"
+                      relative
+                      md:hidden
+                      top-25
+                      sm:top-25 md:top-50
+                      left-0
+                      flex flex-col
+                      items-center
+                      gap-2
+                      sm:gap-4
+                      md:gap-6
+                    `}
+                  insertNameHere="Kate Portalatin"
+                  insertJobTitleHere="Full Stack Software Engineer"
                 />
-                <MobileButtonGroup className="mt-10 sm:mt-20 self-center md:hidden" />
+                <MobileButtonGroup className="mt-25 self-center md:hidden" />
                 <AboutMe className="flex flex-col gap-2 md:gap-8 mx-auto items-center" />
                 <DesktopButtonGroup className="hidden md:inline-flex items-start" />
             </div>
 
             <LayeredVector
                 className={`
-          h-dvh relative 
-          top-0 -left-30
-          lg:-top-30
-        `}
+                  h-dvh relative 
+                  top-0 -left-30
+                  lg:-top-30
+                `}
             />
 
             <div className="hidden md:flex md:flex-col justify-start lg:justify-normal space-y-6">
                 <div className="md:relative md:-left-20 lg:left-5">
                     <ItIsI
                         className={`
-              flex flex-col 
-              w-full h-full
-              mt-50
-              overflow-hidden
-            `}
+                          flex flex-col 
+                          w-full h-full
+                          mt-50
+                          overflow-hidden
+                          items-center
+                          
+                        `}
                         insertNameHere="Kate Portalatin"
                         insertJobTitleHere="Full Stack Software Engineer"
                     />

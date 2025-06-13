@@ -27,11 +27,11 @@ export const ButtonStyle = ({
     buttonIconSelection,
     onClick,
 }: ButtonStyleProps) => {
-    let styleClass = 'bg-brand-tertiary border border-solid border-brand-secondaryvar';
-    let hoverStyleClass = 'hover:bg-brand-tertiaryvar hover:border-2 hover:border-brand-quinary';
-    let activeStyleClass = 'active:bg-brand-quaternaryvar active:border-brand-senary';
+    let styleClass = 'bg-brand-septenary border border-solid border-brand-secondaryvar !text-redblacks-arsenic';
+    let hoverStyleClass = 'hover:bg-brand-senary hover:!text-redblacks-vampireblack';
+    let activeStyleClass = 'active:bg-brand-tertiaryvar active:!text-accent-accentbluevar';
     let loadingStyleClass =
-        '[&[data-loading=true]]:bg-brand-quaternary [&[data-loading=true]]:border-brand-primary';
+        '[&[data-loading=true]]:bg-accent-accentbluevar [&[data-loading=true]]:border-brand-primary [&[data-loading=true]]:!text-brand-secondaryvar';
     let sizeClass = 'px-28 py-5';
     let iconPositionClass = 'left-icon';
     let borderRadiusClass = 'rounded-sm';
@@ -39,21 +39,21 @@ export const ButtonStyle = ({
 
     if (style === 'outlined') {
         styleClass =
-            'bg-brand-secondary/25 border border-solid border-accent-accentred !text-bluewhites-ghostwhite';
+            'bg-accent-accentpink border border-solid border-accent-accentpinkvar !text-redblacks-blackraspberry';
         hoverStyleClass =
-            'hover:bg-brand-secondary/50 hover:border-2 hover:border-accent-accentredvar text-bluewhites-ghostwhite';
-        activeStyleClass = 'active:bg-accent-accentred/75 active:border-accent-accentredvar';
+            'hover:bg-accent-accentredvar hover:border-2 hover:border-accent-accentred hover:!text-redblacks-blackraspberry';
+        activeStyleClass = 'active:bg-redblacks-blackraspberry active:border-collection-portlandorangered active:!text-redgrays-silverpink';
         loadingStyleClass =
-            '[&[data-loading=true]]:bg-brand-secondary/25 [&[data-loading=true]]:border-accent-accentredvar';
+            '[&[data-loading=true]]:bg-accent-accentpink [&[data-loading=true]]:border-accent-accentpinkvar [&[data-loading=true]]:!text-redblacks-blackraspberry';
     }
 
     if (style === 'ghost') {
-        styleClass = 'bg-accent-accentgreen border border-solid border-accent-accentgreenvar';
+        styleClass = 'bg-brand-quaternary/75 border border-solid border-brand-quaternaryvar !text-redblacks-vampireblack';
         hoverStyleClass =
-            'hover:bg-accent-accentgreenvar hover:border-2 hover-border-brand-secondaryvar';
-        activeStyleClass = 'active:bg-accent-accentbluevar active:border-accent-accentblue';
+            'hover:bg-brand-quaternaryvar/75 hover:border-2 hover-border-brand-secondaryvar hover:!text-redblacks-vampireblack';
+        activeStyleClass = 'active:bg-accent-accentbluevar active:border-brand-tertiary active:!text-brand-septenary';
         loadingStyleClass =
-            '[&[data-loading=true]]:bg-accent-accentbluevar [&[data-loading=true]]:border-accent-accentblue';
+            '[&[data-loading=true]]:bg-accent-accentgreen [&[data-loading=true]]:border-brand-quinaryvar [&[data-loading=true]]:!text-accent-accentbluevar';
     }
 
     size === 'medium'
@@ -113,27 +113,26 @@ export const ButtonStyle = ({
             >
                 <div
                     className={`
-                    relative 
+                    relative
                     w-fit mt-[-1.00px] 
                     whitespace-nowrap 
                     not-italic
-                    font-bold lg:font-normal
-                    text-xs lg:text-sm
-                    uppercase
+                    text-[10.5px]
+                    capitalize
                     [&[data-loading='true']]:text-transparent
-                    text-greenblacks-jade
+                    tracking-tight
                 `}
                 >
-                    {IconComponent && <IconComponent className="inline-flex mx-auto" />}
-                    <span className="data-[loading=true]:hidden mx-2">{buttonText}</span>
+                    {IconComponent && <IconComponent className="inline-flex mx-auto w-5 h-5" />}
+                    <span className="data-[loading=true]:hidden mx-2 mt-t font-martianmono">{buttonText}</span>
                 </div>
                 <div
                     className={`
                     text-greenblacks-jade
                     active:text-bluewhites-ghostwhite
-                    inline-flex 
-                    items-center 
-                    gap-1.5 
+                    inline-flex
+                    items-center
+                    gap-1.5
                     relative
                     uppercase
                 `}

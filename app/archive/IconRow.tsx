@@ -1,5 +1,5 @@
 import React from 'react';
-import { getFontAwesomeIcon } from '../../styles/icons';
+import { getFontAwesomeIcon } from '../lib/utils/getFontAwesomeIcon';
 
 interface IconRowProps {
     icons: { name: string; className?: string }[];

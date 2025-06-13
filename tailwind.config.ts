@@ -10,6 +10,7 @@ export default {
             boxShadow: themeConfig.shadows,
             spacing: themeConfig.spacing,
             screens: themeConfig.screens,
+            textShadow: themeConfig.textShadow,
             transitionProperty: themeConfig.transition,
             zIndex: themeConfig.zIndex,
         },

@@ -2,6 +2,7 @@ import { neutral_blacks } from '../colors/neutrals/blacks';
 import { neutral_whites } from '../colors/neutrals/whites';
 import { neutral_grays } from '../colors/neutrals/grays';
 import { neutral_browns } from '../colors/neutrals/browns';
+import { spectrum_blues } from '../colors/spectrum/blues';
 import { theme } from './theme_light';
 import { darkThemeColors } from './theme_dark';
 import { typography } from '../typography/typography';
@@ -15,6 +16,7 @@ export const themeConfig = {
         ...neutral_grays,
         ...neutral_browns,
         ...neutral_whites,
+        ...spectrum_blues,
     },
     typography: {
         ...typography.font,
@@ -39,6 +41,14 @@ export const themeConfig = {
         '3xl': '1600px',
         '4xl': '1800px',
         '5xl': '2000px',
+    },
+    textShadow: {
+        'btn-text-shadow': {
+            '2px 2px 0 rgba(45,70,58,0.75)':
+            '-2px -2px 0 rgba(45,70,58,0.75)',
+            '2px -2px 0 rgba(45,70,58,0.75)':
+            '-2px 2px 0 rgba(45,70,58,0.75)',
+        },
     },
     transition: {
         default: 'all 0.3s ease-in-out',
