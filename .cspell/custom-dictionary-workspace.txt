@@ -15,6 +15,7 @@ accentredvar
 acousticwhite
 advbegin
 aestheticblack
+africanviolet
 agreeablegray
 aircraftwhite
 alabaster
@@ -31,6 +32,7 @@ anvilgray
 armyuniform
 arsenicgray
 ashgray
+astromomy
 astros
 atriumwhite
 audienceanger
@@ -183,6 +185,7 @@ greekvilla
 greenblacks
 greenblues
 greenwhites
+gsap
 gunmetal
 gunsmokegray
 guppie-green

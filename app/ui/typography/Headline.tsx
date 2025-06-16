@@ -28,8 +28,8 @@ export const Headline = ({
             ${textColor}
             ${textSize}
             ${className}
-            hover:text-brand-quinary
-            hover:text-xl
+            hover:text-brand-tertiary
+            hover:text-[calc(${textSize}*1.4)]
         `}
         >
             {headlineText}

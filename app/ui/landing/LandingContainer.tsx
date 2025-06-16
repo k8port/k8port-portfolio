@@ -32,12 +32,9 @@ export const LandingContainer = () => {
                     4xl:aspect-[1/70]
                     5xl:aspect-[1/80]
                     object-cover z-0
-                    -translate-y-12
-                    md:-translate-y-16
-                    lg:-translate-y-20
-                    xl:-translate-y-24
                     max-w-full
                     max-h-full
+                    priority
                 `}
             />
 

@@ -27,8 +27,9 @@ export default function AboutMe({ className }: AboutMeProps) {
                 className={`
                     w-72 h-72
                     sm:w-80 sm:h-72
-                    md:w-96 md:h-84
-                    lg:w-md lg:h-md
+                    md:w-80 md:h-80
+                    mlg:w-96 mlg:h-84
+                    lg:w-sm lg:h-md
                     relative
                     bg-brand-secondary/60
                     rounded-2xl
@@ -43,8 +44,13 @@ export default function AboutMe({ className }: AboutMeProps) {
                     </div>
                     <div className="flex items-start gap-4">
                         <p
-                            className="pt-t text-redblacks-blackplum paragraph-small md:text-base
-                                lg:text-lg leading-5 md:leading-6 lg:leading-7 text-pretty">
+                            className={`
+                                pt-t
+                                text-redblacks-blackplum
+                                paragraph-small mlg:text-base
+                                leading-5 mlg:leading-6 text-pretty
+                            `}
+                        >
                                 system design, programming paradigms,
                                 discovery, puzzles, complexity,
                                 user-centric design, embroidery string craft, color theory, maps,

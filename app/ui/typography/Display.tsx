@@ -12,6 +12,8 @@ export const Display = ({ className, displayText, textColor, textSize }: Display
         <div
             className={`
             font-dmserifdisplay
+            hover:text-brand-tertiary
+            hover:text-[calc(${textSize}*1.4)]
             ${textColor}
             ${textSize}
             ${className}
