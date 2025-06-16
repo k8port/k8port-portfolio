@@ -14,20 +14,20 @@ const LandingContent = forwardRef<HTMLDivElement, LandingContentProps>(({ classN
         <div
             ref={ref}
             className={`
-          flex 
-          w-full 
+          flex w-full
           gap-0 md:gap-8 lg:gap-0
-          justify-center
+          justify-center lg:justify-center-safe
           mx-auto
           pb-20
+          shadow shadow-lg
           ${className}
       `}
         >
             <div
                 className={`
-                  flex flex-col 
+                  flex flex-col
                   sm:min-w-2xl
-                  gap-8 md:gap-12 
+                  gap-8 md:gap-12
                   justify-start sm:justify-center
                 `}
             >
@@ -46,6 +46,7 @@ const LandingContent = forwardRef<HTMLDivElement, LandingContentProps>(({ classN
                     `}
                   insertNameHere="Kate Portalatin"
                   insertJobTitleHere="Full Stack Software Engineer"
+                  profilePicWidth="w-96 lg:w-md"
                 />
                 <MobileButtonGroup className="mt-25 self-center md:hidden" />
                 <AboutMe className="flex flex-col gap-2 md:gap-8 mx-auto items-center" />
@@ -54,7 +55,7 @@ const LandingContent = forwardRef<HTMLDivElement, LandingContentProps>(({ classN
 
             <LayeredVector
                 className={`
-                  h-dvh relative 
+                  h-dvh relative
                   top-0 -left-30
                   lg:-top-30
                 `}
@@ -64,15 +65,16 @@ const LandingContent = forwardRef<HTMLDivElement, LandingContentProps>(({ classN
                 <div className="md:relative md:-left-20 lg:left-5">
                     <ItIsI
                         className={`
-                          flex flex-col 
+                          flex flex-col
                           w-full h-full
-                          mt-50
+                          mt-50 pl-10
                           overflow-hidden
                           items-center
                           
                         `}
                         insertNameHere="Kate Portalatin"
                         insertJobTitleHere="Full Stack Software Engineer"
+                        profilePicWidth="w-2xl"
                     />
                 </div>
                 {/* TODO: move to other section */}

@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import AnimatedMuse from "./vector/AnimatedMuse";
 
 interface LayeredVectorProps {
     className: string;
@@ -12,44 +13,47 @@ export default function LayeredVector({ className }: LayeredVectorProps) {
     return (
         <div className={`${className}`}>
             <div className="w-full h-full">
-                <Image 
-                    src="/images/layered_vector/floatingvectors.svg" 
-                    alt="Floating Vectors" 
-                    width={600} 
-                    height={600} 
-                    className={`
-                        min-h-[60px] min-w-[60px]
-                        z-999
-                        aspect-[1]
-                        object-cover absolute
-                        top-47 -left-15
-                        sm:top-54 sm:-left-25
-                        md:top-15 md:-left-55
-                        lg:top-75 lg:-left-50
-                        lg-dt:top-50 lg-dt:-left-45
-                        animate-float-left
-                    `}
-                />
+                <AnimatedMuse className={`
+                    min-h-[50px] min-w-[100px]
+                    absolute
+                    top-37 sm:top-54 md:top-15 lg:top-51
+                    -left-10 sm:-left-25 md:-left-60 lg:-l
+                    opacity-85
+                    z-999
+                `} />
+                <AnimatedMuse className={`
+                    min-h-[50px] min-w-[100px]
+                    absolute
+                    top-37 sm:top-54 md:top-15 lg:top-51
+                    -left-10 sm:-left-25 md:-left-60 lg:-l
+                    opacity-85
+                    z-999
+                `} />
+                <AnimatedMuse className={`
+                    min-h-[50px] min-w-[100px]
+                    absolute
+                    top-37 sm:top-54 md:top-15 lg:top-51
+                    -left-10 sm:-left-25 md:-left-60 lg:-l
+                    opacity-85
+                    z-999
+                `} />
                 <Image
                     src="/images/layered_vector/vector_figure.svg"
-                    alt="Luminous Vector"
+                    alt="Vector Figure"
                     width={width}
                     height={height}
                     className={`
                         min-h-[605.5px] min-w-[200px]
+                        sm:min-h-[700px] sm:min-w-[225px]
                         md:min-h-[807px] md:min-w-[267px]
                         aspect-[${aspectRatio}]
                         object-cover
                         absolute
-                        top-37 -left-10
-                        sm:top-54 sm:-left-25
-                        md:top-15 md:-left-60
-                        lg:top-75 lg:-left-50
-                        lg-dt:top-50 lg-dt:-left-45
+                        top-37 sm:top-54 md:top-15 lg:top-51
+                        -left-10 sm:-left-25 md:-left-60 lg:-left-45
                         opacity-85
-                    `} 
+                    `}
                 />
-
             </div>
         </div>
     );

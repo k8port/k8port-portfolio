@@ -17,7 +17,7 @@ const projectMap = projects.map((project) => ({
 
 export default function ProjectsContainer() {
     return (
-        <section className="p-8 bg-brand-secondaryvar border border-greenwhites-featherwhite">
+        <section className="px-8  py-16 bg-brand-secondaryvar border border-greenwhites-featherwhite rounded-lg shadow-lg shadow-inset-lg">
             <div className="max-w-screen-xl mx-auto mb-8 text-center">
                 <h2 className="caption-heavy text-lg uppercase text-blueblacks-bluecharcoal">
                     Portfolio Software Projects
@@ -29,30 +29,33 @@ export default function ProjectsContainer() {
                 spaceBetween={24}
                 navigation
                 pagination={{ clickable: true }}
+                grabCursor={true}
+                simulateTouch={true}
+                touchRatio={1}
+                touchAngle={45}
+                touchStartPreventDefault={false}
+                touchMoveStopPropagation={false}
+                touchReleaseOnEdges={true}
                 breakpoints={{
-                    0: { 
-                        slidesPerView: 1, 
+                    0: {
+                        slidesPerView: 1,
                         slidesPerGroup: 1,
                         centeredSlides: true,
-                        // centeredSlidesBounds: true,
                     }, // mobile
-                    768: { 
-                        slidesPerView: 2, 
+                    768: {
+                        slidesPerView: 2,
                         slidesPerGroup: 2,
-                        centeredSlides: true,
-                        // centeredSlidesBounds: true,
+                        centeredSlides: false,
                     }, // tablet
-                    1024: { 
-                        slidesPerView: 3, 
+                    1024: {
+                        slidesPerView: 3,
                         slidesPerGroup: 3,
-                        centeredSlides: true,
-                        // centeredSlidesBounds: true,
+                        centeredSlides: false,
                     }, // laptop
-                    1280: { 
-                        slidesPerView: 4, 
+                    1280: {
+                        slidesPerView: 4,
                         slidesPerGroup: 4,
-                        centeredSlides: true,
-                        // centeredSlidesBounds: true,
+                        centeredSlides: false,
                     }, // desktop +
                 }}
                 className="swiper-fullwidth"

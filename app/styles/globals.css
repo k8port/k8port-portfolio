@@ -3,12 +3,12 @@
 @config '../../tailwind.config.ts';
 
 /*
-  The default border color has changed to `currentColor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
+    The default border color has changed to `currentColor` in Tailwind CSS v4,
+    so we've added these compatibility styles to make sure everything still
+    looks the same as it did with Tailwind CSS v3.
 
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
+    If we ever want to remove these styles, we need to add an explicit border
+    color utility to any element that depends on these defaults.
 */
 @layer base {
     ::after,
@@ -289,4 +289,57 @@
             0 2 8px 0 rgba(40, 41, 61, 0.15);
         border: 1px solid #a3c1ad;
     }
+}
+
+@layer components {
+    .swiper-fullwidth {
+        @apply w-full px-4;
+        touch-action: pan-y; /* allow vertical scroll, but lets horizontal be controlled by Swiper */
+        padding-bottom: 3rem !important;
+        position: relative !important;
+    }
+
+    .swiper-fullwidth .swiper-button-next::after,
+    .swiper-fullwidth .swiper-button-prev::after {
+        color: #8DA399;
+        font-size: 1.75rem;
+        font-weight: 900;
+        opacity: 0.75;
+    }
+
+    .swiper-fullwidth .swiper-button-next:hover::after,
+    .swiper-fullwidth .swiper-button-prev:hover::after {
+        opacity: 1;
+    }
+
+    .swiper-fullwidth .swiper-button-next {
+        right: 0.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .swiper-fullwidth .swiper-button-prev {
+        left: 0.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+
+    .swiper-fullwidth .swiper-pagination {
+        bottom: 1rem !important;
+    }
+
+    .swiper-fullwidth .swiper-pagination-bullet {
+        background-color: #A3C1AD !important;
+        opacity: 0.6 !important;
+    }
+
+    .swiper-fullwidth .swiper-pagination-bullet-active {
+        background-color: #8DA399 !important;
+        opacity: 1 !important;
+    }
+
+
+
+
 }
