@@ -77,6 +77,17 @@ const LandingContent = forwardRef<HTMLDivElement, LandingContentProps>(({ classN
                         profilePicWidth="w-2xl"
                     />
                 </div>
+
+                {/* <div className="flex flex-col items-center justify-center">
+                  <iframe 
+                    style={{borderRadius: "12px"}}
+                    title="Music Speaks"
+                    src="https://open.spotify.com/embed/playlist/7uPHECxzk2dVTzRUKXB8uA?utm_source=generator&theme=0" 
+                    width="100%"
+                    height="352"
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"/>
+                </div> TODO: move to other section */} 
+
                 {/* TODO: move to other section */}
                 {/* <div className='flex flex-col items-center justify-center'>
             <div className='flex flex-row gap-4'>

@@ -37,6 +37,7 @@ export default function LayeredVector({ className }: LayeredVectorProps) {
                     opacity-85
                     z-999
                 `} />
+
                 <Image
                     src="/images/layered_vector/vector_figure.svg"
                     alt="Vector Figure"
@@ -54,6 +55,7 @@ export default function LayeredVector({ className }: LayeredVectorProps) {
                         opacity-85
                     `}
                 />
+
             </div>
         </div>
     );

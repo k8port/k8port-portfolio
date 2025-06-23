@@ -22,7 +22,7 @@ export default function AnimatedMuseSVG({ className }: AnimatedMuseSVGProps) {
                     // generate per-muse random target
                     const to = {
                         x: rand(-2000, 0),
-                        y: rand(-100, 100),
+                        y: rand(-115, 115),
                         rotate: rand(-2160, 2160)
                     };
                     const delay = i * 0.3;
