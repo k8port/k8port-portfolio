@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import AnimatedMuse from "./vector/AnimatedMuse";
+import { AnimatedMuseGroup } from "./vector/AnimatedMuseGroup";
 
 interface LayeredVectorProps {
     className: string;
@@ -12,50 +13,53 @@ export default function LayeredVector({ className }: LayeredVectorProps) {
     const aspectRatio = width / height;
     return (
         <div className={`${className}`}>
-            <div className="w-full h-full">
-                <AnimatedMuse className={`
-                    min-h-[50px] min-w-[100px]
-                    absolute
-                    top-37 sm:top-54 md:top-15 lg:top-51
-                    -left-10 sm:-left-25 md:-left-60 lg:-l
-                    opacity-85
-                    z-999
-                `} />
-                <AnimatedMuse className={`
-                    min-h-[50px] min-w-[100px]
-                    absolute
-                    top-37 sm:top-54 md:top-15 lg:top-51
-                    -left-10 sm:-left-25 md:-left-60 lg:-l
-                    opacity-85
-                    z-999
-                `} />
-                <AnimatedMuse className={`
-                    min-h-[50px] min-w-[100px]
-                    absolute
-                    top-37 sm:top-54 md:top-15 lg:top-51
-                    -left-10 sm:-left-25 md:-left-60 lg:-l
-                    opacity-85
-                    z-999
-                `} />
-
+            <div className="relative h-dvh">
+                <AnimatedMuseGroup className="absolute top-2 right-32 size-12" />
+                <AnimatedMuseGroup className="absolute top-2 right-34 size-14" />
+                <AnimatedMuseGroup className="absolute top-2 right-32 size-16" />
+                <AnimatedMuseGroup className="absolute top-2 right-34 size-18" />
+                <AnimatedMuseGroup className="absolute top-2 right-36 size-18" />
+                <AnimatedMuseGroup className="absolute top-2 right-38 size-16" />
+                <AnimatedMuseGroup className="absolute top-2 right-33 size-14" />
+                <AnimatedMuseGroup className="absolute top-2 right-33 size-18" />
+                <AnimatedMuseGroup className="absolute top-2 right-34 size-12" />
+                <AnimatedMuseGroup className="absolute top-2 right-34 size-14" />
+                
+                <AnimatedMuseGroup className="absolute top-3 right-35 size-16" />
+                <AnimatedMuseGroup className="absolute top-3 right-33 size-18" />
+                <AnimatedMuseGroup className="absolute top-3 right-34 size-12" />
+                <AnimatedMuseGroup className="absolute top-3 right-34 size-16" />
+                <AnimatedMuseGroup className="absolute top-3 right-34 size-14" />
+                <AnimatedMuseGroup className="absolute top-3 right-34 size-16" />
+                <AnimatedMuseGroup className="absolute top-3 right-34 size-12" />
+                {/* <Image // TODO: hair animation>
+                    src="/images/layered_vector/hair.svg"
+                    alt="Vector figure&apos;s hair"
+                    width={width}
+                    height={height}
+                    className={`
+                        absolute right-0
+                        opacity-85
+                        min-w-[275px]
+                        animate-sway
+                        aspect-[${aspectRatio}]
+                    `}
+                /> */}
                 <Image
                     src="/images/layered_vector/vector_figure.svg"
                     alt="Vector Figure"
                     width={width}
                     height={height}
                     className={`
-                        min-h-[605.5px] min-w-[200px]
-                        sm:min-h-[700px] sm:min-w-[225px]
-                        md:min-h-[807px] md:min-w-[267px]
-                        aspect-[${aspectRatio}]
+                        absolute right-0
                         object-cover
-                        absolute
-                        top-37 sm:top-54 md:top-15 lg:top-51
-                        -left-10 sm:-left-25 md:-left-60 lg:-left-45
                         opacity-85
+                        priority
+                        aspect-[${aspectRatio}]
+                        h-dvh
+                        min-w-[285px]
                     `}
                 />
-
             </div>
         </div>
     );

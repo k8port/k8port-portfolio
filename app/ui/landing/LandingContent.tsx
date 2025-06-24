@@ -1,82 +1,93 @@
 import React, { forwardRef } from 'react';
 import LayeredVector from './LayeredVector';
-import AboutMe from './AboutMe';
+import AboutMe from './profile/AboutMe';
 import { MobileButtonGroup } from '../buttons/MobileButtonGroup';
 import { DesktopButtonGroup } from '../buttons/DesktopButtonGroup';
-import { ItIsI } from './ItIsI';
+import { III } from './profile/III';
+import { useBreakpointDebug } from '../../lib/hooks/useBreakpointDebug';
+import { useWindowSize } from '../../lib/hooks/useWindowSize';
 
 interface LandingContentProps {
     className?: string;
 }
 
 const LandingContent = forwardRef<HTMLDivElement, LandingContentProps>(({ className }, ref) => {
+    useBreakpointDebug();
+    useWindowSize();
+    
+
     return (
         <div
-            ref={ref}
-            className={`
-          flex w-full
-          gap-0 md:gap-8 lg:gap-0
-          justify-center lg:justify-center-safe
-          mx-auto
-          pb-20
-          shadow shadow-lg
-          ${className}
-      `}
+          ref={ref}
+          className={`
+            flex w-full
+            gap-0 mx-auto
+            justify-center
+            pb-20
+            shadow shadow-lg
+            ${className}
+          `}
         >
-            <div
-                className={`
-                  flex flex-col
-                  sm:min-w-2xl
-                  gap-8 md:gap-12
-                  justify-start sm:justify-center
-                `}
-            >
-                <ItIsI
-                    className={`
-                      relative
-                      md:hidden
-                      top-25
-                      sm:top-25 md:top-50
-                      left-0
-                      flex flex-col
-                      items-center
-                      gap-2
-                      sm:gap-4
-                      md:gap-6
-                    `}
-                  insertNameHere="Kate Portalatin"
-                  insertJobTitleHere="Full Stack Software Engineer"
-                  profilePicWidth="w-96 lg:w-md"
-                />
-                <MobileButtonGroup className="mt-25 self-center md:hidden" />
-                <AboutMe className="flex flex-col gap-2 md:gap-8 mx-auto items-center" />
-                <DesktopButtonGroup className="hidden md:inline-flex items-start" />
+        <div
+          className={`
+            flex flex-col w-full
+            gap-8 md:gap-4
+            justify-center
+            mt-0 sm:mt-2 lg:mt-16
+            ml-0 sm:ml-16 mlg:ml-64
+          `}
+        >
+          <III
+              className={`
+                mt-10 relative
+                lg:hidden
+                flex flex-col
+                justify-center-safe
+                items-center
+                gap-2
+              `}
+              insertNameHere="Kate Portalatin"
+              insertJobTitleHere="Senior Software Engineer"
+              profilePicWidth="w-96 lg:w-md"
+          />
+          <MobileButtonGroup className="self-center md:hidden" />
+
+          <AboutMe className="flex flex-col gap-2 mx-auto px-10 items-center" />
+
+          <DesktopButtonGroup className="hidden md:inline-flex items-start" />
+      </div>
+
+      <LayeredVector 
+        className={`
+          absolute top-0 right-0
+          h-dvh z-999
+        `} />
+
+      <div className={`
+              flex flex-col
+              w-full h-full
+              mx-auto justify-center-safe
+            `}>
+              <div className="hidden lg:flex lg:flex-col justify-normal space-y-6">
+                  <div className="relative">
+                      <III
+                          className={`
+                            mt-50
+                            overflow-hidden
+                            items-center
+                          `}
+                          insertNameHere="Kate Portalatin"
+                          insertJobTitleHere="Senior Software Engineer"
+                          profilePicWidth="w-2xl"
+                      />
+                  </div>
+              </div>
             </div>
+        </div>
+    );
+});
 
-            <LayeredVector
-                className={`
-                  h-dvh relative
-                  top-0 -left-30
-                  lg:-top-30
-                `}
-            />
-
-            <div className="hidden md:flex md:flex-col justify-start lg:justify-normal space-y-6">
-                <div className="md:relative md:-left-20 lg:left-5">
-                    <ItIsI
-                        className={`
-                          flex flex-col
-                          w-full h-full
-                          mt-50 pl-10
-                          overflow-hidden
-                          items-center
-                          
-                        `}
-                        insertNameHere="Kate Portalatin"
-                        insertJobTitleHere="Full Stack Software Engineer"
-                        profilePicWidth="w-2xl"
-                    />
-                </div>
+LandingContent.displayName = 'LandingContent';
 
                 {/* <div className="flex flex-col items-center justify-center">
                   <iframe 
@@ -97,11 +108,6 @@ const LandingContent = forwardRef<HTMLDivElement, LandingContentProps>(({ classN
               />
             </div>
           </div> */}
-            </div>
-        </div>
-    );
-});
 
-LandingContent.displayName = 'LandingContent';
 
 export default LandingContent;

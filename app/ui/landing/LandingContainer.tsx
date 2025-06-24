@@ -22,6 +22,7 @@ export const LandingContainer = () => {
                 width={width}
                 height={height}
                 className={`
+                    priority
                     absolute inset-0
                     aspect-[1/5]
                     lg:aspect-[1/20]
@@ -34,7 +35,6 @@ export const LandingContainer = () => {
                     object-cover z-0
                     max-w-full
                     max-h-full
-                    priority
                 `}
             />
 

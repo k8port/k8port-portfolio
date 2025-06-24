@@ -237,10 +237,10 @@
     @keyframes sway {
         0%,
         100% {
-            transform: rotate(0deg);
+            transform: rotate(1deg);
         }
         50% {
-            transform: rotate(30deg);
+            transform: rotate(4deg);
         }
     }
 
@@ -265,7 +265,7 @@
     }
 
     .animate-sway {
-        animation: sway 6s ease-in-out infinite;
+        animation: sway 3s ease-in-out infinite;
     }
 
     .animate-scroll {

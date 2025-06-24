@@ -63,7 +63,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                         w-full h-16 z-99
                         bg-brand-secondaryvar/65
                         bg-[url('/images/brand/waves_pattern.png')]
-                        bg-no-repeat sm:bg-repeat-x
+                        bg-repeat-x
                         bg-center
                         bg-blend-overlay
                         backdrop-blur-sm

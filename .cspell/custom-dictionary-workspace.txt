@@ -2,6 +2,7 @@
 /*
 abalone
 abbeywhite
+aboutme
 abstractwhite
 acadiawhite
 accentblue
@@ -189,6 +190,7 @@ gsap
 gunmetal
 gunsmokegray
 guppie-green
+hairwave
 halfnandhalf
 harborgray
 harp

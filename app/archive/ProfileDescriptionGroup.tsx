@@ -1,6 +1,6 @@
 import React from 'react';
-import { ItIsI } from '../ui/landing/ItIsI';
-import { Greeting } from '../ui/landing/Greeting';
+import { III } from '../ui/landing/profile/III';
+import { Greeting } from '../ui/landing/profile/Greeting';
 import { ProfileDescription } from './ProfileDescription';
 interface ProfileDescriptionGroupProps {
     className?: string;
@@ -19,7 +19,7 @@ export const ProfileDescriptionGroup = ({ className }: ProfileDescriptionGroupPr
                         greetingText="Hello!"
                     />
 
-                    <ItIsI
+                    <III
                         className={`
                             flex flex-col items-start
                             gap-1 relative
