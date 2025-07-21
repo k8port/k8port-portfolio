@@ -1,7 +1,7 @@
 import React from 'react';
 import { Greeting } from './Greeting';
 import { FaHeart } from 'react-icons/fa';
-import { downloadAndViewResume } from '../../lib/utils/downloadAndViewResume';
+import { downloadAndViewResume } from '../../../lib/actions/downloadAndViewResume';
 
 interface AboutMeProps {
     className?: string;
@@ -15,8 +15,6 @@ export default function AboutMe({ className }: AboutMeProps) {
                     greeting
                     text-5xl md:text-7xl lg:text-8xl
                     relative
-                    sm:mt-6 lg:mt-50
-                    lg:text-left
                     text-brand-septenary
                     font-outline
                 `}
@@ -25,12 +23,9 @@ export default function AboutMe({ className }: AboutMeProps) {
 
             <div
                 className={`
-                    w-72 h-72
-                    sm:w-80 sm:h-72
-                    md:w-80 md:h-80
-                    mlg:w-96 mlg:h-84
-                    lg:w-sm lg:h-md
                     relative
+                    size-72
+                    mlg:size-84
                     bg-brand-secondary/60
                     rounded-2xl
                 `}

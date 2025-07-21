@@ -16,8 +16,6 @@ export const ProfilePic = ({
     profilePicDescription,
     profilePicSrc,
 }: ProfilePicProps) => {
-    if (!imageWidth) imageWidth = 686;
-    if (!imageHeight) imageHeight = 678;
     return (
         <div className={`relative w-full h-full ${className}`}>
             <Image

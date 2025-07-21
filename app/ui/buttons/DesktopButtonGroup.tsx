@@ -1,7 +1,7 @@
 import React from 'react';
 import { ButtonStyle } from './ButtonStyle';
-import { getFontAwesomeIcon } from '@/app/lib/utils/getFontAwesomeIcon';
-import { downloadAndViewResume } from '@/app/lib/utils/downloadAndViewResume';
+import { getFontAwesomeIcon } from '@/lib/actions/getFontAwesomeIcon';
+import { downloadAndViewResume } from '@/lib/actions/downloadAndViewResume';
 
 interface DesktopButtonGroupProps {
     className?: string;
@@ -9,17 +9,17 @@ interface DesktopButtonGroupProps {
 
 export const DesktopButtonGroup = ({ className }: DesktopButtonGroupProps) => {
     const DownloadIcon = getFontAwesomeIcon('Download');
-    // const PhoneIcon = getFontAwesomeIcon('Phone');
+    const PhoneIcon = getFontAwesomeIcon('Phone');
 
     const handleResumeClick = () => {
         downloadAndViewResume();
     };
 
-    // const handleContactClick = () => {
-    //     // Add your contact logic here
-    //     console.log('Opening contact form...');
-    //     // Example: window.location.href = '#contact';
-    // };
+    const handleContactClick = () => {
+        // Add your contact logic here
+        console.log('Opening contact form...');
+        // Example: window.location.href = '#contact';
+    };
 
     return (
         <div className={`flex justify-center space-x-4 ${className}`}>
@@ -32,7 +32,7 @@ export const DesktopButtonGroup = ({ className }: DesktopButtonGroupProps) => {
                 buttonIconSelection={DownloadIcon ?? undefined}
                 onClick={handleResumeClick}
             />
-            {/* <ButtonStyle
+            <ButtonStyle
                 style='filled'
                 iconPosition='left-icon'
                 size='small'
@@ -40,7 +40,7 @@ export const DesktopButtonGroup = ({ className }: DesktopButtonGroupProps) => {
                 buttonText='Contact Me'
                 buttonIconSelection={PhoneIcon ?? undefined}
                 onClick={handleContactClick}
-            /> */}
+            />
         </div>
     );
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import fs from 'fs';
 import path from 'path';
-import { iconMap } from '../lib/utils/getFontAwesomeIcon';
+import { iconMap } from '../lib/actions/getFontAwesomeIcon';
 
 // const icons = Object.keys(iconMap);
 

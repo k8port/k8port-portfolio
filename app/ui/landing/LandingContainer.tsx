@@ -8,8 +8,8 @@ import LandingContent from './LandingContent';
 // import ScrollingBanner from '../background/ScrollingBanner';
 
 export const LandingContainer = () => {
-    const width = 2400;
-    const height = 2400;
+    const width = 3200;
+    const height = 3200;
     const aspectRatio = width / height;
     const overlayRef = useRef<HTMLDivElement>(null);
     const scrollRef = useRef<HTMLDivElement>(null);
@@ -22,6 +22,7 @@ export const LandingContainer = () => {
                 width={width}
                 height={height}
                 className={`
+                    priority
                     absolute inset-0
                     aspect-[1/5]
                     lg:aspect-[1/20]
@@ -34,7 +35,6 @@ export const LandingContainer = () => {
                     object-cover z-0
                     max-w-full
                     max-h-full
-                    priority
                 `}
             />
 

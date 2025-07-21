@@ -2,6 +2,7 @@
 /*
 abalone
 abbeywhite
+aboutme
 abstractwhite
 acadiawhite
 accentblue
@@ -131,6 +132,7 @@ deepblack
 deepspacesparkle
 delicatewhite
 dimgray
+dmserifdisplay
 doriangray
 dove
 Dropup
@@ -151,6 +153,7 @@ fashiongray
 Fastapi
 featherwhite
 feldgrau
+firstname
 flax
 flint
 floralwhite
@@ -189,6 +192,7 @@ gsap
 gunmetal
 gunsmokegray
 guppie-green
+hairwave
 halfnandhalf
 harborgray
 harp
@@ -220,6 +224,7 @@ la-salle-green
 laidbackgray
 lampblack
 Laravel
+lastname
 lava
 lavenderblush
 lavendergray
@@ -351,6 +356,8 @@ screamin-green
 screamingreen
 seashell
 senaryvar
+sendgrid
+SENDGRID
 shadowwhite
 signalblack
 silkgray

@@ -66,6 +66,7 @@ build/
 # === Editor & IDE ===
 .vscode/
 .idea/
+.cspell/
 *.suo
 *.ntvs*
 *.njsproj

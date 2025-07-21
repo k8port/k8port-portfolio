@@ -1,4 +1,4 @@
-import { getBlendMode } from '@/app/lib/utils/blendMode';
+import { getBlendMode } from '@/lib/actions/blendMode';
 import React from 'react';
 import VectorFigure from './VectorFigure';
 

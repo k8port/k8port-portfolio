@@ -5,6 +5,8 @@ import {
     Great_Vibes,
     Martian_Mono,
     Cormorant_Garamond,
+    Lobster,
+    Bodoni_Moda_SC
 } from 'next/font/google';
 
 export const spaceGrotesk = Space_Grotesk({
@@ -18,6 +20,13 @@ export const dmSerifDisplay = DM_Serif_Display({
     subsets: ['latin'],
     weight: ['400'],
     variable: '--font-dmSerifDisplay',
+    display: 'swap',
+});
+
+export const lobster = Lobster({
+    subsets: ['latin'],
+    weight: ['400'],
+    variable: '--font-lobster',
     display: 'swap',
 });
 
@@ -39,5 +48,12 @@ export const cormorantGaramond = Cormorant_Garamond({
     subsets: ['latin'],
     weight: ['400'],
     variable: '--font-cormorantGaramond',
+    display: 'swap',
+});
+
+export const bodoniModaSC = Bodoni_Moda_SC({
+    subsets: ['latin'],
+    weight: ['400'],
+    variable: '--font-bodoniModaSC',
     display: 'swap',
 });

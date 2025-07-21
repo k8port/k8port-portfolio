@@ -1,4 +1,4 @@
-import { getFontAwesomeIcon } from '@/app/lib/utils/getFontAwesomeIcon';
+import { getFontAwesomeIcon } from '@/lib/actions/getFontAwesomeIcon';
 import React from 'react';
 
 interface IconContainerProps {

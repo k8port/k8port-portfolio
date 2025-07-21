@@ -41,10 +41,10 @@
         "tags": ["REST API", "ML Models", "AWS", "Sonos integration", "Terraform"]
     },
     {
-        "title": "sobres",
-        "description": "Java Spring Boot AWS NoSQL budgeting app modelled after \"envelopes\" system",
+        "title": "Sobres",
+        "description": "Python backend, Next.js frontend budgeting app modelled after \"envelopes\" system",
         "link": "https://github.com/k8port/sobres",
-        "tags": ["Java", "Spring Boot", "AWS", "Docker", "Terraform"]
+        "tags": ["Python", "Next.js", "AWS", "Docker", "SQL"]
     },
     {
         "title": "Sudoku POW",

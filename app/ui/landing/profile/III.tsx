@@ -1,19 +1,17 @@
 import React from 'react';
-import { Display } from '../typography/Display';
-import { Headline } from '../typography/Headline';
+import { Display } from '../../typography/Display';
+import { Headline } from '../../typography/Headline';
 import { ProfilePic } from './ProfilePic';
-interface ItIsIProps {
+
+interface IIIProps {
     className?: string;
     insertNameHere: string;
     insertJobTitleHere: string;
     profilePicWidth?: string;
 }
 
-export const ItIsI = ({ className, insertNameHere, insertJobTitleHere }: ItIsIProps) => {
-    let profilePicWidth = "w-96";
-    if (profilePicWidth) {
-        profilePicWidth = profilePicWidth;
-    }
+export const III = ({ className, insertNameHere, insertJobTitleHere }: IIIProps) => {
+
     return (
         <div className={`${className}`}>
             <Display
@@ -29,12 +27,12 @@ export const ItIsI = ({ className, insertNameHere, insertJobTitleHere }: ItIsIPr
                 textColor="text-greengrays-chameleongray"
                 textSize="text-lg"
             />
-            <div className={`mt-4 sm:mt-10 ${profilePicWidth} h-auto`}>
+            <div className={`mt-4 sm:mt-10 h-auto`}>
                 <ProfilePic
-                    imageWidth={686}
-                    imageHeight={678}
-                    className="rounded-full opacity-65 shadow-btn-shadow"
-                    profilePicSrc="/images/abstract-profile/abstract-profile-sunrise.png"
+                    imageWidth={1038}
+                    imageHeight={920}
+                    className="rounded-full opacity-65 shadow-btn-shadow aspect-[1038/920]"
+                    profilePicSrc="/images/abstract-profile/abstract-profile-sunset.svg"
                     profilePicDescription="Profile Picture"
                 />
             </div>
