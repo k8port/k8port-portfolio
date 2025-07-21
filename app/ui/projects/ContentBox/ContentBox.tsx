@@ -2,7 +2,7 @@ import React from 'react';
 import PlaceholderPicture from '../PlaceholderPicture';
 import Content from './Content';
 import { ImageFrame } from '../../ImageFrame';
-import { getFontAwesomeIcon } from '@/app/lib/utils/getFontAwesomeIcon';
+import { getFontAwesomeIcon } from '@/lib/actions/getFontAwesomeIcon';
 
 interface ContentBoxProps {
     category?: string;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { ButtonStyle } from './ButtonStyle';
-import { getFontAwesomeIcon } from '@/app/lib/utils/getFontAwesomeIcon';
-import { downloadAndViewResume } from '@/app/lib/utils/downloadAndViewResume';
+import { getFontAwesomeIcon } from '@/lib/actions/getFontAwesomeIcon';
+import { downloadAndViewResume } from '@/lib/actions/downloadAndViewResume';
 
 interface MobileButtonGroupProps {
     className?: string;
@@ -9,10 +9,14 @@ interface MobileButtonGroupProps {
 
 export const MobileButtonGroup = ({ className }: MobileButtonGroupProps) => {
     const DownloadIcon = getFontAwesomeIcon('Download');
-    // const PhoneIcon = getFontAwesomeIcon('Phone');
+    const PhoneIcon = getFontAwesomeIcon('Phone');
 
     const handleResumeClick = () => {
         downloadAndViewResume();
+    };
+
+    const handleContactClick = () => {
+        console.log('Featured Project Work');
     };
 
 
@@ -20,22 +24,22 @@ export const MobileButtonGroup = ({ className }: MobileButtonGroupProps) => {
         <div className={`space-x-2 ${className}`}>
             <ButtonStyle
                 style="ghost"
-                iconPosition="left-icon"
+                iconPosition="no-icon"
                 size="tiny"
                 borderRadius="eight"
                 buttonText="Resume/CV"
                 buttonIconSelection={DownloadIcon ?? undefined}
                 onClick={handleResumeClick}
             />
-            {/* <ButtonStyle
-                style="filled"
-                iconPosition="left-icon"
+            <ButtonStyle
+                style="ghost"
+                iconPosition="no-icon"
                 size="tiny"
                 borderRadius="eight"
-                buttonText="Contact Me"
+                buttonText="Projects"
                 buttonIconSelection={PhoneIcon ?? undefined}
                 onClick={handleContactClick}
-            /> */}
+            />
         </div>
     );
 };

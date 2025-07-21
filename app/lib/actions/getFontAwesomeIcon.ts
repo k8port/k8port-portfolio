@@ -28,7 +28,7 @@ import {
     FaLinux,
     FaWindows,
     FaHammer,
-    FaCloudDownloadAlt,
+    FaGithubAlt,
 } from 'react-icons/fa';
 import {
     SiTypescript,
@@ -89,6 +89,8 @@ import {
     FaPersonDigging,
     FaUserAstronaut,
     FaArrowRightLong,
+    FaLinkedin,
+    FaWhatsapp,
 } from 'react-icons/fa6';
 import { GiThink, GiTeacher, GiStrongMan } from 'react-icons/gi';
 import { TbMath } from 'react-icons/tb';
@@ -214,6 +216,9 @@ export const iconMap: Record<string, IconType> = {
     Contact: BsMegaphone,
     User: FaUserAstronaut,
     'Right Arrow': FaArrowRightLong,
+    LinkedIn: FaLinkedin,
+    GitHub: FaGithubAlt,
+    WhatsApp: FaWhatsapp,
 };
 
 export function getFontAwesomeIcon(iconName: string): IconType | null {

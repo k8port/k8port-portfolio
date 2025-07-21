@@ -17,7 +17,7 @@ import {
     greatVibes,
     martianMono,
     spaceGrotesk,
-    cormorantGaramond,
+    lobster,
 } from './styles/typography/fonts';
 
 export const metadata: Metadata = {
@@ -48,7 +48,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     ${dmSerifDisplay.variable}
                     ${greatVibes.variable}
                     ${martianMono.variable}
-                    ${cormorantGaramond.variable}
+                    ${lobster.variable}
                     font-spacegrotesk
                     flex
                     flex-col

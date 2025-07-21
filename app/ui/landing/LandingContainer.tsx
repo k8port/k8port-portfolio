@@ -8,8 +8,8 @@ import LandingContent from './LandingContent';
 // import ScrollingBanner from '../background/ScrollingBanner';
 
 export const LandingContainer = () => {
-    const width = 2400;
-    const height = 2400;
+    const width = 3200;
+    const height = 3200;
     const aspectRatio = width / height;
     const overlayRef = useRef<HTMLDivElement>(null);
     const scrollRef = useRef<HTMLDivElement>(null);

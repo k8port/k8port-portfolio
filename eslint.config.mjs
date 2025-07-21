@@ -47,6 +47,7 @@ const eslintConfig = [
             // React specific formatting
             'react/jsx-indent': ['error', 4],
             'react/jsx-indent-props': ['error', 4],
+            'jsx-a11y/aria-valid-attr-value': ['error', { allowExpressionValues: true }],
         },
     },
 ];

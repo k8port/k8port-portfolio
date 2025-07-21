@@ -30,20 +30,17 @@ const LandingContent = forwardRef<HTMLDivElement, LandingContentProps>(({ classN
         >
         <div
           className={`
-            flex flex-col w-full
-            gap-8 md:gap-4
-            justify-center
-            mt-0 sm:mt-2 lg:mt-16
-            ml-0 sm:ml-16 mlg:ml-64
+            flex flex-col
+            gap-6 md:gap-4
+            mt-0 sm:mt-2 mlg:mt-16
+            ml-0 sm:ml-16 md:ml-32 mlg:ml-64
           `}
         >
           <III
               className={`
                 mt-10 relative
-                lg:hidden
+                md:hidden
                 flex flex-col
-                justify-center-safe
-                items-center
                 gap-2
               `}
               insertNameHere="Kate Portalatin"
@@ -52,7 +49,7 @@ const LandingContent = forwardRef<HTMLDivElement, LandingContentProps>(({ classN
           />
           <MobileButtonGroup className="self-center md:hidden" />
 
-          <AboutMe className="flex flex-col gap-2 mx-auto px-10 items-center" />
+          <AboutMe className="flex flex-col gap-6 mx-auto px-10 items-center md:mt-50" />
 
           <DesktopButtonGroup className="hidden md:inline-flex items-start" />
       </div>
@@ -66,9 +63,9 @@ const LandingContent = forwardRef<HTMLDivElement, LandingContentProps>(({ classN
       <div className={`
               flex flex-col
               w-full h-full
-              mx-auto justify-center-safe
+              mx-auto
             `}>
-              <div className="hidden lg:flex lg:flex-col justify-normal space-y-6">
+              <div className="hidden md:flex md:flex-col justify-normal space-y-6">
                   <div className="relative">
                       <III
                           className={`
@@ -78,7 +75,7 @@ const LandingContent = forwardRef<HTMLDivElement, LandingContentProps>(({ classN
                           `}
                           insertNameHere="Kate Portalatin"
                           insertJobTitleHere="Senior Software Engineer"
-                          profilePicWidth="w-2xl"
+                          profilePicWidth="w-lg max-w-xl"
                       />
                   </div>
               </div>

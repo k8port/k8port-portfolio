@@ -1,5 +1,5 @@
 import React from 'react';
-import NavMenu from './NavMenu';
+import NavMenu from './navmenu/NavMenu';
 
 export default function Header({ className }: { className?: string }) {
     return (

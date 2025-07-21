@@ -48,9 +48,8 @@ export const ButtonStyle = ({
     }
 
     if (style === 'ghost') {
-        styleClass = 'bg-brand-quaternaryvar/75 border border-solid border-brand-quaternary !text-redblacks-vampireblack';
-        hoverStyleClass =
-            'hover:bg-accent-accentpink/75 hover:border-2 hover-border-brand-secondaryvar hover:!text-redblacks-vampireblack';
+        styleClass = 'bg-brand-quinary/75 border border-solid border-brand-quaternary !text-redblacks-vampireblack';
+        hoverStyleClass = 'hover:bg-accent-accentpinkvar/75 hover:border-2 hover-border-brand-secondaryvar hover:!text-redwhites-vistawhite shadow-btn-shadow';
         activeStyleClass = 'active:bg-accent-accentbluevar active:border-brand-tertiary active:!text-brand-septenary';
         loadingStyleClass =
             '[&[data-loading=true]]:bg-accent-accentgreen [&[data-loading=true]]:border-brand-quinaryvar [&[data-loading=true]]:!text-accent-accentbluevar';

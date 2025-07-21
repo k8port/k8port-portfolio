@@ -1,22 +1,24 @@
 import React from 'react';
 import { LandingContainer } from './ui/landing/LandingContainer';
 import ProjectsContainer from './ui/projects/ProjectsContainer';
-import ContactContainer from './ui/contact/ContactContainer';
+import CollaborateContainer from './ui/collaborate/CollaborateContainer';
+import Footer from './ui/Footer';
 
 export default function HomePage() {
     return (
         <div className="w-full overflow-x-hidden">
-            <div id="landing" className="relative">
+            <section id="landing" className="relative">
                 <LandingContainer />
-            </div>
+            </section>
 
-            <div id="projects" className="relative">
+            <section id="projects" className="relative">
                 <ProjectsContainer />
-            </div>
+            </section>
 
-            <div id="contact" className="relative">
-                <ContactContainer />
-            </div>
+            <section id="contact" className="relative flex flex-col min-h-screen">
+                <CollaborateContainer className="flex-grow" />
+                <Footer className="mt-auto"/>
+            </section>
         </div>
     );
 }

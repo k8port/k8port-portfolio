@@ -14,7 +14,7 @@ export default function LayeredVector({ className }: LayeredVectorProps) {
     return (
         <div className={`${className}`}>
             <div className="relative h-dvh">
-                <AnimatedMuseGroup className="absolute top-2 right-32 size-12" />
+                <AnimatedMuseGroup className="absolute top-2 right-30 size-12" />
                 <AnimatedMuseGroup className="absolute top-2 right-34 size-14" />
                 <AnimatedMuseGroup className="absolute top-2 right-32 size-16" />
                 <AnimatedMuseGroup className="absolute top-2 right-34 size-18" />
@@ -57,6 +57,7 @@ export default function LayeredVector({ className }: LayeredVectorProps) {
                         priority
                         aspect-[${aspectRatio}]
                         h-dvh
+                        sm:h-full
                         min-w-[285px]
                     `}
                 />

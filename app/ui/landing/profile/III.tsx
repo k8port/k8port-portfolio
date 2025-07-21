@@ -2,8 +2,6 @@ import React from 'react';
 import { Display } from '../../typography/Display';
 import { Headline } from '../../typography/Headline';
 import { ProfilePic } from './ProfilePic';
-import { useState } from 'react';
-import AnimateProfile from './AnimateProfile';
 
 interface IIIProps {
     className?: string;
@@ -14,7 +12,6 @@ interface IIIProps {
 
 export const III = ({ className, insertNameHere, insertJobTitleHere }: IIIProps) => {
 
-    const [animateState, setAnimateState] = useState<"explode" | "reassemble">("explode");
     return (
         <div className={`${className}`}>
             <Display
@@ -31,7 +28,6 @@ export const III = ({ className, insertNameHere, insertJobTitleHere }: IIIProps)
                 textSize="text-lg"
             />
             <div className={`mt-4 sm:mt-10 h-auto`}>
-                {/* <AnimateProfile animateState={animateState} /> */}
                 <ProfilePic
                     imageWidth={1038}
                     imageHeight={920}
