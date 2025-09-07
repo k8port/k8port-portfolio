@@ -17,9 +17,9 @@ export interface FooterProps extends HTMLAttributes<HTMLDivElement> {
 const defaultNav: NavItem[] = [
     { href: '/#landing', label: 'About (top) | ↑' },
     { href: '/#projects', label: 'Projects ♤' },
-    { href: '/blog', label: 'Blog ♡' },
+    // { href: '/blog', label: 'Blog ♡' },
     // { href: '/skills', label: 'Skills & Experience ♧' },
-    // { href: '/#contact', label: ' ↓ | Contact (bottom)' },
+    { href: '/#contact', label: ' ↓ | Contact (bottom)' },
 ];
 
 const defaultSocials: NavItem[] = [

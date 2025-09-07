@@ -33,11 +33,11 @@ export const DesktopButtonGroup = ({ className }: DesktopButtonGroupProps) => {
                 onClick={handleResumeClick}
             />
             <ButtonStyle
-                style="filled"
-                iconPosition="left-icon"
-                size="tiny"
-                borderRadius="sixteen"
-                buttonText="Contact Me"
+                style='filled'
+                iconPosition='left-icon'
+                size='small'
+                borderRadius='sixteen'
+                buttonText='Contact Me'
                 buttonIconSelection={PhoneIcon ?? undefined}
                 onClick={handleContactClick}
             />

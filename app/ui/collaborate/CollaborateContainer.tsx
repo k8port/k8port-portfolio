@@ -12,7 +12,7 @@ type CollaborateContainerProps = HTMLAttributes<HTMLDivElement>;
 export default function CollaborateContainer({ className, ...rest }: CollaborateContainerProps) {
     return (
         <div
-            id="collaborate"
+            id='collaborate'
             {...rest}
             className={clsx('relative flex items-center justify-center', className)}
         >

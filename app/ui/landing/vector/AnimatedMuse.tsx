@@ -3,7 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { MUSES } from '../../../data/MUSES';
 
-const rand = (min: number, max: number) => Math.random() * (max - min) + min;
+const rand = (min: number, max: number) => Math.random()*(max-min)+min;
 const isFalling = () => Math.random() < 0.45;
 
 interface AnimatedMuseSVGProps {
@@ -11,8 +11,8 @@ interface AnimatedMuseSVGProps {
 }
 
 export default function AnimatedMuseSVG({ className }: AnimatedMuseSVGProps) {
-    const screenW = typeof window !== 'undefined' ? window.innerWidth : 1920;
-    const screenH = typeof window !== 'undefined' ? window.innerHeight : 1080;
+    const screenW = typeof window !== "undefined" ? window.innerWidth : 1920;
+    const screenH = typeof window !== "undefined" ? window.innerHeight : 1080;
 
     return (
         <div className="w-full relative">
@@ -31,7 +31,7 @@ export default function AnimatedMuseSVG({ className }: AnimatedMuseSVGProps) {
                     const swirlTo = {
                         x: rand(-screenW * 4, -screenW),
                         y: rand(-215, 215),
-                        rotate: rand(-2160, 2160),
+                        rotate: rand(-2160, 2160)
                     };
 
                     // drift downward animation
@@ -41,9 +41,10 @@ export default function AnimatedMuseSVG({ className }: AnimatedMuseSVGProps) {
                         rotate: rand(-90, 90),
                     };
 
+
                     let animate: any;
                     let transition: any;
-
+                    
                     if (falling) {
                         animate = {
                             x: [screenW, swirlTo.x, fallTo.x],
@@ -70,15 +71,15 @@ export default function AnimatedMuseSVG({ className }: AnimatedMuseSVGProps) {
                             delay: i * 0.3,
                         };
                     }
-
+        
                     return (
                         <motion.g
                             key={id}
                             id={id}
-                            initial={{ x: 0, y: 0, rotate: 0 }}
+                            initial={{ x:0, y:0, rotate:0 }}
                             animate={animate}
                             transition={transition}
-                        >
+                        > 
                             {paths.map((attrs, j) => (
                                 <path key={j} {...attrs} />
                             ))}
