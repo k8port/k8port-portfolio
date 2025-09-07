@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import { FaEnvelope, FaPhone, FaWhatsapp } from 'react-icons/fa';
 
 interface ApiResponse {
     message?: string;
@@ -10,11 +11,9 @@ interface ApiResponse {
 // --- Main Form Component ----------------------------------------------
 export default function ContactForm() {
 
-    const [status, setStatus] = useState<{
-        loading: boolean;
-        error?: string;
-        success?: string;
-    }>({ loading: false });
+    const [preference, setPreference] = useState<"email" | "text" | "whatsapp">("email");
+    const [status, setStatus] = useState<{ loading: boolean; error?: string; success?: string; }>({ loading: false });
+
 
     async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
@@ -26,9 +25,18 @@ export default function ContactForm() {
         const firstname = fd.get("firstname")?.toString().trim() ?? "";
         const lastname = fd.get("lastname")?.toString().trim() ?? "";
         const name = `${firstname} ${lastname}`;
+        const preference = fd.get("preference")?.toString().trim() ?? "email";
+        const phone = fd.get("phone")?.toString().trim() ?? "";
         const email = fd.get("email")?.toString().trim() ?? "";
-        const method = "email";
-        const handle = email;
+        const whatsapp = fd.get("whatsapp")?.toString().trim() ?? "";
+        const method = fd.get("preference")!.toString().trim() ?? "email";
+
+        let handle: string;
+        (method === "email")
+            ? handle = email
+            : (method === "phone")
+                ? handle = phone
+                : handle = whatsapp;
 
         const message = fd.get("message")?.toString().trim() ?? "";
         const payload = { name, method, handle, message };
@@ -41,10 +49,10 @@ export default function ContactForm() {
             });
 
             const body: ApiResponse = await response.json();
-            console.log('body', body);
             if (!response.ok) throw new Error(body.error || "Failed to submit contact form");
             setStatus({ loading: false, success: body.message || "Thank you for your inquiry!" });
             form.reset();
+            setPreference("email");
         } catch (error: any) {
             setStatus({ loading: false, error: error instanceof Error ? error.message : "An error occurred" });
         }
@@ -89,42 +97,59 @@ export default function ContactForm() {
                 </div>
             </div>
 
-            {/* preferred communication - temporarily disabled for email-only */}
-            {/*
+            {/* communication preference */}
             <fieldset className="space-y-2">
                 <legend className="font-dmserifdisplay font-medium">
                     preferred communication&nbsp;
                     <span className="text-collection-alizarincrimson">*</span>
                 </legend>
                 <div className="flex flex-wrap gap-6 mt-1">
-                    ...
+                    {[
+                        { value: "email", label: "Email", icon: <FaEnvelope /> },
+                        { value: "text", label: "Text", icon: <FaPhone /> },
+                        { value: "whatsapp", label: "WhatsApp", icon: <FaWhatsapp /> },
+                    ].map(({ value, label, icon }) => (
+                        <label key={value} className="inline-flex items-center gap-2 cursor-pointer font-martianmono">
+                            <input
+                                type="radio"
+                                name="preference"
+                                value={value}
+                                defaultChecked={value === "email"}
+                                onChange={() => setPreference(value as any)}
+                                className="sr-only peer accent-collection-caribbeangreen"
+                            />
+                            <span className="peer-checked:text-collection-caribbeangreen capitalize inline-flex items-center gap-1">
+                                {icon}
+                                {label}
+                            </span>
+                        </label>
+                    ))}
                 </div>
             </fieldset>
-            */}
 
             {/* Contact Channels */}
             <div className="grid md:grid-cols-3 gap-4">
                 <label className="flex flex-col">
                     <span className="font-dmserifdisplay font-medium">
-                        email <span className="text-collection-alizarincrimson">*</span>
+                        email {preference === "email" && <span className="text-collection-alizarincrimson">*</span>}
                     </span>
                     <input
                         type="email"
                         name="email"
-                        required
+                        required={preference === "email"}
                         placeholder="your@email.com"
                         className="mt-1 rounded border p-2"
                     />
                 </label>
 
-                {/*
                 <label className="flex flex-col">
                     <span className="font-dmserifdisplay font-medium">
-                        phone
+                        phone {preference === "text" && <span className="text-collection-alizarincrimson">*</span>}
                     </span>
                     <input
                         type="tel"
                         name="phone"
+                        required={preference === "text"}
                         placeholder="(213) 555-1212"
                         className="mt-1 rounded border p-2"
                     />
@@ -132,16 +157,16 @@ export default function ContactForm() {
 
                 <label className="flex flex-col">
                     <span className="font-dmserifdisplay font-medium">
-                        whatsapp
+                        whatsapp {preference === "whatsapp" && <span className="text-collection-alizarincrimson">*</span>}
                     </span>
                     <input
                         type="text"
                         name="whatsapp"
+                        required={preference === "whatsapp"}
                         placeholder="@whatsapp_handle"
                         className="mt-1 rounded border p-2"
                     />
                 </label>
-                */}
             </div>
 
             {/* Message Area */}

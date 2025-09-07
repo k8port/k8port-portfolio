@@ -24,7 +24,7 @@ const LandingContent = forwardRef<HTMLDivElement, LandingContentProps>(({ classN
             gap-0 mx-auto
             justify-center
             pb-20
-            shadow shadow-lg
+            shadow
             ${className}
           `}
         >

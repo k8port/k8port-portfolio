@@ -16,7 +16,7 @@ export const MobileButtonGroup = ({ className }: MobileButtonGroupProps) => {
     };
 
     const handleContactClick = () => {
-        console.log('Featured Project Work');
+        document.getElementById('collaborate')?.scrollIntoView({ behavior: 'smooth' });
     };
 
 

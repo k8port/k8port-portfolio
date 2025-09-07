@@ -14,6 +14,7 @@ export default function CollaborateContainer({
 }: CollaborateContainerProps) {
     return (
         <div
+            id='collaborate'
             {...rest}
             className={clsx('relative flex items-center justify-center', className)}
         >
