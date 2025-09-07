@@ -17,8 +17,8 @@ export const DesktopButtonGroup = ({ className }: DesktopButtonGroupProps) => {
 
     const handleContactClick = () => {
         // Add your contact logic here
-        console.log('Opening contact form...');
         // Example: window.location.href = '#contact';
+        document.getElementById('collaborate')?.scrollIntoView({ behavior: 'smooth' });
     };
 
     return (
@@ -35,7 +35,7 @@ export const DesktopButtonGroup = ({ className }: DesktopButtonGroupProps) => {
             <ButtonStyle
                 style='filled'
                 iconPosition='left-icon'
-                size='small'
+                size='tiny'
                 borderRadius='sixteen'
                 buttonText='Contact Me'
                 buttonIconSelection={PhoneIcon ?? undefined}

@@ -2,35 +2,28 @@ import * as React from 'react';
 
 interface EmailTemplateProps {
     name: string;
-    method: string;
-    handle: string;
+    email: string;
     message?: string;
 }
 
 export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
     name,
-    method,
-    handle,
+    email,
     message,
-}) => {
-    console.log("EmailTemplate", name, method, handle, message);
-    return (
-        <div>
-            <h1>New Contact Inquiry</h1>
-            <p>
-                <strong>Name:</strong> {name}
-            </p>
-            <p>
-                <strong>Preferred Contact Method:</strong> {method}
-            </p>
-            <p>
-                <strong>Contact Info:</strong> {handle}
-            </p>
-            {message && (
-                <p>
-                    <strong>Message:</strong> {message}
-                </p>
-            )}
-        </div>
-    );
-};
+}) => (
+    <div>
+        <h1>New Message incoming from Portfolio!</h1>
+        <p>
+            A new contact form submission has been received.
+        </p>
+        <hr />
+        <h2>Sender Details:</h2>
+        <ul>
+            <li><strong>Name:</strong> {name}</li>
+            <li><strong>Email:</strong> {email}</li>
+        </ul>
+        <hr />
+        <h2>Message:</h2>
+        <p>{message}</p>
+    </div>
+);
