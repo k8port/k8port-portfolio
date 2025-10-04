@@ -1,15 +1,20 @@
 // next.config.ts
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+import createMDX from '@next/mdx';
+import type { NextConfig } from 'next';
+
+const withMDX = createMDX({
+    extension: /\.mdx?/,
+})
+
+const nextConfig: NextConfig = {
     reactStrictMode: true,
+    pageExtensions: ['ts', 'tsx', 'mdx'],
     turbopack: {
-        rules: {
-            '*.svg': {
-                loaders: ['@svgr/webpack'],
-                as: '*js'
-            }
-        }
-    }
+    },
+    eslint: {
+        dirs: ['app', 'components', 'lib', 'pages', 'public', 'styles'],
+        ignoreDuringBuilds: true
+    },
     // Remove any Webpack-specific configurations if possible
     // webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     //   // Custom Webpack configurations
@@ -17,10 +22,4 @@ const nextConfig = {
     // },
 };
 
-module.exports = {
-    ...nextConfig,
-    eslint: {
-        dirs: ['app', 'components', 'lib', 'pages', 'public', 'styles'], // Specify directories to lint
-        ignoreDuringBuilds: true, // Ignore ESLint errors during build
-    },
-};
+export default withMDX(nextConfig)
