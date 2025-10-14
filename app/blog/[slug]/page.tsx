@@ -1,37 +1,65 @@
-// app/blog/[slug]/page.tsx
-import fs from 'fs'
-import path from 'path'
-import matter from 'gray-matter'
-import {MDXRemote} from 'next-mdx-remote/rsc'
+import { notFound } from 'next/navigation';
+import { getAllPosts, getPostBySlug } from '@/lib/blog';
 
-interface BlogPostPageProps {
-    params: { slug: string }
+export async function generateStaticParams() {
+  const posts = getAllPosts();
+  return posts.map(post => ({
+    slug: post.slug
+  }));
 }
 
-const BLOG_DIR = path.join(process.cwd(), "content/blog")
-
-export async function generateStaticFilePaths() {
-    const files = fs.readdirSync(BLOG_DIR)
-    return files.map((file) => ({
-        slug: file.replace(/\.mdx?$/, "")
-    }))
+export async function generateMetadata({ params }: { params: { slug: string } }) {
+  const post = getPostBySlug(params.slug);
+  
+  if (!post) return {};
+  
+  return {
+    title: post.title,
+    description: post.excerpt
+  };
 }
 
-export default function BlogPostPage({ params }: BlogPostPageProps) {
-    const filePath = path.join(BLOG_DIR, `${params.slug}.mdx`)
+export default async function BlogPostPage({ params }: { params: { slug: string } }) {
+  let post;
+  let parameters = params.slug; 
+  
+  try {
+    post = getPostBySlug(parameters);
+  } catch {
+    notFound();
+  }
 
-    if (!fs.existsSync(filePath)) {
-        return <div className="p-6">Post not found.</div>
-    }
-
-    const raw = fs.readFileSync(filePath, 'utf8')
-    const { content, data } = matter(raw)
-
-    return (
-        <article className="prose lg:prose-xl max-w-3xl mx-auto p-6">
-            <h1 className="mb-2">{data.title}</h1>
-            <p className="text-sm text-redgrays-arsenicgray mb-8">{data.date}</p>
-            <MDXRemote source={content} />
-        </article>
-    )
+  return (
+    <article className="max-w-4xl mx-auto px-4 py-12">
+      <header className="mb-8">
+        <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
+        
+        <div className="text-gray-600 mb-4">
+          <time dateTime={post.date}>
+            {new Date(post.date).toLocaleDateString('en-US', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric'
+            })}
+          </time>
+          {post.author && <span> • {post.author}</span>}
+        </div>
+        
+        {post.tags && post.tags.length > 0 && (
+          <div className="flex gap-2 flex-wrap">
+            {post.tags.map(tag => (
+              <span key={tag} className="px-2 py-1 bg-gray-100 text-sm rounded">
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
+      </header>
+      
+      <div 
+        className="prose prose-lg max-w-none"
+        dangerouslySetInnerHTML={{ __html: post.content }}
+      />
+    </article>
+  );
 }
