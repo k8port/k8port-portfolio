@@ -217,6 +217,13 @@
         @apply border-l-4 border-gray-300 pl-4 italic my-4;
     }
 
+    code.language-console {
+        color: black !important;
+        text-decoration-color: black !important;
+        /* text-emphasis-color: transparent !important; */
+        /* -webkit-text-fill-color: transparent !important; */
+    }
+
 
     /* Animation Utilities */
 

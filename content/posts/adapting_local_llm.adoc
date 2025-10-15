@@ -5,6 +5,9 @@ date: "2025-10-15"
 tags: ["LLM", "Fine-tuning", "orchestration", "vibe coding"]
 ---
 
+= Adapting a Local LLm to a Specific Use Case
+kiki<k8@k8port.io>
+:icons: font
 :imagesdir: ~/ws-portfolio/k8port.github.io/public/images
 
 > I humbly bow to the ancient Yoruba pantheon, whom departed their bodies to hold congress in the spiritual realm, providing a binary code for humanity to hold communion with the spiritual and outer realms. Similarly, I invoke the Blessed Carlos Acutis, first Patron Saint of the new millenium, in the hope of echoing the civility, discipline, and wisdom beyond years demonstrated through his writing and regarding the relationship between human and technology.
@@ -105,8 +108,6 @@ _Fine-tuning_ an existing, open-source base model (e.g., llama, deepseek, etc) m
 
 Pulling this off requires first establishing a **tarot corpus**footnote:[A _corpus_ in AI refers to a large and structured collection of texts used to linguistically train models and usually refers to the most fundamental set of knowledge of any given Large Language Model]. This _tarot corpus_ refers to the a customized knowledge base on which the model is fine-tuned. This is what gives the LLM the ability to provide coherent and accurate tarot card readings. The corpus is comprised of knowledge from various resources and covers a wide breadth of cultural and geographical references, crucial for understanding context, "vibe", and basis. 
 
-image::fine_tuning_llm.jpeg[]
-
 Fine-tuning models encompasses a couple of different approaches and a variety of techniques, and without getting too heavy into these distinctions, understand
 that the goal of fine-tuning is to purpose an existing model for a specific use-case. Fine-tuning can be accomplished using tools like **HuggingFace** or **Axolotl** and range from expensive to very expensive. It also requires curating massive datasets and consumes an enormous amount of energy.
 
@@ -124,7 +125,6 @@ In practice, "vibe coding" means designing **prompt archetypes** and **stylistic
 .Common Prompt Archetype
 ====
 Role-Task-Format
-[source,shell]
 ----
 
 You are a [role].
@@ -139,7 +139,6 @@ Output format: [specified format]
 [.small]#**definition**#:
 _Specified reference points provided within a prompt to guide AI output tone, voice, etc. Uses descriptions or concrete examples to produce desired style and tone of output, instead of general characterizations._
 
-[source,shell]
 ----
 characterization: 'maintain a casual tone', or 'write professionally' 
 
@@ -152,7 +151,6 @@ anchoring description: 'write like Malcom Gladwell - story-driven, accessible an
 ====
 Dimensions or levels of characteristics built into a model's response protocol as a multi-faceted personality. Like a _Persona_ used to define use-case, but with more depth and authenticity established through addressing of multiple layers.
 
-[source,uml]
 ----
 block-beta
   columns 6
@@ -171,7 +169,6 @@ block-beta
 ====
 Input-Output pair examples + new input
 
-[source,shell]
 ----
 
 Input: [example 1] -> Output: [result 1]
