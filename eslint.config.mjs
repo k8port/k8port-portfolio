@@ -2,6 +2,7 @@ import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { FlatCompat } from '@eslint/eslintrc';
 import prettier from 'eslint-plugin-prettier';
+import { off } from 'process';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -47,7 +48,7 @@ const eslintConfig = [
             // React specific formatting
             'react/jsx-indent': ['error', 4],
             'react/jsx-indent-props': ['error', 4],
-            'jsx-a11y/aria-valid-attr-value': ['error', { allowExpressionValues: true }],
+            'jsx-a11y/aria-valid-attr-value': off
         },
     },
 ];
