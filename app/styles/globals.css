@@ -1,5 +1,4 @@
 @import 'tailwindcss';
-@plugin '@tailwindcss/typography';
 @config '../../tailwind.config.ts';
 
 /*
@@ -91,6 +90,123 @@
     .subtitle-m {
         @apply font-martianmono font-normal text-xs tracking-[0] leading-4 not-italic;
     }
+
+    .prose {
+        color: #4C5866;
+        max-width: 65ch;
+    }
+
+    .prose h1 {
+        font-size: theme(fontSize.3xl);
+        font-weight: bold;
+        margin-top: theme(spacing.8);
+        margin-bottom: theme(spacing.4);
+    }
+
+    .prose h2 {
+        font-size: theme(fontSize.2xl);
+        font-weight: semibold;
+        margin-top: theme(spacing.6);
+        margin-bottom: theme(spacing.2);
+    }
+
+    .prose h3 {
+        font-size: theme(--typography-lg-css-0-h3-font-size);
+        font-weight: semibold;
+        margin-top: theme(spacing.4);
+        margin-bottom: theme(spacing.2);
+    }
+
+    .prose p {
+        margin-bottom: theme(spacing.4);
+        line-height: 1.25rem;
+    }
+
+    .prose ul, .prose ol {
+        margin-bottom: theme(spacing.4);
+        margin-left: theme(spacing.6);
+    }
+
+    .prose li {
+        margin-bottom: theme(spacing.2);
+    }
+
+    .prose code {
+        background-color: gainsboro;
+        padding-left: theme(spacing.1);
+        padding-right: theme(spacing.1);
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        border-radius: 8px;
+        font-size: theme(--typography-sm-css-0-font-size);
+    }
+
+    .prose pre {
+        background-color: theme(--color-bluegrays-richgray);
+        color: theme(--color-redwhites-platinum);
+        padding: theme(spacing.4);
+        border-radius: theme(--typography-lg-css-0-kbd-border-radius);
+        overflow-x: auto;
+        margin-bottom: theme(spacing.4);
+    }
+
+    .prose pre code {
+        background-color: transparent;
+        padding: 0;
+        color: inherit;
+        font-size: inherit;
+    }
+
+    .prose a {
+        color: theme(--color-blueblues-intel-blue);
+        text-decoration: none;
+    }
+
+    .prose a:hover {
+        text-decoration: underline;
+    }
+
+    .prose blockquote {
+        border-left-width: 4px;
+        border-left-color: theme(--color-bluegrays-templetongray);
+        padding-left: theme(spacing.4);
+        font-style: italic;
+        margin-top: theme(spacing.4);
+        margin-bottom: theme(spacing.4);
+    }
+
+    .prose table {
+        width: 100%;
+        margin-top: theme(spacing.4);
+        margin-bottom: theme(spacing.4);
+        border-collapse: collapse;
+    }
+
+    .prose th {
+        background-color: gainsboro;
+        border: 1px solid theme(--color-bluegrays-silverchalice);
+        padding: theme(spacing.2);
+        text-align: left;
+        font-weight: semibold;
+    }
+
+    .prose td {
+        padding: theme(spacing.2);
+        border: 1px solid theme(--color-bluegrays-silverchalice);
+    }
+
+    .prose img {
+        max-width: 100%;
+        height: auto;
+        margin-top: theme(spacing.4);
+        margin-bottom: theme(spacing.4);
+    }
+
+    .prose hr {
+        border-color: theme(--color-bluegrays-silverchalice);
+        margin-top: theme(spacing.8);
+        margin-bottom: theme(spacing.8);
+    }
 }
 
 @layer utilities {
@@ -171,59 +287,6 @@
     nav ul li a:hover {
         color: var(--brand-tertiary);
     }
-
-    /* prose */
-    .prose {
-        @apply text-gray-800;
-    }
-
-    .prose h1 {
-        @apply text-3xl font-bold mt-8 mb-4;
-    }
-
-    .prose h2 {
-        @apply text-2xl font-semibold mt-6 mb-3;
-    }
-
-    .prose h3 {
-        @apply text-xl font-semibold mt-4 mb-2;
-    }
-
-    .prose p {
-        @apply mb-4 leading-relaxed;
-    }
-
-    .prose ul, .prose ol {
-        @apply mb-4 ml-6;
-    }
-
-    .prose li {
-        @apply mb-2;
-    }
-
-    .prose code {
-        @apply bg-gray-100 px-1 py-0.5 rounded text-sm;
-    }
-
-    .prose pre {
-        @apply bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-4;
-    }
-
-    .prose a {
-        @apply text-blue-600 hover:underline;
-    }
-
-    .prose blockquote {
-        @apply border-l-4 border-gray-300 pl-4 italic my-4;
-    }
-
-    code.language-console {
-        color: black !important;
-        text-decoration-color: black !important;
-        /* text-emphasis-color: transparent !important; */
-        /* -webkit-text-fill-color: transparent !important; */
-    }
-
 
     /* Animation Utilities */
 
@@ -405,8 +468,5 @@
         background-color: #8DA399 !important;
         opacity: 1 !important;
     }
-
-
-
 
 }

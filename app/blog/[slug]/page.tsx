@@ -1,6 +1,10 @@
 import { notFound } from 'next/navigation';
 import { getAllPosts, getPostBySlug } from '@/lib/blog';
 
+interface PageProps {
+  params: Promise<{ slug: string }>;
+} 
+
 export async function generateStaticParams() {
   const posts = getAllPosts();
   return posts.map(post => ({
@@ -8,11 +12,15 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+export async function generateMetadata({ params }: PageProps) {
   const { slug } = await params;
-  const post = getPostBySlug(slug);
-  
-  if (!post) return {};
+  let post;
+
+  try {
+    post = getPostBySlug(slug);
+  } catch {
+    return {};
+  }
   
   return {
     title: post.title,
@@ -20,7 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
-export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function BlogPostPage({ params }: PageProps) {
   const { slug } = await params;
   let post;
   

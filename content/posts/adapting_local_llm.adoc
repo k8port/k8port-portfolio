@@ -5,7 +5,7 @@ date: "2025-10-15"
 tags: ["LLM", "Fine-tuning", "orchestration", "vibe coding"]
 ---
 
-= Adapting a Local LLm to a Specific Use Case
+= Adapting Local LLm to a Specific Use Case
 kiki<k8@k8port.io>
 :icons: font
 :imagesdir: ~/ws-portfolio/k8port.github.io/public/images
