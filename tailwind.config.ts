@@ -17,5 +17,5 @@ export default {
             zIndex: themeConfig.zIndex,
         },
     },
-    plugins: [],
+    plugins: [typography],
 } satisfies Config;
