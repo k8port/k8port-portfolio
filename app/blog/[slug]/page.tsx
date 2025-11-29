@@ -1,7 +1,7 @@
 import React from 'react';
 import { notFound } from 'next/navigation';
 import { getAllPosts, getPostBySlug } from '@/lib/blog';
-import { Metadata } from 'next/dist/lib/metadata/types/metadata-interface';
+import { Metadata } from 'next';
 
 interface PageProps {
     params: { slug: string };
