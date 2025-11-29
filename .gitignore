@@ -35,6 +35,12 @@ out/
 # Next.js static files (if exported)
 export/
 
+# Vercel files
+.vercel/
+
+# tracking core environment type enabled
+!next-env.d.ts
+
 # === Tailwind CSS cache ===
 node_modules/.cache/tailwindcss/
 

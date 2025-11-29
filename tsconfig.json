@@ -35,10 +35,13 @@
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "**/*.js",
+    "**/*.jsx"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    ".next"
   ],
   "ts-node": {
     "compilerOptions": {
