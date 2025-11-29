@@ -9,7 +9,6 @@ interface ApiResponse {
 
 // --- Main Form Component ----------------------------------------------
 export default function ContactForm() {
-
     const [status, setStatus] = useState<{
         loading: boolean;
         error?: string;
@@ -26,8 +25,8 @@ export default function ContactForm() {
         const firstname = fd.get('firstname')?.toString().trim() ?? '';
         const lastname = fd.get('lastname')?.toString().trim() ?? '';
         const name = `${firstname} ${lastname}`;
-        const email = fd.get("email")?.toString().trim() ?? "";
-        const method = "email";
+        const email = fd.get('email')?.toString().trim() ?? '';
+        const method = 'email';
         const handle = email;
 
         const message = fd.get('message')?.toString().trim() ?? '';
@@ -42,11 +41,14 @@ export default function ContactForm() {
 
             const body: ApiResponse = await response.json();
             console.log('body', body);
-            if (!response.ok) throw new Error(body.error || "Failed to submit contact form");
-            setStatus({ loading: false, success: body.message || "Thank you for your inquiry!" });
+            if (!response.ok) throw new Error(body.error || 'Failed to submit contact form');
+            setStatus({ loading: false, success: body.message || 'Thank you for your inquiry!' });
             form.reset();
         } catch (error: any) {
-            setStatus({ loading: false, error: error instanceof Error ? error.message : "An error occurred" });
+            setStatus({
+                loading: false,
+                error: error instanceof Error ? error.message : 'An error occurred',
+            });
         }
     }
 
