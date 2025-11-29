@@ -23,7 +23,7 @@
         --header-height: 3.6rem;
     }
     .font-outline {
-        -webkit-text-stroke: 1px var(--brand-secondaryvar)
+        -webkit-text-stroke: 1px var(--brand-secondaryvar);
     }
 
     html,
@@ -92,7 +92,7 @@
     }
 
     .prose {
-        color: #4C5866;
+        color: #4c5866;
         max-width: 65ch;
     }
 
@@ -122,7 +122,8 @@
         line-height: 1.25rem;
     }
 
-    .prose ul, .prose ol {
+    .prose ul,
+    .prose ol {
         margin-bottom: theme(spacing.4);
         margin-left: theme(spacing.6);
     }
@@ -135,8 +136,8 @@
         background-color: gainsboro;
         padding-left: theme(spacing.1);
         padding-right: theme(spacing.1);
-        padding-top: .5rem;
-        padding-bottom: .5rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
         border-radius: 8px;
         font-size: theme(--typography-sm-css-0-font-size);
     }
@@ -431,7 +432,7 @@
 
     .swiper-fullwidth .swiper-button-next::after,
     .swiper-fullwidth .swiper-button-prev::after {
-        color: #8DA399;
+        color: #8da399;
         font-size: 1.75rem;
         font-weight: 900;
         opacity: 0.75;
@@ -454,19 +455,17 @@
         transform: translateY(-50%);
     }
 
-
     .swiper-fullwidth .swiper-pagination {
         bottom: 1rem !important;
     }
 
     .swiper-fullwidth .swiper-pagination-bullet {
-        background-color: #A3C1AD !important;
+        background-color: #a3c1ad !important;
         opacity: 0.6 !important;
     }
 
     .swiper-fullwidth .swiper-pagination-bullet-active {
-        background-color: #8DA399 !important;
+        background-color: #8da399 !important;
         opacity: 1 !important;
     }
-
 }

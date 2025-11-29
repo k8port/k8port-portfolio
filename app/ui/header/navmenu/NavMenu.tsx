@@ -6,7 +6,9 @@ import { useLinkStatus } from 'next/link';
 import clsx from 'clsx';
 import Link from 'next/link';
 
-interface NavMenuProps { className?: string; }
+interface NavMenuProps {
+    className?: string;
+}
 
 /**
  * ------------------------------------------------------------
@@ -26,10 +28,9 @@ export const navItems = [
     { label: 'contact', href: '/#contact', status: 'active' },
     { label: 'blog', href: '/blog', status: 'active' },
     // { label: 'skills', href: '/skills', status: 'pending' },
-] as const satisfies readonly { label: string, href: string, status: 'active' | 'pending' }[];
+] as const satisfies readonly { label: string; href: string; status: 'active' | 'pending' }[];
 
 type NavItem = (typeof navItems)[number];
-
 
 // ------------------------------------------------------------------------------------------------
 //  2. Root component = owns minimal state (isMenuOpen)
@@ -43,16 +44,16 @@ export default function NavMenu({ className }: NavMenuProps) {
     return (
         <div className={` ${className} flex flex-col w-full max-w-screen-2xl gap-2.5 relative `}>
             <div className="flex my-2 ml-auto">
-                <Hamburger open={isMenuOpen} toggle={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden" />
+                <Hamburger
+                    open={isMenuOpen}
+                    toggle={() => setIsMenuOpen(!isMenuOpen)}
+                    className="md:hidden"
+                />
                 <DesktopLinks pathname={pathname} />
             </div>
 
-             {/* mobile hamburger drop-down menu */}
-            <MobileLinks
-                open={isMenuOpen}
-                pathname={pathname}
-                onNavigate={handleNavigate}
-            />
+            {/* mobile hamburger drop-down menu */}
+            <MobileLinks open={isMenuOpen} pathname={pathname} onNavigate={handleNavigate} />
         </div>
     );
 
@@ -68,21 +69,39 @@ export default function NavMenu({ className }: NavMenuProps) {
      */
 
     /* Hamburger */
-    function Hamburger({ open, toggle, className }: { open: boolean, toggle: () => void; className?: string }) {
+    function Hamburger({
+        open,
+        toggle,
+        className,
+    }: {
+        open: boolean;
+        toggle: () => void;
+        className?: string;
+    }) {
         return (
             <button
-                role='button'
+                role="button"
                 onClick={toggle}
                 aria-label="Toggle Menu"
                 aria-expanded={open}
                 aria-pressed={open}
-                className={clsx("p-2", className)}
+                className={clsx('p-2', className)}
             >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     {open ? (
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M6 18L18 6M6 6l12 12"
+                        />
                     ) : (
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M4 6h16M4 12h16M4 18h16"
+                        />
                     )}
                 </svg>
             </button>
@@ -93,7 +112,7 @@ export default function NavMenu({ className }: NavMenuProps) {
     function DesktopLinks({ pathname }: { pathname: string }) {
         return (
             <nav aria-label="Main" className="hidden space-x-12 ml-auto mr-8 text-lg md:flex">
-                {navItems.map((item) => (
+                {navItems.map(item => (
                     <NavLink key={item.href} item={item} pathname={pathname} />
                 ))}
             </nav>
@@ -101,7 +120,15 @@ export default function NavMenu({ className }: NavMenuProps) {
     }
 
     /* MobileLinks (drawer, screens < md) */
-    function MobileLinks({ open, pathname, onNavigate }: { open: boolean, pathname: string, onNavigate: () => void }) {
+    function MobileLinks({
+        open,
+        pathname,
+        onNavigate,
+    }: {
+        open: boolean;
+        pathname: string;
+        onNavigate: () => void;
+    }) {
         if (!open) return null;
         return (
             <nav
@@ -115,8 +142,13 @@ export default function NavMenu({ className }: NavMenuProps) {
                     z-50
                 `}
             >
-                {navItems.map((item) => (
-                    <NavLink key={item.href} item={item} pathname={pathname} className="disabled:opacity-50 disabled:cursor-not-allowed" />
+                {navItems.map(item => (
+                    <NavLink
+                        key={item.href}
+                        item={item}
+                        pathname={pathname}
+                        className="disabled:opacity-50 disabled:cursor-not-allowed"
+                    />
                 ))}
             </nav>
         );
@@ -142,14 +174,14 @@ function NavLink({
         return (
             <span
                 className={clsx(
-                    "transition-opacity cursor-not-allowed opacity-50",
+                    'transition-opacity cursor-not-allowed opacity-50',
                     className,
-                    "text-greengrays-nickel"
+                    'text-greengrays-nickel'
                 )}
                 title="coming soon"
             >
                 {item.label}
-            </span>    
+            </span>
         );
     } else {
         return (
@@ -157,10 +189,12 @@ function NavLink({
                 href={item.href}
                 onClick={onNavigate}
                 className={clsx(
-                    "transition-opacity",
+                    'transition-opacity',
                     className,
                     isActive ? 'text-collection-midnightgreen' : 'text-greengrays-nickel',
-                    isActive ? 'hover:text-collection-alizarincrimson' : 'hover:text-bluewhites-ghostwhite',
+                    isActive
+                        ? 'hover:text-collection-alizarincrimson'
+                        : 'hover:text-bluewhites-ghostwhite',
                     pending && 'opacity-50',
                     pending && 'cursor-not-allowed'
                 )}

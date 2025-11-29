@@ -44,10 +44,8 @@ export const themeConfig = {
     },
     textShadow: {
         'btn-text-shadow': {
-            '2px 2px 0 rgba(45,70,58,0.75)':
-            '-2px -2px 0 rgba(45,70,58,0.75)',
-            '2px -2px 0 rgba(45,70,58,0.75)':
-            '-2px 2px 0 rgba(45,70,58,0.75)',
+            '2px 2px 0 rgba(45,70,58,0.75)': '-2px -2px 0 rgba(45,70,58,0.75)',
+            '2px -2px 0 rgba(45,70,58,0.75)': '-2px 2px 0 rgba(45,70,58,0.75)',
         },
     },
     transition: {
