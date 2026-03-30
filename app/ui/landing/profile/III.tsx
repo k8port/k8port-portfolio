@@ -21,7 +21,7 @@ export const III = ({ className, insertNameHere, insertJobTitleHere }: IIIProps)
                 textSize="text-5xl"
             />
             <Headline
-                className="mt-4 w-md h-auto text-center"
+                className="mt-4 w-md h-auto text-center animate-slide-in-left"
                 headlineText={insertJobTitleHere}
                 headlineStyle="default"
                 textColor="text-greengrays-chameleongray"
@@ -29,8 +29,8 @@ export const III = ({ className, insertNameHere, insertJobTitleHere }: IIIProps)
             />
             <div className={`mt-4 sm:mt-10 h-auto`}>
                 <ProfilePic
-                    imageWidth={1038}
-                    imageHeight={920}
+                    imageWidth={2038}
+                    imageHeight={1840}
                     className="rounded-full opacity-65 shadow-btn-shadow aspect-[1038/920]"
                     profilePicSrc="/images/abstract-profile/abstract-profile-sunset.svg"
                     profilePicDescription="Profile Picture"

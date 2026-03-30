@@ -43,7 +43,7 @@ const Footer: FC<FooterProps> = ({
     >
         <div className="mx-auto w-full max-w-screen-xl px-4 py-8 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
             {/* Left navigation  */}
-            <nav className="flex flex-wrap justify-center gap-4 md:justify-start">
+            <nav className="hidden md:flex flex-wrap justify-center gap-4 md:justify-start">
                 {nav.map(({ href, label }) => (
                     <Link
                         key={href}
@@ -63,7 +63,7 @@ const Footer: FC<FooterProps> = ({
             </div>
 
             {/* Right social links */}
-            <div className="flex justify-center gap-4">
+            <div className="hidden md:flex justify-center gap-4">
                 {socials.map(({ href, label, icon }) => (
                     <Link
                         key={href}

@@ -69,13 +69,21 @@ const LandingContent = forwardRef<HTMLDivElement, LandingContentProps>(({ classN
                   <div className="relative">
                       <III
                           className={`
-                            mt-50
+                            absolute
+                            top-15
+                            left-10
+                            lg:left-15
+                            xl:left-50
+                            -translate-x-1/2
+                            w-full
+                            max-w-md
+                            text-center
                             overflow-hidden
                             items-center
                           `}
                           insertNameHere="Kate Portalatin"
                           insertJobTitleHere="Senior Software Engineer"
-                          profilePicWidth="w-lg max-w-xl"
+                          profilePicWidth="w-lg max-w-2xl"
                       />
                   </div>
               </div>
