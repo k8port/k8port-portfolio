@@ -4,7 +4,7 @@ import matter from 'gray-matter';
 import Asciidoctor from 'asciidoctor';
 
 const asciidoctor = Asciidoctor();
-const postsDirectory = join(process.cwd(), 'content/posts');
+const postsDirectory = join(process.cwd(), 'content/posts/adoc');
 
 export interface BlogPost {
     slug: string;
@@ -13,6 +13,7 @@ export interface BlogPost {
     excerpt?: string;
     author?: string;
     tags?: string[];
+    draft?: boolean;
     content: string;
 }
 
@@ -39,6 +40,7 @@ export function getPostBySlug(slug: string): BlogPost {
         excerpt: data.excerpt,
         author: data.author,
         tags: data.tags,
+        draft: data.draft ?? false,
         content: html,
     };
 }

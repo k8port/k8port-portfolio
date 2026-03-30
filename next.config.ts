@@ -1,11 +1,14 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
+    output: 'export',
+    images: {
+        unoptimized: true,
+    },
     typescript: {
-        // !! WARN !!
-        // Dangerously allow production builds to successfully complete even if
-        // your project has type errors.
-        // ignoreBuildErrors: true, // Only as last resort
+
     },
 };
 
-module.exports = nextConfig;
+export default nextConfig;
+

@@ -2,10 +2,11 @@ import React from 'react';
 import { notFound } from 'next/navigation';
 import { getAllPosts, getPostBySlug } from '@/lib/blog';
 import { Metadata } from 'next';
+import MermaidRenderer from '@/ui/MermaidRenderer';
 
 interface PageProps {
-    params: { slug: string };
-    searchParams?: { [key: string]: string | string[] | undefined };
+    params: Promise<{ slug: string }>;
+    searchParams?: Promise<{ [key: string]: string | string[] | undefined }>;
 }
 
 export async function generateStaticParams() {
@@ -16,7 +17,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-    const { slug } = params;
+    const { slug } = await params;
     let post;
 
     try {
@@ -32,7 +33,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 export default async function BlogPostPage({ params }: PageProps) {
-    const { slug } = params;
+    const { slug } = await params;
     let post;
 
     try {
@@ -43,6 +44,16 @@ export default async function BlogPostPage({ params }: PageProps) {
 
     return (
         <article className="max-w-4xl mx-auto px-4 py-12">
+            {post.draft && (
+                <div className="w-full overflow-hidden bg-amber-500 text-white font-bold text-lg tracking-widest mb-6">
+                    <div className="whitespace-nowrap animate-scroll py-2">
+                        WORKING DRAFT &nbsp;&bull;&nbsp; WORKING DRAFT &nbsp;&bull;&nbsp; WORKING
+                        DRAFT &nbsp;&bull;&nbsp; WORKING DRAFT &nbsp;&bull;&nbsp; WORKING DRAFT
+                        &nbsp;&bull;&nbsp; WORKING DRAFT &nbsp;&bull;&nbsp; WORKING DRAFT
+                        &nbsp;&bull;&nbsp; WORKING DRAFT
+                    </div>
+                </div>
+            )}
             <header className="mb-8">
                 <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
                 <div className="text-gray-600 mb-4">
@@ -69,6 +80,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                 className="prose prose-lg max-w-none"
                 dangerouslySetInnerHTML={{ __html: post.content }}
             />
+            <MermaidRenderer />
         </article>
     );
 }
