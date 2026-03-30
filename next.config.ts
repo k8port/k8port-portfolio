@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // next.config.ts
 import createMDX from '@next/mdx';
 import type { NextConfig } from 'next';
@@ -32,3 +33,19 @@ if ('turbopack' in finalConfig && 'conditions' in (finalConfig as any).turbopack
 }
 
 export default finalConfig
+=======
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
+    output: 'export',
+    images: {
+        unoptimized: true,
+    },
+    typescript: {
+
+    },
+};
+
+export default nextConfig;
+
+>>>>>>> 4a2eb48 (13-create-blog)
