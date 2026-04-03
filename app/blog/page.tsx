@@ -1,51 +1,71 @@
-import React from 'react';
-import Link from 'next/link';
-import { getAllPosts } from '@/lib/blog';
+// app/blog/page.tsx
+import fs from 'fs'
+import path from 'path'
+import matter from 'gray-matter'
+import Link from 'next/link'
 
-export default async function BlogPage() {
-    const posts = getAllPosts();
+interface PostMeta {
+    slug: string;
+    title: string;
+    date: string;
+    excerpt: string;
+    tags?: string[];
+}
+
+function getPosts(): PostMeta[] {
+    const blogDir = path.join(process.cwd(), 'content/blog')
+    const files  = fs.readdirSync(blogDir)
+
+    return files.map((file) => {
+        const slug = file.replace(/\.mdx?$/, '')
+        const raw = fs.readFileSync(path.join(blogDir, file), "utf-8")
+        const { data } = matter(raw)
+
+        return {
+            slug,
+            title: data.title ?? slug,
+            date: data.date ?? "",
+            excerpt: data.excerpt ?? "",
+            tags: data.tags ?? [],
+        }
+    })
+}
+
+export default function BlogIndex() {
+    const posts = getPosts().sort(
+        (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+    )
 
     return (
-        <div className="max-w-4xl mx-auto px-4 py-12">
-            <h1 className="text-4xl font-bold mb-8">Blog</h1>
-
-            <div className="space-y-8">
-                {posts.map(post => (
-                    <article key={post.slug} className="border-b pb-8">
-                        <Link href={`/blog/${post.slug}`} className="group">
-                            <h2 className="text-2xl font-semibold mb-2 group-hover:text-blue-600 transition">
-                                {post.title}
-                            </h2>
+        <main className="max-w-3xl mx-auto p-6">
+            <h1 className="text-4xl font-bold mb-6">Kiki with Kiki</h1>
+            <ul className="space-y-6">
+                {posts.map((post) => (
+                    <li key={post.slug}>
+                        <Link
+                            href={`/blog/${post.slug}`}
+                            className="text-xl font-semibold text-darkquaternaryvar hover:underline"
+                        >
+                            {post.title}
                         </Link>
-
-                        <div className="text-gray-600 text-sm mb-3">
-                            <time dateTime={post.date}>
-                                {new Date(post.date).toLocaleDateString('en-US', {
-                                    year: 'numeric',
-                                    month: 'long',
-                                    day: 'numeric',
-                                })}
-                            </time>
-                            {post.author && <span> • {post.author}</span>}
-                        </div>
-
-                        {post.excerpt && <p className="text-gray-700 mb-4">{post.excerpt}</p>}
-
+                        <p className="text-sm text-redgrays-arsenicgray">{post.date}</p>
+                        {post.excerpt && (
+                            <p className="text-redblacks-blackstrapmolasses mt-1">{post.excerpt}</p>
+                        )}
                         {post.tags && post.tags.length > 0 && (
-                            <div className="flex gap-2 flex-wrap">
-                                {post.tags.map(tag => (
+                            <div className="mt-2 flex flex-wrap gap-2">
+                                {post.tags.map((tag) => (
                                     <span
                                         key={tag}
-                                        className="px-2 py-1 bg-gray-100 text-sm rounded"
-                                    >
-                                        {tag}
+                                        className="text-xs bg-bluegrays-brightgray px-2 py-1 rounded-full">
+                                            {tag}
                                     </span>
                                 ))}
                             </div>
                         )}
-                    </article>
+                    </li>
                 ))}
-            </div>
-        </div>
-    );
+            </ul>
+        </main>
+    )
 }

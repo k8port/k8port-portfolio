@@ -26,7 +26,7 @@ export const navItems = [
     { label: 'home', href: '/#landing', status: 'active' },
     { label: 'projects', href: '/#projects', status: 'active' },
     { label: 'contact', href: '/#contact', status: 'active' },
-    // { label: 'blog', href: '/blog', status: 'pending' },
+    { label: 'blog', href: '/blog', status: 'active' },
     // { label: 'skills', href: '/skills', status: 'pending' },
 ] as const satisfies readonly { label: string, href: string, status: 'active' | 'pending' }[];
 

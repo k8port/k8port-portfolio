@@ -17,5 +17,5 @@ export default {
             zIndex: themeConfig.zIndex,
         },
     },
-    plugins: [typography],
+    plugins: [require('@tailwindcss/typography')],
 } satisfies Config;

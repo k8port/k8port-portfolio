@@ -1,86 +1,37 @@
-import React from 'react';
-import { notFound } from 'next/navigation';
-import { getAllPosts, getPostBySlug } from '@/lib/blog';
-import { Metadata } from 'next';
-import MermaidRenderer from '@/ui/MermaidRenderer';
+// app/blog/[slug]/page.tsx
+import fs from 'fs'
+import path from 'path'
+import matter from 'gray-matter'
+import {MDXRemote} from 'next-mdx-remote/rsc'
 
-interface PageProps {
-    params: Promise<{ slug: string }>;
-    searchParams?: Promise<{ [key: string]: string | string[] | undefined }>;
+interface BlogPostPageProps {
+    params: { slug: string }
 }
 
-export async function generateStaticParams() {
-    const posts = getAllPosts();
-    return posts.map(post => ({
-        slug: post.slug,
-    }));
+const BLOG_DIR = path.join(process.cwd(), "content/blog")
+
+export async function generateStaticFilePaths() {
+    const files = fs.readdirSync(BLOG_DIR)
+    return files.map((file) => ({
+        slug: file.replace(/\.mdx?$/, "")
+    }))
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-    const { slug } = await params;
-    let post;
+export default function BlogPostPage({ params }: BlogPostPageProps) {
+    const filePath = path.join(BLOG_DIR, `${params.slug}.mdx`)
 
-    try {
-        post = getPostBySlug(slug);
-    } catch {
-        return {};
+    if (!fs.existsSync(filePath)) {
+        return <div className="p-6">Post not found.</div>
     }
 
-    return {
-        title: post.title,
-        description: post.excerpt,
-    };
-}
-
-export default async function BlogPostPage({ params }: PageProps) {
-    const { slug } = await params;
-    let post;
-
-    try {
-        post = getPostBySlug(slug);
-    } catch {
-        notFound();
-    }
+    const raw = fs.readFileSync(filePath, 'utf8')
+    const { content, data } = matter(raw)
 
     return (
-        <article className="max-w-4xl mx-auto px-4 py-12">
-            {post.draft && (
-                <div className="w-full overflow-hidden bg-amber-500 text-white font-bold text-lg tracking-widest mb-6">
-                    <div className="whitespace-nowrap animate-scroll py-2">
-                        WORKING DRAFT &nbsp;&bull;&nbsp; WORKING DRAFT &nbsp;&bull;&nbsp; WORKING
-                        DRAFT &nbsp;&bull;&nbsp; WORKING DRAFT &nbsp;&bull;&nbsp; WORKING DRAFT
-                        &nbsp;&bull;&nbsp; WORKING DRAFT &nbsp;&bull;&nbsp; WORKING DRAFT
-                        &nbsp;&bull;&nbsp; WORKING DRAFT
-                    </div>
-                </div>
-            )}
-            <header className="mb-8">
-                <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
-                <div className="text-gray-600 mb-4">
-                    <time dateTime={post.date}>
-                        {new Date(post.date).toLocaleDateString('en-US', {
-                            year: 'numeric',
-                            month: 'long',
-                            day: 'numeric',
-                        })}
-                    </time>
-                    {post.author && <span> • {post.author}</span>}
-                </div>
-                {post.tags && post.tags.length > 0 && (
-                    <div className="flex gap-2 flex-wrap">
-                        {post.tags.map(tag => (
-                            <span key={tag} className="px-2 py-1 bg-gray-100 text-sm rounded">
-                                {tag}
-                            </span>
-                        ))}
-                    </div>
-                )}
-            </header>
-            <div
-                className="prose prose-lg max-w-none"
-                dangerouslySetInnerHTML={{ __html: post.content }}
-            />
-            <MermaidRenderer />
+        <article className="prose lg:prose-xl max-w-3xl mx-auto p-6">
+            <h1 className="mb-2">{data.title}</h1>
+            <p className="text-sm text-redgrays-arsenicgray mb-8">{data.date}</p>
+            <MDXRemote source={content} />
         </article>
-    );
+    )
 }
