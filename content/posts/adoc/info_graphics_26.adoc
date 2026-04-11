@@ -13,7 +13,7 @@ v1.0, 2026-03-29
 :icons: font
 :sectanchors:
 :sectnums:
-:imagesdir: ../../../public/images
+:imagesdir: /images
 
 [.lead]
  In art school, a teacher once made a significant impression on me through a simple assignment. Consider the following design problem:
@@ -60,7 +60,7 @@ image::khipu_knots.webp[300,500, caption="Khipu: knotted cords encoding informat
 ****
  Marshallese stick charts, encode wave patterns and island relationships using sparse lattices of sticks and shells. Even when cultural practices are lost, objects still convey “graph-like structure” through their use of nodes and relationshps, and incidentally the is the exact sort of thing that a future intelligence could reverse-engineer.
  ---
- image::marchallese stick chart.webp[]
+ image::MarshallIslandsRebbelib.jpg[]
 ****
 
 .Astronomy as tabular prediction. 
@@ -69,17 +69,17 @@ image::khipu_knots.webp[300,500, caption="Khipu: knotted cords encoding informat
 [.float-group]
 [.left]
 .Mattang
-image::mattang.webp[300,300, caption="Marshallese Mattang stick chart. Source: Wikimedia Commons."]
+image::MarshallIslandMattang.jpg[300,300, caption="Marshallese Mattang stick chart. Source: Wikimedia Commons."]
 [.right]
 
 [.right]
 .Meddo
-image::meddo.webp[300,300, caption="Dresden Codex Meddo eclipse table. Source: Wikimedia Commons."]
+image::MarshallIslandMeddo.jpg[300,300, caption="Dresden Codex Meddo eclipse table. Source: Wikimedia Commons."]
 
 .float-group
 [.center]
 .Rebellib
-image:: imagelib,jpg[300,300, caption="Marshallese Rebellib stick chart. Source: Wikimedia Commons."]
+image::MarshallIslandsRebbelib.jpg[300,300, caption="Marshallese Rebellib stick chart. Source: Wikimedia Commons."]
 ====
 
 Recent scholarship analyzing the Dresden Codex eclipse table emphasizes structured sequences and corrections—evidence of a predictive, model-based information system. Even if glyph semantics are lost, periodic structure and error-correction marks may remain legible as “prediction machinery.” ====
