@@ -1,31 +1,29 @@
 'use client';
 
 import { useEffect } from 'react';
-import mermaid from 'mermaid';
-
-mermaid.initialize({
-    startOnLoad: false,
-    theme: 'default',
-});
 
 export default function MermaidRenderer() {
     useEffect(() => {
-        const codeBlocks = document.querySelectorAll('pre code.language-mermaid');
+        import('mermaid').then(({ default: mermaid }) => {
+            mermaid.initialize({ startOnLoad: false, theme: 'default' });
 
-        codeBlocks.forEach(block => {
-            const pre = block.closest('pre');
-            const wrapper = pre?.parentElement;
-            const target = wrapper?.classList.contains('content') ? wrapper.parentElement : pre;
-            if (!target) return;
+            const codeBlocks = document.querySelectorAll('pre code.language-mermaid');
 
-            const container = document.createElement('div');
-            container.className = 'mermaid';
-            // Use textContent to decode HTML entities like &gt; back to >
-            container.textContent = block.textContent ?? '';
-            target.replaceWith(container);
+            codeBlocks.forEach(block => {
+                const pre = block.closest('pre');
+                const wrapper = pre?.parentElement;
+                const target = wrapper?.classList.contains('content') ? wrapper.parentElement : pre;
+                if (!target) return;
+
+                const container = document.createElement('div');
+                container.className = 'mermaid';
+                // Use textContent to decode HTML entities like &gt; back to >
+                container.textContent = block.textContent ?? '';
+                target.replaceWith(container);
+            });
+
+            mermaid.run({ querySelector: '.mermaid' });
         });
-
-        mermaid.run({ querySelector: '.mermaid' });
     }, []);
 
     return null;

@@ -2,9 +2,9 @@ name: Vercel Deploy
 
 on:
     push:
-        branches: [mvp_layout_v1.1]
+        branches: [main]
     pull_request:
-        branches: [mvp_layout_v1.1]
+        branches: [main]
 
 permissions:
     contents: read
