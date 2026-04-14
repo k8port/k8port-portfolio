@@ -84,7 +84,7 @@ const LandingContent = forwardRef<HTMLDivElement, LandingContentProps>(({ classN
                           `}
                           insertNameHere="Kate Portalatin"
                           insertJobTitleHere="Senior Software Engineer"
-                          profilePicWidth="w-lg max-w-xl"
+                          profilePicWidth="w-lg max-w-2xl"
                       />
                   </div>
               </div>
