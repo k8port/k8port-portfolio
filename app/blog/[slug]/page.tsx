@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
 export default async function BlogPostPage({ params }: { params: { slug: string } }) {
   let post;
-  let parameters = params.slug; 
+  const parameters = params.slug; 
   
   try {
     post = getPostBySlug(parameters);
