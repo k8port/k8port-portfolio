@@ -3,7 +3,6 @@ import * as React from 'react';
 interface EmailTemplateProps {
     name: string;
     email: string;
-    email: string;
     message?: string;
 }
 
