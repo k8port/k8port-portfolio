@@ -42,9 +42,11 @@ jobs:
               run: pnpm test
 
             - name: Setup Pages
+              if: github.event_name == 'push'
               uses: actions/configure-pages@v5
 
             - name: Upload Pages artifact
+              if: github.event_name == 'push'
               uses: actions/upload-pages-artifact@v3
               with:
                   path: out/
