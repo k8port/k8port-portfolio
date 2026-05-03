@@ -65,30 +65,21 @@ const LandingContent = forwardRef<HTMLDivElement, LandingContentProps>(({ classN
               flex flex-col
               w-full h-full
               mx-auto
-            `}>
-              <div className="hidden md:flex md:flex-col justify-normal space-y-6">
-                  <div className="relative">
-                      <III
-                          className={` absolute top-15 left-10 lg:left-15 xl:left-50 -translate-x-1/2 w-full max-w-md text-center `}
-                          insertNameHere="Kate Portalatin"
-                          insertJobTitleHere="Software Engineer"
-                        />
-                      
+            `}
+            >
                 <div className="hidden md:flex md:flex-col justify-normal space-y-6">
                     <div className="relative">
                         <III
                             className={`
-                            mt-50
-                            overflow-hidden
-                            items-center
-                          `}
-                          insertNameHere="Kate Portalatin"
-                          insertJobTitleHere="Senior Software Engineer"
-                          profilePicWidth="w-lg max-w-2xl"
-                      />
-                  </div>
-              </div>
-        </div>
+                    mt-50
+                    overflow-hidden
+                    items-center
+                    `}
+                            insertNameHere="Kate Portalatin"
+                            insertJobTitleHere="Senior Software Engineer"
+                            profilePicWidth="w-lg max-w-2xl"
+                        />
+                    </div>
                 </div>
             </div>
         </div>
