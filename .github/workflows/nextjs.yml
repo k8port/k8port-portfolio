@@ -27,10 +27,13 @@ jobs:
               with:
                   node-version: '20'
 
+            - name: Enable Corepack
+              run: corepack enable
+
             - name: Setup pnpm
               uses: pnpm/action-setup@v4
               with:
-                  version: 10
+                  version: 10.10.0
 
             - name: Install dependencies
               run: pnpm install
