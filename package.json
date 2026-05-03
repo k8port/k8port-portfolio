@@ -7,7 +7,7 @@
         "node": "22.x"
     },
     "scripts": {
-        "dev": "next dev --turbopack",
+        "dev": "NODE_OPTIONS='--no-experimental-webstorage' next dev",
         "build": "next build",
         "export": "next export",
         "start": "next start",
