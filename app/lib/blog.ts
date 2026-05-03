@@ -1,3 +1,5 @@
+import 'server-only';
+
 import { readdirSync, readFileSync } from 'fs';
 import { join } from 'path';
 import matter from 'gray-matter';

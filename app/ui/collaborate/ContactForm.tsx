@@ -33,15 +33,10 @@ export default function ContactForm() {
         const payload = { name, method, handle, message };
 
         try {
-            const response = await fetch('/api/contact', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(payload),
-            });
-
-            const data: ApiResponse = await response.json();
-            if (!response.ok) throw new Error(data.error || 'Failed to submit contact form');
-            setStatus({ loading: false, success: data.message || 'Thank you for your inquiry!' });
+            const subject = encodeURIComponent('Portfolio Contact Form');
+            const body = encodeURIComponent(`From: ${name} (${email})\n\n${message}`);
+            window.location.href = `mailto:k8@k8port.io?subject=${subject}&body=${body}`;
+            setStatus({ loading: false, success: 'Opening your email client...' });
             form.reset();
         } catch (error: unknown) {
             setStatus({

@@ -2,7 +2,6 @@ import type { Config } from 'tailwindcss';
 import { themeConfig } from './app/styles/theme/theme.config';
 import typography from '@tailwindcss/typography';
 
-/** @type {import('tailwindcss').Config} */ 
 export default {
     content: ['./app/**/*.{js,ts,jsx,tsx,mdx}'],
     theme: {
