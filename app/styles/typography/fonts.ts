@@ -6,7 +6,7 @@ import {
     Martian_Mono,
     Cormorant_Garamond,
     Lobster,
-    Bodoni_Moda_SC
+    Bodoni_Moda_SC,
 } from 'next/font/google';
 
 export const spaceGrotesk = Space_Grotesk({

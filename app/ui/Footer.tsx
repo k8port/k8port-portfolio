@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import { FC, ReactNode, HTMLAttributes } from 'react';
 import Link from 'next/link';
 import clsx from 'clsx';
@@ -16,8 +17,6 @@ export interface FooterProps extends HTMLAttributes<HTMLDivElement> {
 const defaultNav: NavItem[] = [
     { href: '/#landing', label: 'About (top) | ↑' },
     { href: '/#projects', label: 'Projects ♤' },
-    // { href: '/blog', label: 'Blog ♡' },
-    // { href: '/skills', label: 'Skills & Experience ♧' },
     { href: '/#contact', label: ' ↓ | Contact (bottom)' },
 ];
 

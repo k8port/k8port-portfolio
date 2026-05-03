@@ -1,10 +1,7 @@
 'use client';
 
 const viewResume = () => {
-    window.open(
-        'https://drive.proton.me/urls/35YHM5DT3W#q8cG6y5bmbYP',
-        '_blank'
-    );
+    window.open('https://drive.proton.me/urls/35YHM5DT3W#q8cG6y5bmbYP', '_blank');
 };
 
 export const downloadAndViewResume = () => {

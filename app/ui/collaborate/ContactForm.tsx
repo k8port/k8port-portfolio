@@ -9,7 +9,6 @@ interface ApiResponse {
 
 // --- Main Form Component ----------------------------------------------
 export default function ContactForm() {
-
     const [status, setStatus] = useState<{
         loading: boolean;
         error?: string;
@@ -23,30 +22,27 @@ export default function ContactForm() {
         // grab form data
         const form = e.currentTarget;
         const fd = new FormData(form);
-        const firstname = fd.get("firstname")?.toString().trim() ?? "";
-        const lastname = fd.get("lastname")?.toString().trim() ?? "";
+        const firstname = fd.get('firstname')?.toString().trim() ?? '';
+        const lastname = fd.get('lastname')?.toString().trim() ?? '';
         const name = `${firstname} ${lastname}`;
-        const email = fd.get("email")?.toString().trim() ?? "";
-        const method = "email";
+        const email = fd.get('email')?.toString().trim() ?? '';
+        const method = 'email';
         const handle = email;
 
-        const message = fd.get("message")?.toString().trim() ?? "";
+        const message = fd.get('message')?.toString().trim() ?? '';
         const payload = { name, method, handle, message };
 
         try {
-            const response = await fetch("/api/contact", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(payload),
-            });
-
-            const body: ApiResponse = await response.json();
-            console.log('body', body);
-            if (!response.ok) throw new Error(body.error || "Failed to submit contact form");
-            setStatus({ loading: false, success: body.message || "Thank you for your inquiry!" });
+            const subject = encodeURIComponent('Portfolio Contact Form');
+            const body = encodeURIComponent(`From: ${name} (${email})\n\n${message}`);
+            window.location.href = `mailto:k8@k8port.io?subject=${subject}&body=${body}`;
+            setStatus({ loading: false, success: 'Opening your email client...' });
             form.reset();
-        } catch (error: any) {
-            setStatus({ loading: false, error: error instanceof Error ? error.message : "An error occurred" });
+        } catch (error: unknown) {
+            setStatus({
+                loading: false,
+                error: error instanceof Error ? error.message : 'An error occurred',
+            });
         }
     }
 
@@ -55,7 +51,10 @@ export default function ContactForm() {
             Thanks for your inquiry! I&apos;ll be in touch soon!
         </div>
     ) : (
-        <form onSubmit={handleSubmit} className="w-full max-w-3xl mx-auto bg-brand-secondary/60 border rounded shadow p-12 space-y-8 text-collection-midnightgreen">
+        <form
+            onSubmit={handleSubmit}
+            className="w-full max-w-3xl mx-auto bg-brand-secondary/60 border rounded shadow p-12 space-y-8 text-collection-midnightgreen"
+        >
             {/* name inline */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="flex items-center gap-2 w-full">
@@ -146,9 +145,7 @@ export default function ContactForm() {
 
             {/* Message Area */}
             <label className="flex flex-col">
-                <span className="text-sm font-medium">
-                    Message
-                </span>
+                <span className="text-sm font-medium">Message</span>
                 <textarea
                     name="message"
                     rows={6}
@@ -162,16 +159,14 @@ export default function ContactForm() {
                 <button
                     type="submit"
                     disabled={status.loading}
-                    className="bg-collection-caribbeangreen text-brand-secondary font-bold px-6 py-2 rounded hover:bg-collection-caribbeangreen/60 disabled:opacity-50 disabled:cursor-not-allowed">
-                    {status.loading ? "Sending..." : "Submit"}
+                    className="bg-collection-caribbeangreen text-brand-secondary font-bold px-6 py-2 rounded hover:bg-collection-caribbeangreen/60 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                    {status.loading ? 'Sending...' : 'Submit'}
                 </button>
             </div>
 
             {/* Error Message */}
-            {status.error && (
-                <p className="text-collection-alizarincrimson">{status.error}</p>
-            )}
-
+            {status.error && <p className="text-collection-alizarincrimson">{status.error}</p>}
         </form>
     );
 }

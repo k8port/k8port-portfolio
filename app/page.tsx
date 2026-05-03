@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { LandingContainer } from './ui/landing/LandingContainer';
 import ProjectsContainer from './ui/projects/ProjectsContainer';
 import CollaborateContainer from './ui/collaborate/CollaborateContainer';
@@ -17,7 +18,7 @@ export default function HomePage() {
 
             <section id="contact" className="relative flex flex-col min-h-screen">
                 <CollaborateContainer className="flex-grow" />
-                <Footer className="mt-auto"/>
+                <Footer className="mt-auto" />
             </section>
         </div>
     );
