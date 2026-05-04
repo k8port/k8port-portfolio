@@ -32,6 +32,9 @@ node_modules/
 .next/
 out/
 
+# === Vercel local metadata ===
+.vercel/
+
 # Next.js static files (if exported)
 export/
 
