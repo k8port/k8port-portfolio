@@ -1,16 +1,21 @@
 'use client';
 
-import React, { HTMLAttributes } from 'react';
+import { HTMLAttributes } from 'react';
 import ContactForm from './ContactForm';
 import Image from 'next/image';
 import OpacityOverlay from '../background/OpacityOverlay';
 import clsx from 'clsx';
+import React from 'react';
 
 type CollaborateContainerProps = HTMLAttributes<HTMLDivElement>;
 
 export default function CollaborateContainer({ className, ...rest }: CollaborateContainerProps) {
     return (
-        <div {...rest} className={clsx('relative flex items-center justify-center', className)}>
+        <div
+            id="collaborate"
+            {...rest}
+            className={clsx('relative flex items-center justify-center', className)}
+        >
             {/* full-screen background image */}
             <Image
                 src="/images/arcade-girl.png"

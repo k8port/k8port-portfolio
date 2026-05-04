@@ -19,26 +19,41 @@ export function useBreakpointDebug() {
         };
 
         function getScreenZone() {
-            if (width < 480) return 'xs';
-            if (width < 640) return 'sm';
-            if (width < 768) return 'md';
-            if (width < 900) return 'mlg';
-            if (width < 1024) return 'lg';
-            if (width < 1200) return 'xl';
-            if (width < 1400) return '2xl';
-            if (width < 1600) return '3xl';
-            if (width < 1800) return '4xl';
-            if (width < 2000) return '5xl';
-            return '6xl';
+            return width < 480
+                ? 'xs'
+                : width < 640
+                  ? 'sm'
+                  : width < 768
+                    ? 'md'
+                    : width < 900
+                      ? 'mlg'
+                      : width < 1024
+                        ? 'lg'
+                        : width < 1200
+                          ? 'xl'
+                          : width < 1400
+                            ? '2xl'
+                            : width < 1600
+                              ? '3xl'
+                              : width < 1800
+                                ? '4xl'
+                                : width < 2000
+                                  ? '5xl'
+                                  : '6xl';
         }
 
         const listeners = Object.entries(themeBreakpoints).map(([label, query]) => {
             const mediaQuery = window.matchMedia(query);
             let currentBreakpoint = getScreenZone();
             let previousBreakpoint = currentBreakpoint;
-            const handleChange = (_event: MediaQueryListEvent) => {
-                previousBreakpoint = currentBreakpoint;
-                currentBreakpoint = getScreenZone();
+            const handleChange = (event: MediaQueryListEvent) => {
+                if (event.matches) {
+                    previousBreakpoint = currentBreakpoint;
+                    currentBreakpoint = getScreenZone();
+                } else {
+                    previousBreakpoint = currentBreakpoint;
+                    currentBreakpoint = getScreenZone();
+                }
             };
             mediaQuery.addEventListener('change', handleChange);
 

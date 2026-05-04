@@ -1,5 +1,5 @@
 import { motion, useAnimation } from 'motion/react';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { blobData, N } from '../../../data/blob_data';
 import SvgDefs from './SvgDefs';
 

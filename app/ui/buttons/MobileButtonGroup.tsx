@@ -15,7 +15,9 @@ export const MobileButtonGroup = ({ className }: MobileButtonGroupProps) => {
         downloadAndViewResume();
     };
 
-    const handleContactClick = () => {};
+    const handleContactClick = () => {
+        document.getElementById('collaborate')?.scrollIntoView({ behavior: 'smooth' });
+    };
 
     return (
         <div className={`space-x-2 ${className}`}>

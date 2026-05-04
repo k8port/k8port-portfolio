@@ -34,7 +34,7 @@ export const ButtonStyle = ({
     let loadingStyleClass =
         '[&[data-loading=true]]:bg-accent-accentbluevar [&[data-loading=true]]:border-brand-primary [&[data-loading=true]]:!text-brand-secondaryvar';
     let sizeClass = 'px-28 py-5';
-    let iconPositionClass = 'left-icon';
+    const iconPositionClass = 'left-icon';
     let borderRadiusClass = 'rounded-sm';
     const IconComponent = buttonIconSelection ?? null;
 
@@ -64,33 +64,26 @@ export const ButtonStyle = ({
         sizeClass = 'px-12 py-4';
     } else if (size === 'small') {
         sizeClass = 'px-10 py-3';
+    } else if (size === 'large') {
+        sizeClass = 'px-28 py-5'; 
     } else {
-        sizeClass = 'px-8 py-2';
+        sizeClass = 'px-8 py-2'; 
     }
 
-    if (iconPosition === 'left-icon') {
-        iconPositionClass = 'left-icon';
-    } else if (iconPosition === 'right-icon') {
-        iconPositionClass = 'right-icon';
-    } else if (iconPosition === 'no-icon') {
-        iconPositionClass = 'no-icon';
-    } else if (iconPosition === 'left-icon-right-text') {
-        iconPositionClass = 'left-icon-right-text';
-    } else {
-        iconPositionClass = 'right-icon-left-text';
-    }
-
-    if (borderRadius === 'four') {
-        borderRadiusClass = 'rounded-sm';
-    } else if (borderRadius === 'eight') {
+    if (borderRadius === 'eight') {
         borderRadiusClass = 'rounded-lg';
     } else if (borderRadius === 'sixteen') {
         borderRadiusClass = 'rounded-2xl';
-    } else {
+    } else if (borderRadius === 'thirty-two') {
         borderRadiusClass = 'rounded-full';
+    } else {
+        borderRadiusClass = 'rounded-sm';
     }
 
+    
     return (
+        /* default code is for large button right icon, border-radius: four */
+
         <button
             type="button"
             onClick={onClick}

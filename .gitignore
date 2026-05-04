@@ -38,6 +38,12 @@ out/
 # Next.js static files (if exported)
 export/
 
+# Vercel files
+.vercel/
+
+# tracking core environment type enabled
+!next-env.d.ts
+
 # === Tailwind CSS cache ===
 node_modules/.cache/tailwindcss/
 
@@ -49,6 +55,9 @@ node_modules/.cache/tailwindcss/
 
 # Optional tailwindcss JIT cache
 .tailwind/
+
+# Guard against accidental dependency snapshot commit (issue #49)
+/chore: sync pnpm lockfile/
 
 # === TypeScript build outputs ===
 dist/
@@ -103,3 +112,5 @@ pnpm-lock.yaml
 *.pid
 *.seed
 *.pid.lock
+.vercel
+.env*.local

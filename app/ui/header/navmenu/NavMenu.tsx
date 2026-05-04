@@ -26,8 +26,8 @@ export const navItems = [
     { label: 'home', href: '/#landing', status: 'active' },
     { label: 'projects', href: '/#projects', status: 'active' },
     { label: 'contact', href: '/#contact', status: 'active' },
-    { label: 'blog', href: '/blog', status: 'pending' },
-    { label: 'skills', href: '/skills', status: 'pending' },
+    { label: 'blog', href: '/blog', status: 'active' },
+    // { label: 'skills', href: '/skills', status: 'pending' },
 ] as const satisfies readonly { label: string; href: string; status: 'active' | 'pending' }[];
 
 type NavItem = (typeof navItems)[number];
@@ -80,6 +80,7 @@ export default function NavMenu({ className }: NavMenuProps) {
     }) {
         return (
             <button
+                role="button"
                 onClick={toggle}
                 aria-label="Toggle Menu"
                 aria-expanded={open}
@@ -169,22 +170,37 @@ function NavLink({
     const { pending } = useLinkStatus();
     const isActive = !pending;
 
-    return (
-        <Link
-            href={item.href}
-            onClick={onNavigate}
-            className={clsx(
-                'transition-opacity',
-                className,
-                isActive ? 'text-collection-midnightgreen' : 'text-greengrays-nickel',
-                isActive
-                    ? 'hover:text-collection-alizarincrimson'
-                    : 'hover:text-bluewhites-ghostwhite',
-                pending && 'opacity-50',
-                pending && 'cursor-not-allowed'
-            )}
-        >
-            {item.label}
-        </Link>
-    );
+    if (!isActive) {
+        return (
+            <span
+                className={clsx(
+                    'transition-opacity cursor-not-allowed opacity-50',
+                    className,
+                    'text-greengrays-nickel'
+                )}
+                title="coming soon"
+            >
+                {item.label}
+            </span>
+        );
+    } else {
+        return (
+            <Link
+                href={item.href}
+                onClick={onNavigate}
+                className={clsx(
+                    'transition-opacity',
+                    className,
+                    isActive ? 'text-collection-midnightgreen' : 'text-greengrays-nickel',
+                    isActive
+                        ? 'hover:text-collection-alizarincrimson'
+                        : 'hover:text-bluewhites-ghostwhite',
+                    pending && 'opacity-50',
+                    pending && 'cursor-not-allowed'
+                )}
+            >
+                {item.label}
+            </Link>
+        );
+    }
 }

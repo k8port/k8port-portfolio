@@ -1,5 +1,6 @@
 import type { Config } from 'tailwindcss';
 import { themeConfig } from './app/styles/theme/theme.config';
+import typography from '@tailwindcss/typography';
 
 export default {
     content: ['./app/**/*.{js,ts,jsx,tsx,mdx}'],
@@ -15,5 +16,5 @@ export default {
             zIndex: themeConfig.zIndex,
         },
     },
-    plugins: [],
+    plugins: [typography],
 } satisfies Config;
