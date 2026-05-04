@@ -65,9 +65,9 @@ export const ButtonStyle = ({
     } else if (size === 'small') {
         sizeClass = 'px-10 py-3';
     } else if (size === 'large') {
-        sizeClass = 'px-28 py-5'; 
+        sizeClass = 'px-28 py-5';
     } else {
-        sizeClass = 'px-8 py-2'; 
+        sizeClass = 'px-8 py-2';
     }
 
     if (borderRadius === 'eight') {
@@ -80,10 +80,7 @@ export const ButtonStyle = ({
         borderRadiusClass = 'rounded-sm';
     }
 
-    
     return (
-        /* default code is for large button right icon, border-radius: four */
-
         <button
             type="button"
             onClick={onClick}

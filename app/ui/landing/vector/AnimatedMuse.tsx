@@ -14,6 +14,21 @@ export default function AnimatedMuseSVG({ className }: AnimatedMuseSVGProps) {
     const screenW = typeof window !== 'undefined' ? window.innerWidth : 1920;
     const screenH = typeof window !== 'undefined' ? window.innerHeight : 1080;
 
+    type MuseAnimation = {
+        x: number | number[];
+        y: number | number[];
+        rotate: number | number[];
+        opacity?: number[];
+    };
+    type MuseTransition = {
+        duration: number;
+        ease: 'easeInOut';
+        repeat: number;
+        repeatType: 'loop';
+        delay: number;
+        times?: number[];
+    };
+
     return (
         <div className="w-full relative">
             <motion.svg
@@ -41,8 +56,8 @@ export default function AnimatedMuseSVG({ className }: AnimatedMuseSVGProps) {
                         rotate: rand(-90, 90),
                     };
 
-                    let animate: any;
-                    let transition: any;
+                    let animate: MuseAnimation;
+                    let transition: MuseTransition;
 
                     if (falling) {
                         animate = {
