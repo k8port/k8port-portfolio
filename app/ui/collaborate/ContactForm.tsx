@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import { createContactTransport } from '@/lib/contact/transport';
 
 interface ApiResponse {
     message?: string;
@@ -9,6 +10,7 @@ interface ApiResponse {
 
 // --- Main Form Component ----------------------------------------------
 export default function ContactForm() {
+    const transport = createContactTransport();
     const [status, setStatus] = useState<{
         loading: boolean;
         error?: string;
@@ -30,13 +32,23 @@ export default function ContactForm() {
         const handle = email;
 
         const message = fd.get('message')?.toString().trim() ?? '';
-        const payload = { name, method, handle, message };
+        const payload = { name, method, handle, message, email };
 
         try {
-            const subject = encodeURIComponent('Portfolio Contact Form');
-            const body = encodeURIComponent(`From: ${name} (${email})\n\n${message}`);
-            window.location.href = `mailto:k8@k8port.io?subject=${subject}&body=${body}`;
-            setStatus({ loading: false, success: 'Opening your email client...' });
+            const response = await transport.submit({
+                name: payload.name,
+                email: payload.email,
+                message: payload.message,
+            });
+            if (!response.ok || !response.redirectUrl) {
+                throw new Error(response.error || 'Failed to start contact flow');
+            }
+
+            window.location.href = response.redirectUrl;
+            setStatus({
+                loading: false,
+                success: response.message || 'Opening your email client...',
+            });
             form.reset();
         } catch (error: unknown) {
             setStatus({
