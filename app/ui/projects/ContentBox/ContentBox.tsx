@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import PlaceholderPicture from '../PlaceholderPicture';
 import Content from './Content';
 import { ImageFrame } from '../../ImageFrame';
@@ -11,7 +12,9 @@ interface ContentBoxProps {
     image?: string;
     has_button?: boolean;
     github?: string;
-    liveUrl?: string;
+    portfolioRoute?: string;
+    externalLiveUrl?: string;
+    liveStatus?: 'planned' | 'in-progress' | 'live';
 }
 
 export default function ContentBox({
@@ -21,7 +24,9 @@ export default function ContentBox({
     image,
     has_button,
     github,
-    liveUrl,
+    portfolioRoute,
+    externalLiveUrl,
+    liveStatus,
 }: ContentBoxProps) {
     const GitHubIcon = getFontAwesomeIcon('GitHub');
     const ArrowIcon = getFontAwesomeIcon('Right Arrow');
@@ -54,17 +59,34 @@ export default function ContentBox({
 
             {has_button && (
                 <div className="flex items-center gap-2 p-4 w-full border-t border-greenwhites-featherwhite">
-                    {liveUrl && (
+                    {portfolioRoute && (
+                        <Link
+                            href={portfolioRoute}
+                            className="inline-flex items-center gap-2 px-4 py-2 cursor-pointer text-accent-accentredvar hover:text-accent-accentpink hover:text-lg text-base whitespace-nowrap"
+                        >
+                            <span>View Project</span>
+                            {ArrowIcon && <ArrowIcon className="w-4 h-4 hover:w-5 hover:h-5" />}
+                        </Link>
+                    )}
+
+                    {externalLiveUrl && liveStatus === 'live' && (
                         <a
-                            href={liveUrl}
+                            href={externalLiveUrl}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 px-4 py-2 cursor-pointer text-accent-accentredvar hover:text-accent-accentpink hover:text-lg text-base whitespace-nowrap"
                         >
-                            <span>Live Demo</span>
+                            <span>Live App</span>
                             {ArrowIcon && <ArrowIcon className="w-4 h-4 hover:w-5 hover:h-5" />}
                         </a>
                     )}
+
+                    {externalLiveUrl && liveStatus !== 'live' && (
+                        <span className="inline-flex items-center gap-2 px-4 py-2 text-greengrays-nickel text-base whitespace-nowrap">
+                            Live App Coming Soon
+                        </span>
+                    )}
+
                     {github && (
                         <a
                             href={github}

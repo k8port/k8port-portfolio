@@ -2,16 +2,16 @@
 
 import React from 'react';
 import ProjectCard from './ProjectCard';
-import projects from '../../data/projects.json';
+import { allProjects } from '@/lib/projects';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-const projectMap = projects.map(project => ({
+const projectMap = allProjects.map(project => ({
     ...project,
-    tags: project.tags.map(tag => tag.toLowerCase()),
+    tags: (project.tags ?? []).map(tag => tag.toLowerCase()),
 }));
 
 export default function ProjectsContainer() {
