@@ -58,24 +58,24 @@ Choose one mode per issue before implementation starts.
 
 Use this as the default at issue kickoff.
 
-. #49 Remove accidental dependency snapshot directory
-.. Interaction level: Medium
-.. Recommended mode: Manager + Delegate
-.. Why: high repo impact but low product ambiguity.
-. #50 Fix contact subject interpolation bug
-.. Interaction level: Medium
-.. Recommended mode: Pairing Loop
-.. Why: small change, but tied to contact architecture decisions and regression risk.
-. #51 Align contact architecture with deployment model
-.. Interaction level: High
-.. Recommended mode: Pairing Loop
-.. Why: decision-heavy, affects flow, config, and future issue scope.
-. #52 Refactor duplicated landing layout JSX
-.. Interaction level: Medium
-.. Recommended mode: Manager + Delegate
-.. Why: visual/structure sensitivity with manageable technical ambiguity.
+. [.line-through]#49 Remove accidental dependency snapshot directory#
+.. [.line-through]#Interaction level: Medium#
+.. [.line-through]#Recommended mode: Manager + Delegate#
+.. [.line-through]#Why: high repo impact but low product ambiguity#
+. [.line-through]#50 Fix contact subject interpolation bug#
+.. [.line-through]#Interaction level: Medium#
+.. [.line-through]#Recommended mode: Pairing Loop#
+.. [.line-through]#Why: small change, but tied to contact architecture decisions and regression risk#
+. [.line-through]#51 Align contact architecture with deployment model#
+.. [.line-through]#Interaction level: High#
+.. [.line-through]#Recommended mode: Pairing Loop#
+.. [.line-through]#Why: decision-heavy, affects flow, config, and future issue scope#
+. [.line-through]#52 Refactor duplicated landing layout JSX#
+.. [.line-through]#Interaction level: Medium#
+.. [.line-through]#Recommended mode: Manager + Delegate#
+.. [.line-through]#Why: visual/structure sensitivity with manageable technical ambiguity#
 . #53 Remove production debug logging and enforce policy
-.. Interaction level: Low
+.. #Interaction level: Low#
 .. Recommended mode: Autonomous Executor
 .. Why: mostly mechanical cleanup with policy checks.
 . #54 Replace invalid dynamic Tailwind class usage
