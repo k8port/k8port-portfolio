@@ -114,8 +114,8 @@
     {
         "key": "sudoku-pow",
         "slug": "sudoku-pow",
-        "title": "Sudoku POW",
-        "description": "Sudoku solver and generator built as PWA using React and TypeScript",
+        "title": "Sudoku App",
+        "description": "Sudoku solver and generator built as a PWA with customizable UI and sound",
         "github": "https://github.com/k8port/sudoku-pow",
         "portfolioRoute": "/projects/sudoku-pow",
         "externalLiveUrl": "https://k8port.github.io/sudoku-app/",
