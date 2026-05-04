@@ -10,7 +10,6 @@ import LandingContent from './LandingContent';
 export const LandingContainer = () => {
     const width = 3200;
     const height = 3200;
-    const aspectRatio = width / height;
     const overlayRef = useRef<HTMLDivElement>(null);
     const scrollRef = useRef<HTMLDivElement>(null);
 

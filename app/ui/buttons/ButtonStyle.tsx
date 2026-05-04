@@ -34,7 +34,7 @@ export const ButtonStyle = ({
     let loadingStyleClass =
         '[&[data-loading=true]]:bg-accent-accentbluevar [&[data-loading=true]]:border-brand-primary [&[data-loading=true]]:!text-brand-secondaryvar';
     let sizeClass = 'px-28 py-5';
-    const iconPositionClass = 'left-icon';
+    const iconPositionClass = iconPosition;
     let borderRadiusClass = 'rounded-sm';
     const IconComponent = buttonIconSelection ?? null;
 

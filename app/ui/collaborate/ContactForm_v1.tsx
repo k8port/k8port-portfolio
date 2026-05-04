@@ -8,12 +8,14 @@ interface ApiResponse {
     error?: string;
 }
 
+type ContactPreference = 'email' | 'text' | 'whatsapp';
+
 // Deprecated legacy component. Kept temporarily for reference while the active
 // contact flow uses MailtoContactTransport via ContactForm.tsx.
 
 // --- Main Form Component ----------------------------------------------
 export default function ContactForm() {
-    const [preference, setPreference] = useState<'email' | 'text' | 'whatsapp'>('email');
+    const [preference, setPreference] = useState<ContactPreference>('email');
     const [status, setStatus] = useState<{ loading: boolean; error?: string; success?: string }>({
         loading: false,
     });
@@ -28,16 +30,15 @@ export default function ContactForm() {
         const firstname = fd.get('firstname')?.toString().trim() ?? '';
         const lastname = fd.get('lastname')?.toString().trim() ?? '';
         const name = `${firstname} ${lastname}`;
-        const preference = fd.get('preference')?.toString().trim() ?? 'email';
         const phone = fd.get('phone')?.toString().trim() ?? '';
         const email = fd.get('email')?.toString().trim() ?? '';
         const whatsapp = fd.get('whatsapp')?.toString().trim() ?? '';
-        const method = fd.get('preference')!.toString().trim() ?? 'email';
+        const method = (fd.get('preference')?.toString().trim() ?? 'email') as ContactPreference;
 
         let handle: string;
         if (method === 'email') {
             handle = email;
-        } else if (method === 'phone') {
+        } else if (method === 'text') {
             handle = phone;
         } else {
             handle = whatsapp;
@@ -58,7 +59,7 @@ export default function ContactForm() {
             setStatus({ loading: false, success: body.message || 'Thank you for your inquiry!' });
             form.reset();
             setPreference('email');
-        } catch (error: any) {
+        } catch (error: unknown) {
             setStatus({
                 loading: false,
                 error: error instanceof Error ? error.message : 'An error occurred',
@@ -132,7 +133,7 @@ export default function ContactForm() {
                                     name="preference"
                                     value={value}
                                     defaultChecked={value === 'email'}
-                                    onChange={() => setPreference(value as any)}
+                                    onChange={() => setPreference(value as ContactPreference)}
                                     className="sr-only peer accent-collection-caribbeangreen"
                                 />
                                 <span className="peer-checked:text-collection-caribbeangreen capitalize inline-flex items-center gap-1">

@@ -63,7 +63,7 @@ const Footer: FC<FooterProps> = ({
 
             {/* Right social links */}
             <div className="hidden md:flex justify-center gap-4">
-                {socials.map(({ href, label, icon }) => (
+                {socials.map(({ href, icon }) => (
                     <Link
                         key={href}
                         href={href}

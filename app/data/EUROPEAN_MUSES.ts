@@ -1,6 +1,4 @@
-import React from 'react';
 import { MuseDef } from './MUSES';
-import path from 'path';
 
 export const EUROPEAN_MUSES: MuseDef[] = [
     {

@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import { usePathname } from 'next/navigation';
 import { useLinkStatus } from 'next/link';
 import clsx from 'clsx';
 import Link from 'next/link';
@@ -37,7 +36,6 @@ type NavItem = (typeof navItems)[number];
 // ------------------------------------------------------------------------------------------------
 export default function NavMenu({ className }: NavMenuProps) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const pathname = usePathname();
 
     const handleNavigate = () => setIsMenuOpen(false);
 
@@ -49,11 +47,11 @@ export default function NavMenu({ className }: NavMenuProps) {
                     toggle={() => setIsMenuOpen(!isMenuOpen)}
                     className="md:hidden"
                 />
-                <DesktopLinks pathname={pathname} />
+                <DesktopLinks />
             </div>
 
             {/* mobile hamburger drop-down menu */}
-            <MobileLinks open={isMenuOpen} pathname={pathname} onNavigate={handleNavigate} />
+            <MobileLinks open={isMenuOpen} onNavigate={handleNavigate} />
         </div>
     );
 
@@ -109,26 +107,18 @@ export default function NavMenu({ className }: NavMenuProps) {
     }
 
     /* DesktopLinks (inline, screens >= md) */
-    function DesktopLinks({ pathname }: { pathname: string }) {
+    function DesktopLinks() {
         return (
             <nav aria-label="Main" className="hidden space-x-12 ml-auto mr-8 text-lg md:flex">
                 {navItems.map(item => (
-                    <NavLink key={item.href} item={item} pathname={pathname} />
+                    <NavLink key={item.href} item={item} />
                 ))}
             </nav>
         );
     }
 
     /* MobileLinks (drawer, screens < md) */
-    function MobileLinks({
-        open,
-        pathname,
-        onNavigate,
-    }: {
-        open: boolean;
-        pathname: string;
-        onNavigate: () => void;
-    }) {
+    function MobileLinks({ open, onNavigate }: { open: boolean; onNavigate: () => void }) {
         if (!open) return null;
         return (
             <nav
@@ -146,7 +136,7 @@ export default function NavMenu({ className }: NavMenuProps) {
                     <NavLink
                         key={item.href}
                         item={item}
-                        pathname={pathname}
+                        onNavigate={onNavigate}
                         className="disabled:opacity-50 disabled:cursor-not-allowed"
                     />
                 ))}
@@ -158,12 +148,10 @@ export default function NavMenu({ className }: NavMenuProps) {
 /* Atomic Links = handles active and pending states */
 function NavLink({
     item,
-    pathname,
     className,
     onNavigate,
 }: {
     item: NavItem;
-    pathname: string;
     className?: string;
     onNavigate?: () => void;
 }) {

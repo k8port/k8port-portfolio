@@ -3,11 +3,6 @@
 import React, { useState } from 'react';
 import { createContactTransport } from '@/lib/contact/transport';
 
-interface ApiResponse {
-    message?: string;
-    error?: string;
-}
-
 // --- Main Form Component ----------------------------------------------
 export default function ContactForm() {
     const transport = createContactTransport();
