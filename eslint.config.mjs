@@ -18,6 +18,7 @@ const eslintConfig = [
             'node_modules/**',
             '.next/**',
             'out/**',
+            '.vscode/**',
             // ... (rest of ignores)
         ],
     },
@@ -45,6 +46,7 @@ const eslintConfig = [
             '@typescript-eslint/no-unused-vars': 'off',
             '@typescript-eslint/no-explicit-any': 'off',
             'react/react-in-jsx-scope': 'off',
+            'no-console': ['error', { allow: ['warn', 'error'] }],
         },
     },
 ];
