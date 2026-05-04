@@ -11,7 +11,8 @@ describe('buildPortfolioMailtoUrl', () => {
         });
 
         expect(redirectUrl).toContain('mailto:k8@k8port.io?');
-        expect(redirectUrl).toContain('subject=Portfolio%20Contact%20Form');
+        expect(redirectUrl).toContain('subject=New%20inquiry%20from%20Jane%20Doe');
+        expect(redirectUrl).not.toContain('%24%7Bname%7D');
         expect(redirectUrl).toContain(
             'body=From%3A%20Jane%20Doe%20(jane%40example.com)%0A%0AHello%20world'
         );
