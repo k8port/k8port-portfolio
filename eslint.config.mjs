@@ -43,8 +43,16 @@ const eslintConfig = [
 
             // ✅ Keep necessary overrides and code quality rules:
             '@next/next/no-img-element': 'off',
-            '@typescript-eslint/no-unused-vars': 'off',
-            '@typescript-eslint/no-explicit-any': 'off',
+            '@typescript-eslint/no-unused-vars': [
+                'warn',
+                {
+                    argsIgnorePattern: '^_',
+                    varsIgnorePattern: '^_',
+                    caughtErrorsIgnorePattern: '^_',
+                    ignoreRestSiblings: true,
+                },
+            ],
+            '@typescript-eslint/no-explicit-any': 'warn',
             'react/react-in-jsx-scope': 'off',
             'no-console': ['error', { allow: ['warn', 'error'] }],
         },

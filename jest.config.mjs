@@ -1,4 +1,4 @@
-export default {
+const config = {
     preset: 'ts-jest/presets/default-esm',
     testEnvironment: 'jsdom',
     roots: ['<rootDir>/app'],
@@ -25,3 +25,5 @@ export default {
     clearMocks: true,
     collectCoverageFrom: ['app/**/*.{ts,tsx}', '!app/**/*.d.ts', '!app/**/__tests__/**'],
 };
+
+export default config;
