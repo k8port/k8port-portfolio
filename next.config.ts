@@ -6,10 +6,10 @@ const nextConfig = {
         rules: {
             '*.svg': {
                 loaders: ['@svgr/webpack'],
-                as: '*js'
-            }
-        }
-    }
+                as: '*js',
+            },
+        },
+    },
     // Remove any Webpack-specific configurations if possible
     // webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     //   // Custom Webpack configurations

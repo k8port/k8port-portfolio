@@ -11,8 +11,7 @@ export async function POST(request: NextRequest) {
         const { name, method, handle, message } = body;
 
         // basic validation
-        console.log("body", body);
-        if (!name || !method || !handle ) {
+        if (!name || !method || !handle) {
             return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
         }
 

@@ -9,10 +9,9 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-
-const projectMap = projects.map((project) => ({
+const projectMap = projects.map(project => ({
     ...project,
-    tags: project.tags.map((tag) => tag.toLowerCase()),
+    tags: project.tags.map(tag => tag.toLowerCase()),
 }));
 
 export default function ProjectsContainer() {

@@ -37,7 +37,7 @@ const eslintConfig = [
             // Add prettier rule
             'prettier/prettier': 'error',
             // Basic formatting rules
-            indent: ['error', 4],
+            indent: 'off',
             'linebreak-style': ['error', 'unix'],
             quotes: ['error', 'single', { avoidEscape: true }],
             semi: ['error', 'always'],
@@ -45,9 +45,17 @@ const eslintConfig = [
             '@next/next/no-img-element': 'off',
             '@typescript-eslint/no-unused-vars': 'off',
             // React specific formatting
-            'react/jsx-indent': ['error', 4],
-            'react/jsx-indent-props': ['error', 4],
-            'jsx-a11y/aria-valid-attr-value': ['error', { allowExpressionValues: true }],
+            'react/jsx-indent': 'off',
+            'react/jsx-indent-props': 'off',
+            // Prevent production debug logging; allow warnings/errors.
+            'no-console': ['error', { allow: ['warn', 'error'] }],
+        },
+    },
+    {
+        files: ['app/archive/generateIcons.tsx'],
+        rules: {
+            // Build-time script output is allowed for local generation.
+            'no-console': 'off',
         },
     },
 ];

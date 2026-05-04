@@ -24,5 +24,5 @@ export const typography = {
         '5xl': '33px',
         '6xl': '37px',
         '7xl': '41px',
-    }
+    },
 };

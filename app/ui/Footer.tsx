@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import { FC, ReactNode, HTMLAttributes } from 'react';
 import Link from 'next/link';
 import clsx from 'clsx';

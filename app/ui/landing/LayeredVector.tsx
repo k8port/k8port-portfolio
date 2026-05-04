@@ -1,7 +1,7 @@
-import React from "react";
-import Image from "next/image";
-import AnimatedMuse from "./vector/AnimatedMuse";
-import { AnimatedMuseGroup } from "./vector/AnimatedMuseGroup";
+import React from 'react';
+import Image from 'next/image';
+import AnimatedMuse from './vector/AnimatedMuse';
+import { AnimatedMuseGroup } from './vector/AnimatedMuseGroup';
 
 interface LayeredVectorProps {
     className: string;
@@ -24,7 +24,7 @@ export default function LayeredVector({ className }: LayeredVectorProps) {
                 <AnimatedMuseGroup className="absolute top-2 right-33 size-18" />
                 <AnimatedMuseGroup className="absolute top-2 right-34 size-12" />
                 <AnimatedMuseGroup className="absolute top-2 right-34 size-14" />
-                
+
                 <AnimatedMuseGroup className="absolute top-3 right-35 size-16" />
                 <AnimatedMuseGroup className="absolute top-3 right-33 size-18" />
                 <AnimatedMuseGroup className="absolute top-3 right-34 size-12" />

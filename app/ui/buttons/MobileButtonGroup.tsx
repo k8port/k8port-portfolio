@@ -15,10 +15,7 @@ export const MobileButtonGroup = ({ className }: MobileButtonGroupProps) => {
         downloadAndViewResume();
     };
 
-    const handleContactClick = () => {
-        console.log('Featured Project Work');
-    };
-
+    const handleContactClick = () => {};
 
     return (
         <div className={`space-x-2 ${className}`}>

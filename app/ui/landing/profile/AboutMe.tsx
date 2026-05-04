@@ -46,15 +46,12 @@ export default function AboutMe({ className }: AboutMeProps) {
                                 leading-5 mlg:leading-6 text-pretty
                             `}
                         >
-                                system design, programming paradigms,
-                                discovery, puzzles, complexity,
-                                user-centric design, embroidery string craft, color theory, maps,
-                                philosophy, dance, scenic drives, one day writing a book,
-                                thinking about the people who lived before,
-                                watching cartoons and science shows, unusual datasets,
-                                gardening and more...
+                            system design, programming paradigms, discovery, puzzles, complexity,
+                            user-centric design, embroidery string craft, color theory, maps,
+                            philosophy, dance, scenic drives, one day writing a book, thinking about
+                            the people who lived before, watching cartoons and science shows,
+                            unusual datasets, gardening and more...
                         </p>
-                                
                     </div>
                 </div>
             </div>

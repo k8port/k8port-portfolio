@@ -17,7 +17,6 @@ export const DesktopButtonGroup = ({ className }: DesktopButtonGroupProps) => {
 
     const handleContactClick = () => {
         // Add your contact logic here
-        console.log('Opening contact form...');
         // Example: window.location.href = '#contact';
     };
 
@@ -33,11 +32,11 @@ export const DesktopButtonGroup = ({ className }: DesktopButtonGroupProps) => {
                 onClick={handleResumeClick}
             />
             <ButtonStyle
-                style='filled'
-                iconPosition='left-icon'
-                size='small'
-                borderRadius='sixteen'
-                buttonText='Contact Me'
+                style="filled"
+                iconPosition="left-icon"
+                size="small"
+                borderRadius="sixteen"
+                buttonText="Contact Me"
                 buttonIconSelection={PhoneIcon ?? undefined}
                 onClick={handleContactClick}
             />

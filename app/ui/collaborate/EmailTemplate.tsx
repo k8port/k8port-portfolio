@@ -13,7 +13,6 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
     handle,
     message,
 }) => {
-    console.log("EmailTemplate", name, method, handle, message);
     return (
         <div>
             <h1>New Contact Inquiry</h1>
