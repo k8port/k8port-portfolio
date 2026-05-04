@@ -83,7 +83,7 @@ import {
 import { IoLogoJavascript } from 'react-icons/io5';
 import { FiDownloadCloud } from 'react-icons/fi';
 import { DiMongodb, DiDjango, DiMysql, DiPostgresql, DiRuby } from 'react-icons/di';
-import { MdOutlineViewKanban, MdOutlinePhone, MdOutlineCloudDownload } from 'react-icons/md';
+import { MdOutlineViewKanban, MdOutlinePhone } from 'react-icons/md';
 import {
     FaBusinessTime,
     FaGolang,
