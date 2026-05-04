@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import AnimatedMuse from './vector/AnimatedMuse';
 import { AnimatedMuseGroup } from './vector/AnimatedMuseGroup';
 
 interface LayeredVectorProps {
@@ -50,12 +49,12 @@ export default function LayeredVector({ className }: LayeredVectorProps) {
                     alt="Vector Figure"
                     width={width}
                     height={height}
+                    style={{ aspectRatio }}
                     className={`
                         absolute right-0
                         object-cover
                         opacity-85
                         priority
-                        aspect-[${aspectRatio}]
                         h-dvh
                         sm:h-full
                         min-w-[285px]
