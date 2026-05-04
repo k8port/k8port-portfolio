@@ -8,6 +8,9 @@ interface ApiResponse {
     error?: string;
 }
 
+// Deprecated legacy component. Kept temporarily for reference while the active
+// contact flow uses MailtoContactTransport via ContactForm.tsx.
+
 // --- Main Form Component ----------------------------------------------
 export default function ContactForm() {
     const [preference, setPreference] = useState<'email' | 'text' | 'whatsapp'>('email');
@@ -65,10 +68,11 @@ export default function ContactForm() {
 
     if (status.success) {
         return (
-        <div className="text-brand-secondary font-lobster font-semibold text-center">
-            Thanks for your inquiry! I&apos;ll be in touch soon!
-        </div>
-    )} else {
+            <div className="text-brand-secondary font-lobster font-semibold text-center">
+                Thanks for your inquiry! I&apos;ll be in touch soon!
+            </div>
+        );
+    } else {
         return (
             <form
                 onSubmit={handleSubmit}
@@ -216,5 +220,6 @@ export default function ContactForm() {
                 {/* Error Message */}
                 {status.error && <p className="text-collection-alizarincrimson">{status.error}</p>}
             </form>
-    )};
+        );
+    }
 }
