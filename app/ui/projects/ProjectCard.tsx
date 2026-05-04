@@ -6,7 +6,8 @@ interface ProjectCardProps {
         title: string;
         description: string;
         image?: string;
-        link: string;
+        github: string;
+        liveUrl?: string;
         tags?: string[];
         year?: number;
     };
@@ -20,7 +21,8 @@ export default function ProjectCard({ project, className }: ProjectCardProps) {
                 title={project.title}
                 text={project.description}
                 category={`${project.tags?.join(', ')}`}
-                link={project.link}
+                github={project.github}
+                liveUrl={project.liveUrl}
                 image={project.image}
                 has_button={true}
             />
