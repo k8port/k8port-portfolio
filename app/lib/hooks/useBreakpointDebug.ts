@@ -42,17 +42,14 @@ export function useBreakpointDebug() {
                                   : '6xl';
         }
 
-        const listeners = Object.entries(themeBreakpoints).map(([label, query]) => {
+        const listeners = Object.entries(themeBreakpoints).map(([, query]) => {
             const mediaQuery = window.matchMedia(query);
-            let currentBreakpoint = getScreenZone();
-            let previousBreakpoint = currentBreakpoint;
+          let _currentBreakpoint = getScreenZone();
             const handleChange = (event: MediaQueryListEvent) => {
                 if (event.matches) {
-                    previousBreakpoint = currentBreakpoint;
-                    currentBreakpoint = getScreenZone();
+              _currentBreakpoint = getScreenZone();
                 } else {
-                    previousBreakpoint = currentBreakpoint;
-                    currentBreakpoint = getScreenZone();
+              _currentBreakpoint = getScreenZone();
                 }
             };
             mediaQuery.addEventListener('change', handleChange);

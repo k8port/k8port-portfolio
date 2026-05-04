@@ -1,7 +1,6 @@
 import React from 'react';
 import { Greeting } from './Greeting';
 import { FaHeart } from 'react-icons/fa';
-import { downloadAndViewResume } from '../../../lib/actions/downloadAndViewResume';
 
 interface AboutMeProps {
     className?: string;

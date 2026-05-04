@@ -1,5 +1,3 @@
-import React from 'react';
-
 export interface BlobDataDef {
     id: string;
     d: string;

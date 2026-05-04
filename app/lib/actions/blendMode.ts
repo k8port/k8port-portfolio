@@ -1,5 +1,3 @@
-import React from 'react';
-
 export enum MixBlendMode {
     MULTIPLY = 'multiply',
     SCREEN = 'screen',

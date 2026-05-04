@@ -17,7 +17,9 @@ export interface EmailAdapter {
     send(mail: Mail): Promise<{ ok: boolean; id?: string; error?: string }>;
 }
 
-const EMAIL_PROVIDER = process.env.EMAIL_PROVIDER ?? 'resend';
+function getErrorMessage(error: unknown): string {
+    return error instanceof Error ? error.message : 'Unknown error';
+}
 
 /* ---------- Resend ---------- */
 export class ResendAdapter implements EmailAdapter {
@@ -33,8 +35,8 @@ export class ResendAdapter implements EmailAdapter {
                 text: mail.text,
             });
             return { ok: true, id: data?.id ?? '' };
-        } catch (e: any) {
-            return { ok: false, error: e.message };
+        } catch (error: unknown) {
+            return { ok: false, error: getErrorMessage(error) };
         }
     }
 }
@@ -53,8 +55,8 @@ export class PostmarkAdapter implements EmailAdapter {
                 MessageStream: 'outbound',
             });
             return { ok: true, id: res.MessageID };
-        } catch (e: any) {
-            return { ok: false, error: e.message };
+        } catch (error: unknown) {
+            return { ok: false, error: getErrorMessage(error) };
         }
     }
 }
@@ -74,8 +76,8 @@ export class SesAdapter implements EmailAdapter {
         try {
             const out = await this.ses.send(new SendEmailCommand(params));
             return { ok: true, id: out.MessageId };
-        } catch (e: any) {
-            return { ok: false, error: e.message };
+        } catch (error: unknown) {
+            return { ok: false, error: getErrorMessage(error) };
         }
     }
 }
@@ -101,8 +103,8 @@ export class SmtpAdapter implements EmailAdapter {
                 text: mail.text,
             });
             return { ok: true, id: info.messageId };
-        } catch (e: any) {
-            return { ok: false, error: e.message };
+        } catch (error: unknown) {
+            return { ok: false, error: getErrorMessage(error) };
         }
     }
 }
@@ -122,8 +124,8 @@ export class SendGridAdapter implements EmailAdapter {
                 html: mail.html,
             });
             return { ok: true, id: response.headers?.['x-message-id'] as string | undefined };
-        } catch (e: any) {
-            return { ok: false, error: e.message };
+        } catch (error: unknown) {
+            return { ok: false, error: getErrorMessage(error) };
         }
     }
 }
@@ -146,8 +148,8 @@ export class TwilioAdapter implements EmailAdapter {
                 to: mail.to,
             });
             return { ok: true, id: message.sid };
-        } catch (e: any) {
-            return { ok: false, error: e.message };
+        } catch (error: unknown) {
+            return { ok: false, error: getErrorMessage(error) };
         }
     }
 }
