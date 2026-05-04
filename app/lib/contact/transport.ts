@@ -1,5 +1,4 @@
-/* eslint-disable @typescript-eslint/no-require-imports */
-const { buildPortfolioMailtoUrl } = require('./mailtoTransportCore');
+import { buildPortfolioMailtoUrl } from './mailtoTransportCore';
 
 export interface ContactSubmission {
     name: string;

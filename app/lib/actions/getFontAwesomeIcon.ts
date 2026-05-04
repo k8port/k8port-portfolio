@@ -29,6 +29,10 @@ import {
     FaWindows,
     FaHammer,
     FaGithubAlt,
+    FaUser,
+    FaArrowRight,
+    FaLinkedin,
+    FaWhatsapp,
 } from 'react-icons/fa';
 import {
     SiTypescript,
@@ -87,10 +91,6 @@ import {
     FaScrewdriverWrench,
     FaCompassDrafting,
     FaPersonDigging,
-    FaUserAstronaut,
-    FaArrowRightLong,
-    FaLinkedin,
-    FaWhatsapp,
 } from 'react-icons/fa6';
 import { GiThink, GiTeacher, GiStrongMan } from 'react-icons/gi';
 import { TbMath } from 'react-icons/tb';
@@ -105,7 +105,7 @@ import {
 import { FcCollaboration } from 'react-icons/fc';
 import { PiStudent, PiFileCpp } from 'react-icons/pi';
 import { VscAzure } from 'react-icons/vsc';
-import { IconType } from 'react-icons';
+import type { IconType } from 'react-icons';
 import { BsMegaphone } from 'react-icons/bs';
 
 export const iconMap: Record<string, IconType> = {
@@ -214,8 +214,8 @@ export const iconMap: Record<string, IconType> = {
     Download: FiDownloadCloud,
     Phone: MdOutlinePhone,
     Contact: BsMegaphone,
-    User: FaUserAstronaut,
-    'Right Arrow': FaArrowRightLong,
+    User: FaUser,
+    'Right Arrow': FaArrowRight,
     LinkedIn: FaLinkedin,
     GitHub: FaGithubAlt,
     WhatsApp: FaWhatsapp,
