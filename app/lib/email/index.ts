@@ -24,9 +24,6 @@ export class ResendAdapter implements EmailAdapter {
     private resend = new Resend(process.env.RESEND_API_KEY!);
 
     async send(mail: Mail) {
-        console.log('Sending email with Resend', mail);
-        console.log('MAIL_FROM', process.env.MAIL_FROM);
-        console.log('Resend API Key', process.env.RESEND_API_KEY);
         try {
             const { data } = await this.resend.emails.send({
                 from: process.env.MAIL_FROM!,
@@ -35,7 +32,6 @@ export class ResendAdapter implements EmailAdapter {
                 html: mail.html,
                 text: mail.text,
             });
-            console.log('Resend email sent', data);
             return { ok: true, id: data?.id ?? '' };
         } catch (e: any) {
             return { ok: false, error: e.message };
@@ -158,7 +154,6 @@ export class TwilioAdapter implements EmailAdapter {
 
 /* ---------- Factory ---------- */
 export function getEmailAdapter(): EmailAdapter {
-    console.log('getEmailAdapter invoked', process.env.EMAIL_PROVIDER);
     switch (process.env.EMAIL_PROVIDER) {
         case 'postmark':
             return new PostmarkAdapter();
@@ -171,7 +166,6 @@ export function getEmailAdapter(): EmailAdapter {
         case 'twilio':
             return new TwilioAdapter();
         default:
-            console.log('Using Resend as default email provider');
             return new ResendAdapter();
     }
 }

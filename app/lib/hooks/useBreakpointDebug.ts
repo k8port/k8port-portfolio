@@ -48,24 +48,14 @@ export function useBreakpointDebug() {
             let previousBreakpoint = currentBreakpoint;
             const handleChange = (event: MediaQueryListEvent) => {
                 if (event.matches) {
-                    console.log(`width: ${width}`);
-                    console.log(`Breakpoint breached: Welcome to ${label} zone...`);
                     previousBreakpoint = currentBreakpoint;
                     currentBreakpoint = getScreenZone();
-                    console.log(`leaving zone: ${previousBreakpoint}`);
                 } else {
-                    console.log(`width: ${width}`);
-                    console.log(`Now leaving sanctuary of breakpoint: ${label}.`);
                     previousBreakpoint = currentBreakpoint;
                     currentBreakpoint = getScreenZone();
-                    console.log(`In zone: ${currentBreakpoint}`);
                 }
             };
             mediaQuery.addEventListener('change', handleChange);
-
-            if (mediaQuery.matches) {
-                console.log(`Origin: You are at or above breakpoint: ${label}.`);
-            }
 
             return () => mediaQuery.removeEventListener('change', handleChange);
         });
