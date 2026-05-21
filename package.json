@@ -95,10 +95,10 @@
         "turbopack": "^0.0.1",
         "typescript": "^5.7.3"
     },
-    "homepage": "https://k8port.github.io",
+    "homepage": "https://www.k8port.io",
     "repository": {
         "type": "git",
-        "url": "https://github.com/k8port/k8port.github.io.git"
+        "url": "https://github.com/k8port/k8port-portfolio.git"
     },
     "pnpm": {
         "onlyBuiltDependencies": [
