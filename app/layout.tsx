@@ -62,7 +62,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                         sticky top-0 left-0
                         w-full h-16 z-99
                         bg-brand-secondaryvar/65
-                        bg-[url('/images/brand/waves_pattern.png')]
+                        bg-waves-pattern
                         bg-repeat-x
                         bg-center
                         bg-blend-overlay
