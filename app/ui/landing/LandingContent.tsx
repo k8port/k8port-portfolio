@@ -50,7 +50,7 @@ const LandingContent = forwardRef<HTMLDivElement, LandingContentProps>(({ classN
                 <div
                     className={`
                         absolute top-0 left-0 z-0
-                        w-[65vw] max-w-2xl
+                        w-[60vw] max-w-xl
                     `}
                 >
                     <ProfilePic

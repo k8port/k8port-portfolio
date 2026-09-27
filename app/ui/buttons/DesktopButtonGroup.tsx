@@ -10,6 +10,7 @@ interface DesktopButtonGroupProps {
 export const DesktopButtonGroup = ({ className }: DesktopButtonGroupProps) => {
     const DownloadIcon = getFontAwesomeIcon('Download');
     const PhoneIcon = getFontAwesomeIcon('Phone');
+    const CalendarIcon = getFontAwesomeIcon('Calendar');
 
     const handleResumeClick = () => {
         downloadAndViewResume();
@@ -21,26 +22,42 @@ export const DesktopButtonGroup = ({ className }: DesktopButtonGroupProps) => {
         document.getElementById('collaborate')?.scrollIntoView({ behavior: 'smooth' });
     };
 
+    const handleScheduleClick = () => {
+        window.location.href =
+            'https://calendar.proton.me/bookings/guest#1YyyqlWtO7nGp4bbcDH36rlU8QQo8Hql_2GGm7_jhnI=';
+    };
+
     return (
-        <div className={`flex flex-col items-stretch justify-center space-y-4 ${className}`}>
-            <ButtonStyle
-                style="ghost"
-                iconPosition="left-icon-right-text"
-                size="large"
-                borderRadius="thirty-two"
-                buttonText="Resume / CV"
-                buttonIconSelection={DownloadIcon ?? undefined}
-                onClick={handleResumeClick}
-            />
-            <ButtonStyle
-                style="ghost"
-                iconPosition="left-icon-right-text"
-                size="large"
-                borderRadius="thirty-two"
-                buttonText="Contact Me"
-                buttonIconSelection={PhoneIcon ?? undefined}
-                onClick={handleContactClick}
-            />
-        </div>
+        <>
+            <div className={`flex flex-col space-y-4 ml-[45%] ${className}`}>
+                <ButtonStyle
+                    style="ghost"
+                    iconPosition="right-icon"
+                    size="small"
+                    borderRadius="thirty-two"
+                    buttonText="Schedule Meeting with K8"
+                    buttonIconSelection={CalendarIcon ?? undefined}
+                    onClick={handleScheduleClick}
+                />
+                <ButtonStyle
+                    style="ghost"
+                    iconPosition="left-icon-right-text"
+                    size="small"
+                    borderRadius="thirty-two"
+                    buttonText="Resume / CV"
+                    buttonIconSelection={DownloadIcon ?? undefined}
+                    onClick={handleResumeClick}
+                />
+                <ButtonStyle
+                    style="ghost"
+                    iconPosition="left-icon-right-text"
+                    size="small"
+                    borderRadius="thirty-two"
+                    buttonText="Contact Me"
+                    buttonIconSelection={PhoneIcon ?? undefined}
+                    onClick={handleContactClick}
+                />
+            </div>
+        </>
     );
 };

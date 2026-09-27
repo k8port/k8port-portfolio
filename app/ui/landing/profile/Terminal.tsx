@@ -19,7 +19,7 @@ type Card = [string, string, string, string];
 const ASCII = `
    ██  ██  ████
    ██ ██  ██  ██   k8port.io
-   ████   ██  ██   design engineer
+   ████   ██████   design engineer
    ██ ██  ██  ██   dfw / remote
    ██  ██  ████
 `;
@@ -182,7 +182,7 @@ const BANNER: string[] = [
 /* ------------------------------------------------------------------------- */
 
 export default function Terminal() {
-  const [open, setOpen] = useState<boolean>(false);
+  const [open, setOpen] = useState<boolean>(true);
   const [lines, setLines] = useState<string[]>(BANNER);
   const [input, setInput] = useState<string>("");
   const [history, setHistory] = useState<string[]>([]);
@@ -288,7 +288,7 @@ export default function Terminal() {
       <button
         ref={triggerRef}
         onClick={() => setOpen(true)}
-        className="font-mono text-xs text-bluegrays-templetongray underline decoration-dotted underline-offset-4 transition-colors hover:text-blueblues-intel-blue focus:outline-none focus-visible:ring-2 focus-visible:ring-blueblues-intel-blue focus-visible:ring-offset-2"
+        className="w-full rounded-lg border border-border bg-surface-muted px-4 py-3 font-mono text-sm text-content underline decoration-dotted underline-offset-4 transition-colors hover:bg-surface-elevated hover:text-heading focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
       >
         press ~ for a terminal
       </button>
@@ -297,7 +297,7 @@ export default function Terminal() {
 
   return (
     <div
-      className="overflow-hidden rounded-lg border border-bluegrays-silverchalice bg-bluegrays-richgray shadow-2xl"
+      className="w-full min-w-0 overflow-hidden rounded-lg border border-bluegrays-silverchalice bg-bluegrays-richgray shadow-2xl"
       onClick={() => inputRef.current?.focus()}
     >
       {/* chrome */}
@@ -323,7 +323,7 @@ export default function Terminal() {
       {/* screen */}
       <div
         ref={scrollRef}
-        className="h-80 overflow-y-auto px-4 py-3"
+        className="h-96 overflow-y-auto px-4 py-3"
         role="log"
         aria-live="polite"
         aria-label="Terminal output"
