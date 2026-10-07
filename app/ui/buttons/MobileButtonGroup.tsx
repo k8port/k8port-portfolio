@@ -10,6 +10,7 @@ interface MobileButtonGroupProps {
 export const MobileButtonGroup = ({ className }: MobileButtonGroupProps) => {
     const DownloadIcon = getFontAwesomeIcon('Download');
     const PhoneIcon = getFontAwesomeIcon('Phone');
+    const CalendarIcon = getFontAwesomeIcon('Calendar');
 
     const handleResumeClick = () => {
         downloadAndViewResume();
@@ -21,13 +22,14 @@ export const MobileButtonGroup = ({ className }: MobileButtonGroupProps) => {
 
     return (
         <div className={`space-x-2 ${className}`}>
+            {/* ButtonStyle component instances below */}
             <ButtonStyle
                 style="ghost"
                 iconPosition="no-icon"
                 size="tiny"
                 borderRadius="eight"
-                buttonText="Resume/CV"
-                buttonIconSelection={DownloadIcon ?? undefined}
+                buttonText="Schedule w/ K8"
+                buttonIconSelection={CalendarIcon ?? undefined}
                 onClick={handleResumeClick}
             />
             <ButtonStyle
