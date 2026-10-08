@@ -36,6 +36,9 @@ import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
     typescript: {},
+    images: {
+        qualities: [90],
+    },
 };
 
 export default nextConfig;

@@ -1,9 +1,14 @@
-# The HuggingFace Incident Made Me Want to Run an Experiment
-
-by, Kate Portalatin
+---
+title: "I Ran a Study -- Part 1 of 2"
+author: "Kate Portalatin"
+date: "2026-10-08"
+tags: ["LLM", "Fine-tuning", "orchestration", "vibe coding"]
+---
+= The HuggingFace Incident Made Me Want to Run an Experiment
+kiki<k8@k8port.io>
 v1.2, October 6, 2026
 
-*This post is part 1 of 2 on how a strange series of events during the summer of 2026 changed the direction of my career.*
+> _This post is part 1 of 2 on how a strange series of events during the summer of 2026 changed the direction of my career._
 
 After reading [METR’s recent evaluation](https://metr.org/hugging-face-incident-report-aug-2026.pdf) of what has widely become known as _the HuggingFace Incident_, I became intrigued-- not because I am scared of AI and think it will destroy humanity in less than 5 years...I was intrigued because I wanted to know how researchers had studied it.
 
