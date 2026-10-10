@@ -29,7 +29,7 @@
         "@fortawesome/react-fontawesome": "^0.2.6",
         "@jest/globals": "^29.7.0",
         "@mdx-js/react": "^3.1.1",
-        "@next/mdx": "^15.4.0",
+        "@next/mdx": "15.5.21",
         "@sendgrid/mail": "^8.1.6",
         "@vercel/analytics": "^1.5.0",
         "@vercel/speed-insights": "^1.2.0",
@@ -71,7 +71,7 @@
         "clsx": "^2.1.1",
         "cypress": "^14.5.4",
         "eslint": "^9.14.0",
-        "eslint-config-next": "15.3.1",
+        "eslint-config-next": "15.5.21",
         "eslint-config-prettier": "^10.1.8",
         "eslint-plugin-prettier": "^5.5.4",
         "eslint-plugin-react": "^7.37.5",
@@ -99,18 +99,6 @@
     "repository": {
         "type": "git",
         "url": "https://github.com/k8port/k8port-portfolio.git"
-    },
-    "pnpm": {
-        "onlyBuiltDependencies": [
-            "@tailwindcss/oxide",
-            "@vercel/speed-insights",
-            "@vscode/ripgrep",
-            "bufferutil",
-            "cypress",
-            "sharp",
-            "unrs-resolver",
-            "utf-8-validate"
-        ]
     },
     "overrides": {
         "abab": "^2.0.7",

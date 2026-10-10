@@ -36,7 +36,6 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
         // Theme preference is browser-only and must be read after hydration.
         // eslint-disable-next-line react-hooks/set-state-in-effect
         setThemeState(initialTheme);
-
         applyThemeClass(initialTheme);
     }, []);
 
@@ -52,15 +51,12 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
     useEffect(() => {
         const media = window.matchMedia('(prefers-color-scheme: dark)');
-
         const handleChange = (event: MediaQueryListEvent) => {
             if (window.localStorage.getItem(STORAGE_KEY)) return;
-
             const next: Theme = event.matches ? 'dark' : 'light';
             setThemeState(next);
             applyThemeClass(next);
         };
-
         media.addEventListener('change', handleChange);
         return () => media.removeEventListener('change', handleChange);
     }, []);

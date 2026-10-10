@@ -33,6 +33,7 @@ import {
     FaArrowRight,
     FaLinkedin,
     FaWhatsapp,
+    FaCalendar
 } from 'react-icons/fa';
 import {
     SiTypescript,
@@ -182,6 +183,7 @@ export const iconMap: Record<string, IconType> = {
     Postman: SiPostman,
     'Open API': SiOpenapiinitiative,
     Markdown: FaMarkdown,
+    Calendar: FaCalendar,
     Latex: SiLatex,
     Sphinx: SiSphinx,
     Uml: SiUml,

@@ -13,11 +13,12 @@ export default function RainbowGradientOverlay({
         <div className={`${className}`}>
             <div
                 className={`
-        absolute inset-0 bg-linear-to-b 
-        from-brand-quinaryvar dark:from-dkquinaryvar
-        to-accent-accentpinkvar dark:to-dkaccentpurplevar
-        ${innerClassName}
-      `}
+                    absolute inset-0 bg-linear-to-b
+                    from-brand-quinaryvar dark:from-dkquinaryvar
+                    to-accent-accentpinkvar dark:to-dkaccentpurplevar
+                    transition-colors duration-300
+                    ${innerClassName}
+                `}
             ></div>
         </div>
     );

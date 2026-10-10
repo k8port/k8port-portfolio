@@ -11,6 +11,7 @@ const OpacityOverlay = forwardRef<HTMLDivElement, OpacityOverlayProps>(({ classN
             className={`
                 bg-linear-to-b from-brand-primary
                 to-brand-primary/0
+                transition-colors duration-300
                 ${className}
             `}
         />

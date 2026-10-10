@@ -30,16 +30,13 @@ const LandingContent = forwardRef<HTMLDivElement, LandingContentProps>(({ classN
           `}
         >
             {/* Mobile hero */}
-            <div className="flex flex-col gap-6 mt-10 md:hidden">
-                <Greeting
-                    className="greeting text-5xl text-accent font-outline ml-26"
-                    greetingText="Hello!"
-                />
+            <div className="flex flex-col gap-6 mt-16 md:hidden">
                 <III
-                    className="relative flex flex-col gap-2"
+                    className="relative flex flex-col gap-2 ml-40"
+                    greetingText="Hello!"
                     insertNameHere="Kate Portalatin"
                     insertJobTitleHere="Full Stack Product Engineer 🜉 Data Intensive Frontends"
-                    profilePicWidth="w-96 lg:w-md"
+                    profilePicWidth="w-108"
                 />
                 <MobileButtonGroup className="self-center" />
             </div>
@@ -50,7 +47,7 @@ const LandingContent = forwardRef<HTMLDivElement, LandingContentProps>(({ classN
                 <div
                     className={`
                         absolute top-0 left-0 z-0
-                        w-[65vw] max-w-2xl
+                        w-[60vw] max-w-xl
                     `}
                 >
                     <ProfilePic
@@ -63,30 +60,31 @@ const LandingContent = forwardRef<HTMLDivElement, LandingContentProps>(({ classN
                     />
                 </div>
 
-                <div className="relative z-10 flex w-full flex-col pt-8 pl-10 mlg:pl-20">
+                <div className="relative z-10 flex w-full flex-col pt-18 pl-10 mlg:pl-20">
                     <Greeting
                         className={`
                             greeting
                             text-4xl md:text-6xl lg:text-7xl
                             text-center
-                            text-border-strong
+                            text-accent-accentpinkvar
+                            font-lobster
                             font-outline
                         `}
-                        greetingText="Hello!"
+                        greetingText="Hello! My name is..."
                     />
 
                     <div className="mt-6 flex flex-col items-center text-center">
                         <Display
                             className="h-auto text-center animate-slide-in-left font-semibold"
                             displayText="Kate Portalatin"
-                            textColor="text-persiangreen"
-                            textSize="text-5xl"
+                            textColor="text-midnightgreen"
+                            textSize="text-6xl"
                         />
                         <Headline
                             className="mt-4 h-auto text-center animate-slide-in-left"
                             headlineText="Full Stack Product Engineer | Data Intensive Frontends | Systems & Discovery"
                             headlineStyle="default"
-                            textColor="text-primary"
+                            textColor="text-dkquaternary"
                             textSize="text-lg"
                         />
                     </div>
