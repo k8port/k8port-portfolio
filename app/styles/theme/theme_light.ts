@@ -23,7 +23,8 @@ export const theme = {
             accentred: 'oklch(0.74 0.1515 28.06)',
             accentredvar: 'oklch(0.79 0.1248 42.42)',
             accentpink: 'oklch(0.81 0.0672 46.9)',
-            accentpinkvar: 'oklch(0.74 0.1445 26.21)',
+            accentpinkvar: 'oklch(0.99 0.3445 26.21)',
+            accentpinkdark: 'oklch(0.55 0.2217 349.69',
         },
         collection: {
             pariswhite: 'oklch(0.94 0.0055 200)',

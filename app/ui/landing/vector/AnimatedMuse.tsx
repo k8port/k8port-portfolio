@@ -7,6 +7,20 @@ import { MUSES } from '../../../data/MUSES';
 const rand = (min: number, max: number) => Math.random() * (max - min) + min;
 const isFalling = () => Math.random() < 0.45;
 
+const CONFETTI_TO_HAIR_COLOR: Readonly<Record<string, string>> = {
+    '#00CED1': '#3E2F84',
+    '#50C878': '#E6A6BE',
+    '#595652': '#595652',
+    '#870074': '#870074',
+    '#8DA399': '#595652',
+    '#F3DECA': '#F0C0A8',
+    '#F8F9F5': '#F8F9F5',
+    '#FF00FF': '#FF33CC',
+    '#FF2400': '#FF2400',
+    '#FF5A36': '#F88379',
+    '#FFFD01': '#E0B0FF',
+};
+
 interface AnimatedMuseSVGProps {
     className?: string;
 }
@@ -36,7 +50,12 @@ export default function AnimatedMuseSVG({ className }: AnimatedMuseSVGProps) {
                 viewBox="0 0 256 324"
                 preserveAspectRatio="xMidYMid meet"
                 xmlns="http://www.w3.org/2000/svg"
-                className={`w-full h-auto overflow-visible ${className}`}
+                className={`
+                    w-full h-auto overflow-visible
+                    transition-all duration-300
+                    dark:[filter:invert(1)_hue-rotate(180deg)_brightness(1.05)_contrast(1.15)]
+                    ${className}
+                `}
             >
                 {MUSES.map(({ id, paths }, i) => {
                     // generate per-muse random target
@@ -95,9 +114,15 @@ export default function AnimatedMuseSVG({ className }: AnimatedMuseSVGProps) {
                             animate={animate}
                             transition={transition}
                         >
-                            {paths.map((attrs, j) => (
-                                <path key={j} {...attrs} />
-                            ))}
+                            {paths.map((attrs, j) => {
+                                const fill = CONFETTI_TO_HAIR_COLOR[attrs.fill];
+
+                                if (!fill) {
+                                    throw new Error(`Missing hair color for confetti fill ${attrs.fill}`);
+                                }
+
+                                return <path key={j} {...attrs} fill={fill} />;
+                            })}
                         </motion.g>
                     );
                 })}

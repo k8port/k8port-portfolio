@@ -29,9 +29,9 @@ export const DesktopButtonGroup = ({ className }: DesktopButtonGroupProps) => {
 
     return (
         <>
-            <div className={`flex flex-col space-y-4 ml-[45%] ${className}`}>
+            <div className={`flex flex-col space-y-4 ml-[55%] ${className}`}>
                 <ButtonStyle
-                    style="ghost"
+                    style="filled"
                     iconPosition="right-icon"
                     size="small"
                     borderRadius="thirty-two"
@@ -49,7 +49,7 @@ export const DesktopButtonGroup = ({ className }: DesktopButtonGroupProps) => {
                     onClick={handleResumeClick}
                 />
                 <ButtonStyle
-                    style="ghost"
+                    style="outlined"
                     iconPosition="left-icon-right-text"
                     size="small"
                     borderRadius="thirty-two"

@@ -2,12 +2,12 @@ export const darkThemeColors = {
     colors: {
         brand: {
             dkprimary: 'oklch(0.27 0.0963 303.66)',
-            dkquaternary: 'oklch(0.25 0.0667 326.1)',
+            dkquaternary: 'oklch(0.25 0.1667 326.1)',
             dkquaternaryvar: 'oklch(0.2 0.0729 348.09)',
             dkquinary: 'oklch(0.25 0.0259 326.31)',
             dkquinaryvar: 'oklch(0.32 0.0638 340.08)',
-            dksecondary: 'oklch(0.15 0.0641 304.15)',
-            dksecondaryvar: 'oklch(0.3 0.02 339.93)',
+            dksecondary: 'oklch(0.15 0.2641 304.15)',
+            dksecondaryvar: 'oklch(0.3 0.22 339.93)',
             dksenary: 'oklch(0.2 0.0558 358.14)',
             dksenaryvar: 'oklch(0.39 0.0303 332.62)',
             dktertiary: 'oklch(0.23 0.0429 51.7)',
