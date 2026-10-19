@@ -1,7 +1,7 @@
 ---
 title: "I Ran a Study -- Part 2 of 2"
 author: "Kate Portalatin"
-date: "2026-10-XX"
+date: "2026-10-19"
 tags: ["AI Evaluation", "Job Candidate Screener Study", "OSF", "Preregistration", "ATS readers", "LLM Behavior"]
 icons: font
 imagesdir: /blog_images
@@ -9,14 +9,18 @@ imagesdir: /blog_images
 = Study Results Analysis: Qualified Candidates Rejected When Screener Prompted to List Candidate Cons
 
 kiki<k8@k8port.io>
-v0.1 October 2026
+v1.2 October 2026
 :icons: font
 :imagesdir: /blog_images
 
-> _This is part 2 of 2. https://www.k8port.io/blog/iranastudy[Part 1] covered background information including context and reasoning for running this experiment. Part 2 covers experiment results and analysis._
+> _This is part 2 of 2. https://www.k8port.io/blog/iranastudy[Part 1] covered background information including context and reasoning for running this experiment. Part 2 covers experiment results and analysis.
 
+image::../../../public/blog_images/claude_disgraced.png[width=500]
+
+---
 
 View the https://osf.io/832yx[preregistration documents on OSF] (Open Science Framework), which establishes the hypotheses and documents my experiment's design.  It was registered prior to collecting any data, and exists to reduce bias and manipulation of experiment results.
+
 
 My hypothesis was proved mostly wrong by the 1,800 screening calls run against the frontier model Claude Sonnet 5.5. _How_ it was wrong is actually more interesting than if my hypotheses had been correct.
 
@@ -27,63 +31,66 @@ More curiously , all rejections cut the same person: the nontraditional candidat
 
 == The Question
 
-Here's a little background if you missed Part 1 of this article: I have been on the receiving end of AI screening rejections since the beginning of 2025. At first, I was clueless as to why I was not receiving responses to my applications. After a few weeks of automated rejection notices or simply radio silence, it became apparent that the system is broken. It is designed to keep out frauds and phonies but unwittingly promotes the opposite.  Here's why: if one does not check off every box in a job description, the candidate is summarily rejected.  This encourages applicants to tailor resumes to job descriptions rather than to state a summary of their most important qualifications. I wondered if it could be shown, that the more a system is asked to scrutinize, the more likely it will find reason to reject, even when a candidate is clearly qualified to perform a job. 
+Here's a little background for this posting if you missed the first part: I have been on the receiving end of AI screening rejections since the beginning of 2025. At first, I was clueless as to why I was not receiving responses to my applications. After a few weeks of automated rejection notices or simply radio silence, it became apparent that the system is broken. It is designed to keep out frauds and phonies but unwittingly promotes the opposite.  Here's why: if one does not check off every box in a job description, the candidate is summarily rejected.  This encourages applicants to tailor resumes to job descriptions rather than to state a summary of their most important qualifications. I wondered if it could be shown, that the more a system is asked to scrutinize, the more likely it will find reason to reject, even when a candidate is clearly qualified to perform a job. 
 
-I registered my hypothesis with Open Science Foundation (OSF) before collecting any data:  
+I registered my hypothesis with https://osf.io/832yx[Open Science Foundation (OSF)] before collecting any data:  
 
 [quote]
 ____
-We hypothesize that the more detailed screening instructions become, the higher the rejection rate of clearly qualified candidates.
+"We hypothesize that the more detailed screening instructions become, the higher the rejection rate of clearly qualified candidates."
 ____
 
 This registration is public and timestamped at the following link: https://osf.io/832yx[OSF registration]. All peripheral documents relevant to the study are described below, including a job description, candidate profiles, five screening conditions, labels, and an analysis plan. All were registered with the hypothesis before making any API calls.
 
 Full disclosure (in case I haven't mentioned it enough times yet): I am a job seeker, and I have a stake in the answer. That is why I preregistered my study beforehand: because is harder to look for grievances when the expectation is explicity recorded.
 
-== Why Measure
+== Why Measure This 
 
-LLM-based résumé reviews are now standard, widely used by employers to vet job candidates and accepted as a filtering mechanism prior to interviews.  That these systems behave differently depending on the instructions given is no longer disputed. What is less clear is how candidates are filtered out of the pool of applicants under consideration and whether those filters succumb to bias or other systematic errors.
+LLM-based résumé reviews are now standard and widely used by employers to vet job candidates. They are the accepted filtering mechanism of candidates prior to the interview phase.  That these systems behave differently depending on the instructions given is no longer disputed--what is less clear is how candidates are filtered from the applicant pool and if those filters succumb to bias or other systematic errors.
+
+=== What's Not In Scope
 
 _Not_ considered as part of my study are the following hot-button issues:
+
 . Legacy keyword-matching ATS software, which doesn't reason and can't manufacture anything
 . Any specific company's hiring pipeline (and their unknown prompts and models used) 
 . Demographic bias, a real and studied problem that deserves its own design and a review board, not just a solo project. 
 
 Names and backgrounds were held demographically constant across all profiles so that the cultural dimension could not leak into the result.  This is a study of a single class of system--an LLM given a résumé, a job description, and an instruction under a single reasonable configuration.
 
-== What Was Built
+== Study documents & their design
 
 I designed and drafted the following documents specifically for this study:
 
 [horizontal,labelwidth=30]
 
-**Job Description**:: A pseudo Senior Software Engineer job posting for a payments platform team in Plano, Texas, with seven required and six preferred qualifications. It was AI-drafted to my specification and checked against live DFW postings to make sure it read as typical and can be found in the https://github.com/k8port/llm-job-screener-study[github repo] titled `_llm_job_seeker_study_`.
+**Job Description**:: A pseudo Senior Software Engineer job posting for a hypothetical payments platform team in Plano, Texas, with seven required and six preferred qualifications. It was AI-drafted to my specification and checked against live DFW postings to make sure it read as typical. Find it in the https://github.com/k8port/llm-job-screener-study[github repo] titled `_llm_job_seeker_study_`.
 
-**12 candidate profiles (resumes)**:: Fictional profiles templated uniformly and having the same sections, of comparable length and density, and the same register so that the only difference between them was the person's actually experience. Each was labeled according to degree of capability before running the study and using the following definition:
+**12 candidate profiles (resumes)**:: Fictional profiles templated uniformly with same sections, of comparable length and density, and using same register so that the only difference between them was a person's actually experience. Each labeled according to degree of capability before running the study. Used the following definition for _clearly capable_:
 +
 [quote]
 ____
-Clear capability is defined as meeting most of the core requirements and some of the nice-to-haves but not necessarily, and demonstrating the clear capability to acquire any unmet skill.
+Clear capability is defined as meeting most core requirements and some or none nice-to-have requirements and demonstrating the potential to acquire unmet skills.
 ____
 
 [WARNING]
 ====
-As a sidebar, it is my belief that a competent human reviewer reads a résumé and assesses the person as a whole in entirety. They may be impressed by the accomplishments listed and therefore not assess capability with a 1-to-1 mapping of job requirements to career experience and a capability assessment therefore is not based on "checking every box"." Humanity often falls prey to this trap, of reducing one another to a 2-dimensional checklist of attributes and assessing each other's worth this way.   It's like trying to remember your grandmother's face by looking for women with similar hair color or stature.  The essesnce of what marks us distinct is something more abstract, or at least this abstract impression should not be thrown out entirely.  
+As a sidebar, it is my belief that a competent human reviewer reads a résumé and assesses the person as a whole (in entirety). For instance, they may be impressed by the accomplishments listed and decide not to assess capability with a 1-to-1 mapping of job requirements to career experience.  The capability assessment, therefore, would be less based on "checking every box" and more on holistic judgment and knowledge of people. Humanity often falls prey to the trap of reducing one another to 2-dimensional checklists and breaking one another down to a list of attributes, assessing  each other's worth by first picking each other apart.   It's like trying to remember your grandmother's face by looking for women with similar hair color or stature.  The essesnce of what marks us distinct is something more abstract.  This abstract impression should not be disregarded as it is essential to human uniqueness.
 ====
 
-For the purpose of this study, candidates were passed through if meeting 4 out of 5 of the major critiria.  
-By this metric, 4 of the candidates were labeled as  `CLEARLY_CAPABLE`, 4 were labelled `BORDERLINE_CAPABLE`, and 4 were labelled `NOT_CLEARLY_CAPABLE`. These labels were not revealed to the screener at any point of the study and labels were attached to results after the fact and for the purpose of analysis.
+For the purpose of this study, candidates were passed through if they met 4 out of 5 of the major critiria.  
+By this metric, 4 of the candidates were labeled as  `CLEARLY_CAPABLE`, 4 were labelled `BORDERLINE_CAPABLE`, and 4 were labelled `NOT_CLEARLY_CAPABLE`. These labels were not revealed to the screener at any point during the study and labels were attached to results after the fact and for the purpose of analysis.
 
 
-=== The Path to `CLEARLY_CAPABLE`
+=== Career Paths of the `CLEARLY_CAPABLE`
 
 The 4 profiles labelled as `CLEARLY_CAPABLE` were designed to qualify via different career paths.  These paths are defined as follows: 
 
 [horizontal]
 **C02**:: _Conventional path_. Computer Science (CS) degree, 8 years in payments, Java/Kafka/AWS, mirrors posting nearly line for line.
-**C04**:: _No degree_. Apprenticeship, 9 years, 6 in payments infrastructure. Qualifies under posting's "equivalent practical experience" clause.
-**C07**:: _Adjacent route_. Data platform engineer for 8 years, Python (not Java), healthcare and analytics (not payments), runs Kafka at 40M events a day and owns Terraform and observability. Technically overqualified; conventionally shaped wrong.
-**C10**:: _Nonlinear path_. Prior career in actuarial analysis, took family leave in 2023--24, seven years of backend work in credit services.
+**C04**:: _No degree path_. Apprenticeship, 9 years, 6 in payments infrastructure. Qualifies under posting's "equivalent practical experience" clause.
+**C07**:: _The adjacent route_. Data platform engineer for 8 years, Python (not Java), healthcare and analytics (not payments), runs Kafka at 40M events a day and owns Terraform and observability. Technically overqualified; conventionally shaped wrong.
+**C10**:: _The nonlinear path_. Prior career in actuarial analysis, took family leave in 2023--24, seven years of backend work in credit services.
 
 == Screening Conditions
 
@@ -162,20 +169,22 @@ Condition 2, which prompted the model to identify and list candidate weaknesses,
 
 [quote, C07 / condition 2 / run 24]
 ____
-[...] lack of payments experience are genuine concerns but manageable for a strong candidate with clear technical depth. The missing mentorship signal is a notable omission against an explicit requirement.\n\nOn balance, the candidate meets most required qualifications and nearly all preferred ones technically. The concerns are worth probing in an interview but do not warrant rejection.
+...lack of payments experience are genuine concerns but manageable for a strong candidate with clear technical depth. The missing mentorship signal is a notable omission against an explicit requirement.
+
+On balance, the candidate meets most required qualifications and nearly all preferred ones technically. The concerns are worth probing in an interview but do not warrant rejection.
 
 **FINAL: ADVANCE**
 ____
 
 Condition 3, which prompts the model to design a scoring rubric and assess the candidate against it, scored her _and_ noted that the Java gap was explicitly covered by the posting's "or comparable" language.
 
-Condition 5, to apply a full ATS treatment, resulted in a score of roughly 88 out of 100 and called the domain gap "a hiring-team conversation, not a disqualifier.";
+Condition 5, to apply a full ATS treatment, resulted in a score of roughly 88 out of 100 and called the domain gap "a hiring-team conversation, not a disqualifier".
 
-Condition 4, which asks the model to list the reasons this candidate should not advance and then decide ADVANCE or REJECT, the same facts became a case against:
+Condition 4, which asks the model to list the reasons this candidate should not advance and then decide ADVANCE or REJECT, the same facts became a case **against**:
 
 [quote, C07 / condition 4 / run 17 -- REJECT]
 ____
-[...] Despite strong preferred-qualification matches (Kafka, Terraform, EKS/Kubernetes, Prometheus/Grafana, CI/CD, PostgreSQL), the core role requirements — backend service engineering for payments, Java or strong equivalent, and mentorship — are insufficiently demonstrated.
+...Despite strong preferred-qualification matches (Kafka, Terraform, EKS/Kubernetes, Prometheus/Grafana, CI/CD, PostgreSQL), the core role requirements — backend service engineering for payments, Java or strong equivalent, and mentorship — are insufficiently demonstrated.
 
 **FINAL: REJECT**
 ____
@@ -185,7 +194,7 @@ ____
 [quote, C07 / condition 4 / run 21 -- ADVANCE]
 
 ____
-[...] despite gaps, the candidate meets most required qualifications (8 years experience, Python, REST APIs, SQL, AWS, CI/CD, cloud) and nearly all preferred technical qualifications (Kafka, Docker/Kubernetes, Terraform, Prometheus/Grafana). The profile is strong technically, and the gaps are relatively minor in the context of the full requirement set.
+...despite gaps, the candidate meets most required qualifications (8 years experience, Python, REST APIs, SQL, AWS, CI/CD, cloud) and nearly all preferred technical qualifications (Kafka, Docker/Kubernetes, Terraform, Prometheus/Grafana). The profile is strong technically, and the gaps are relatively minor in the context of the full requirement set.
 
 **FINAL: ADVANCE**
 ____
@@ -202,23 +211,23 @@ It appears to have chosen the candidate whose profile offered the most material 
 
 Another observation is that models do not retain context once contexts become hyper-theoretical and more than once removed from the original instruction. For instance, the screener holds the context throughout the study that it is determining which candidates amongst the pool demonstrate sufficient skill and experience for the Job description.  Once the prompt layers on a meta-level discussion instigated by a list of candidate weaknesses, the model's focus appears to drift away from the original evaluative task and to consider the candidate entirely based on the list of weaknesses produced.
 
-Previous context that passes candidates with similar and overlapping skill transfer, or that there are at least four acceptable career paths that a candidate can follow and qualify as capable are temporarily forgotten and dropped completely from decision-making once the model is prompted to choose to advance or reject after listing the candidate's weaknesses. In fact, condition 4 was intentionally written to not provide explicit direction that them model should consider this new list of weaknesses when making its determination.  It is heavily implied that it should and reasonable if the model assumes this.  However, once contradition is introduced ( an instruction that conflics with a previous context), the model appears to prioritize the most recent instruction over the previously established context rather than asking clarifying questions. Still, it also only allows the list of weaknesses to supersede previous instruction for a single candidate and only on 15% of all of this candidate's runs, which suggests a gap or weakness with the model, or a place where it can fall through rather than of where is consistently performs. To reject a candidate's candidacy based on sheer number of tick marks that are seemingly racked up against the candidate indicates that previous tasks that passed the candidate on the same profile are not being considered or even "held in mind".  It seems like a stack overflow issue for contextual memory location, similar to a person multiplying 2 triple digit number in one's own head and forgetting one of the places to carry the one forward, et.al..
+Previous context that passes candidates with similar and overlapping skill transfer, or that there are at least four acceptable career paths that a candidate can follow and qualify as capable are temporarily forgotten and dropped completely from decision-making once the model is prompted to choose to advance or reject after listing the candidate's weaknesses. In fact, condition 4 was intentionally written to not provide explicit direction-- that the model should consider the new list of weaknesses when making its determination.  It is heavily implied that it should and is reasonable if the model assumes this.  However, once contradiction is introduced (an instruction that conflics with a previous context), the model appears to prioritize the most recent instruction over the previously established context rather than asking clarifying questions. Still, it also only allows the list of weaknesses to supersede previous instruction for a single candidate and only on 15% of all of this candidate's runs, which suggests a gap or weakness with the model, or a place where it can fall through rather than of where is consistently performs. To reject a candidate's candidacy based on sheer number of tick marks that are seemingly racked up against the candidate indicates that previous tasks that passed the candidate on the same profile are not being considered or even "held in mind".  It seems like a stack overflow issue for contextual memory location, similar to a person multiplying 2 triple digit number in one's own head and forgetting one of the places to carry the one forward, et.al..
 
-I cannot conclude from this study that "adjacent-route candidates" as a class are more vulnerable to instructions prompting for arguments against them.  I only have one adjacent-route candidate. I can say that in this study and under this model, the only instruction that rejected a qualified person was the one that asked for the case against, and the only qualified person it rejected was the one that didn't look the part.
+I cannot conclude from this study that "adjacent-route candidates" as a class are more vulnerable to instructions that prompt them to look for reasons against passing a candidate.  With a study containing one adjacent-route candidate, I can say that this study and run under this model results in it being the only condition where a qualified person was rejected based on making a case against.
 
 The study results indicate that the model's decision-making is highly sensitive to how weaknesses are framed and that it may prioritize the most recent instruction over previously established context. It also suggests that this sensitivity exists only around candidates whose profiles already buck some established norm or expectation and only about 15% of the time.
 
 === Candidates with Borderline Capabilities
 
-The middle row of Table 2 shows candidates labelled as having borderline capabilities, in other words people who match some of the requirements and might be worth interviewing, especially if the candidate pool is thin. But these candidates were rejected 98 to 100% of the time by the screeners under every condition, including bare sufficiency. This indicates that screeners themselves have no concept of "middle ground", no gray areas.  
+The middle row of Table 2 shows candidates labelled as having borderline capabilities. These are people who match some of the requirements and might be worth interviewing, especially when the candidate pool is thin. These candidates were rejected 98 to 100% of the time by the screeners in this study and under every condition, including bare sufficiency. This indicates that the screeners themselves have no concept of "middle ground"... they have no gray areas.
 
-I did not preregister any claim about this, so am reporting it as an observation and not a finding. What I can say is that the model's selection of candidates for "clearly capable" matched the pre-labelled candidates in this study four for four, for four of five conditions. That there was no distinguishing of borderline candidates could simply be that there was no reason for a 3rd division amongst the candidates, as the screener was asked to determine whether to pass or reject only.  In hindsight labels couls have been kept to "capable" or "not capable" only, but having a third category would have been useful if the screener had had less consistency choosing which candidates to pass than it did. It holds for a tool that has little capacity for layering context and nuance, that it seems to have an internal debate over the capability of a  candidate.  While it does not prove so, nor was the study designed to test, but it does seem to indicate that models when used as screeners are holding candidates to very rigorous conditions, expecting 100% line for line matching of requirements to experience unless explicitly instructed to accept a lower bar.  If you are a borderline candidate for a job listing, these results suggest that you will not pass initial screeenings and will be held to matching all or nearly all of the job requirements.  It is sad because this is a very narrow way to measure human ability and worth.
+I did not preregister any claim about this, so am reporting it as an observation and not a finding. What I can say is that the model's selection of candidates for "clearly capable" matched the pre-labelled candidates in this study four for four, for four of five conditions. That there was no distinguishing of borderline candidates could simply be that there was no reason for a 3rd division amongst the candidates, as the screener was asked to determine whether to pass or reject only.  In hindsight, labels could have been kept to "capable" or "not capable" only, but a third category was used in case the screener showed less consistency choosing which candidates to pass than it did. It holds for a tool that has little capacity for layering context and nuance, that candidates do not fall into any gray areas from the model's perspective and demonstrates the limited conceptual ability of the model.  While it does not prove so, nor was the study designed to test this statement, models when used as screeners are holding candidates to very rigorous conditions, expecting 100% line for line matching of requirements to experience unless explicitly instructed to accept a lower bar.  If you are a borderline candidate for a job listing, these results suggest that you will not pass initial screeenings and will be held to matching all or nearly all of the job requirements.  It is sad because this is a very narrow way to measure human ability and worth.
 
-.Things that Give Pause
+.Things that Lend me Pause
 [IMPORTANT]
 ====
-[horizontal,labelwidth=50]
-**Single model**:: The shape of the result could be specific to Claude Sonnet 5.5. A second model in the next run is the obvious next move and I have not done it.;
+[horizontal,labelwidth=40]
+**Single model**:: The shape of the result could be specific to Claude Sonnet 5.5. A second model in the next run is the obvious next move and I have not done it.
 
 **Only 4/5 `CLEARLY_CAPABLE` profiles**:: Condition 4 effects a single candidate only-- an `n of 1` at the level that matters for generalization. It is a strong `n of 1` -- 18 of 30 versus 0 of 120 is not noise -- but it is, still, just one.
 
