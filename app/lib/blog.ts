@@ -30,9 +30,18 @@ export function getPostBySlug(slug: string): BlogPost {
 
     const { data, content } = matter(fileContents);
 
+    const attributes: Record<string, string | boolean> = {
+        showtitle: true,
+        icons: data.icons || 'font',
+    };
+
+    if (data.imagesdir) {
+        attributes.imagesdir = data.imagesdir;
+    }
+
     const html = asciidoctor.convert(content, {
         safe: 'safe',
-        attributes: { showtitle: true },
+        attributes,
     }) as string;
 
     return {

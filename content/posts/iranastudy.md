@@ -14,7 +14,7 @@ How do you take the unpredictable nature of an LLM and turn it into something th
 
 This question arrived during an interesting period of self-reflection and career reassessment. The summer of 2026 had already been a fairly intense period of career introspection for me.  The conundrum was I had spent most of my career as a Software Engineering generalist but that no longer seemed sufficient. By 2025, I was flailing a little.
 
-It wasn't exactly an identity crisis.  It was a realization that the map I'd been using no longer corresponded to the territory. 
+It wasn't exactly an identity crisis.  It was a realization that the map I'd been using no longer corresponded to the territory.
 
 Being from the tail end of Generation X, this feeling is strangely familiar. I reached legal drinking age before September 11, 2001, and much of my adult life has been punctuated by moments when my assumptions about the world and its people suddenly stopped being true. The past two years have felt like another of those moments.
 
