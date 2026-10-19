@@ -15,7 +15,7 @@ v1.2 October 2026
 
 > _This is part 2 of 2. https://www.k8port.io/blog/iranastudy[Part 1] covered background information including context and reasoning for running this experiment. Part 2 covers experiment results and analysis.
 
-image::../../../public/blog_images/claude_disgraced.png[width=500]
+image::claude_disgraced.png[width=500]
 
 ---
 
@@ -130,7 +130,7 @@ None of these changes affected the terms of the study. Each should have been cau
 
 == Results Analysis
 
-image::/Users/dk8furia/ws-portfolio/k8port-portfolio/public/blog_images/chart_95.png[width=600]
+image::chart_95.png[width=600]
 
 1,800 responses were parsed in all, with 0 being unparseable after the fixes above were implemented.
 

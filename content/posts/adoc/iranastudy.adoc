@@ -7,10 +7,6 @@ icons: font
 imagesdir: /blog_images
 ---
 = The HuggingFace Incident Made Me Want to Run an Experiment
-kiki<k8@k8port.io>
-v1.3 October 8, 2026
-:icons: font
-:imagesdir: /blog_images
 
 > _This post is part 1 of 2 on how a strange series of events during the summer of 2026 changed the direction of my career._
 
